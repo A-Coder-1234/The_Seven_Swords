@@ -1,0 +1,149 @@
+extends AnimatedSprite2D
+
+var direction: int = 3
+var velocity_Y: float = 0.0
+var velocity_X: float = 0.0
+var velocity: Vector2 = Vector2(0, 0)
+var anim_cycle: int = 0
+var player_cords: Vector2 = Vector2(0, 0)
+var dir = Input.get_vector("Left", "Right", "Forward", "Back")
+var frame_count: int = 0
+var last_dir: Vector2 = Vector2(0, 0)
+var current_dir: Vector2 = Vector2(0, 0)
+var angle: int = 0
+var degrees: int = 0
+
+# Frame count is for tracking the current frame and last_dir will store the direction each frame so the program can find out if the direction has changed and reset the frame counter.
+
+func _ready() -> void:
+	Global.connect("PLAYER_UPDATE", update)
+	
+func update():
+	
+# Move Player
+	# 0.25
+	# Create input vector
+	dir = Input.get_vector("Left", "Right", "Forward", "Back")
+	#print(dir)
+	
+	# Cache last direction
+	last_dir = current_dir
+	
+	# Check direction X
+	if dir.x > 0.25:
+		velocity.x += 1
+		current_dir.x = 1
+	elif dir.x < -0.25:
+		velocity.x -= 1
+		current_dir.x = -1
+	else:
+		current_dir.x = 0
+		
+	# Check direction y
+	if dir.y > 0.25:
+		velocity.y += 1
+		current_dir.y = -1
+	elif dir.y < -0.25:
+		velocity.y -= 1
+		current_dir.y = 1
+	else:
+		current_dir.y = 0
+	
+	#print(velocity)
+	#velocity.x = 0
+	#velocity.y = 0
+	
+	#Check for input
+	#if Input.is_action_pressed("Forward"):
+		#velocity_Y += 0.5
+		# print("Forward")
+	#elif Input.is_action_pressed("Back"):
+		#velocity_Y -= 0.5
+		# print("Back")
+	#elif Input.is_action_pressed("Right"):
+		#velocity_X += 0.5
+		# print("Right")
+	#elif Input.is_action_pressed("Left"):
+		#velocity_X -= 0.5
+		# print("Left")
+	
+	# Update player cords
+	player_cords.x += velocity.x
+	player_cords.y += velocity.y
+	
+	#angle = atan2(player_cords.y, player_cords.x)
+	#degrees = angle * (180/PI)
+	#current_dir = round(degrees/45) % 8
+	
+	# Calcule the directon the player is is faceing
+	# Will only change if the player moved
+	# The warn is ok because this is just computeing an angle and does not need a float level of presision. It also must return a hole number.
+	# If anyone knows how to dissable the warning pleas do so.
+	#if player_cords.x != 0 and player_cords.y != 0:
+		#angle = atan2(player_cords.x, player_cords.y)
+		#degrees = angle * (180/PI)
+		#current_dir = round(degrees/45) % 8
+		#print("change")
+	print(current_dir)
+	
+	#print(player_cords)
+	
+	# Decrease velocity by half
+	velocity.x /= 2
+	velocity.y /= 2
+	# The velocity will take to long to reach 0 so if it is close enough this rounds it to 0.
+	if velocity.x < 0.001 and velocity.x > -0.001:
+		velocity.x = 0
+	if velocity.y < 0.001 and velocity.y > -0.001:
+		velocity.y = 0
+	
+	#velocity_X = 0
+	#velocity_Y = 0
+	
+	#Update velocity X
+	#if velocity_X > 0:
+		#velocity_X -= 0.05
+	#if velocity_X < 0:
+		#velocity_X += 0.05
+	# Update velocity Y
+	#if velocity_Y > 0:
+		#velocity_Y -= 0.05
+	#elif velocity_Y <0:
+		#velocity_Y += 0.05
+	
+	# Move player on screen
+	position += player_cords
+	player_cords = Vector2(0,0)
+	
+	
+	
+	
+	
+#Animate Player
+	
+	# Update frame count
+	frame_count += 1
+	if frame_count > 7:
+		frame_count = 0
+	
+	
+	
+	
+
+
+#func _process(delta: float) -> void:
+	#if direction > 0:
+		#if direction == 1:
+			#pass
+		#elif direction == 2:
+			#pass
+		#elif  direction == 3:
+			#pass
+		#elif direction == 4:
+			#pass
+
+
+#func _input(event):
+	#if event.is_action_pressed()
+	
+	

@@ -1,0 +1,153 @@
+{
+    "activeFile": "Tileset/Game maps/Overworld.tmx",
+    "expandedProjectPaths": [
+        "Tileset",
+        "."
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "Tileset/Game maps/Overworld.tmx": {
+            "scale": 2.4277,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 8.444206450549927,
+                "y": -27.186225645672863
+            }
+        },
+        "Tileset/_gentle forest sample map.tmx": {
+            "scale": 2.8812,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 135.70734416215464,
+                "y": 80.00138831042622
+            }
+        },
+        "Tileset/gentle 32x32 v01.tsx": {
+            "scaleInDock": 2.1429,
+            "scaleInEditor": 1
+        },
+        "Tileset/gentle 32x32 v02.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tileset/gentle 32x32 v03.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tileset/gentle 32x32 v04.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tileset/gentle 32x32 v05.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tileset/gentle 32x32 v06.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tileset/gentle 32x32 v07.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tileset/gentle 32x32 v08.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tileset/gentle 32x32 v09.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tileset/gentle 32x32 v10.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tileset/gentle forest v01.tsx": {
+            "scaleInDock": 1.7404,
+            "scaleInEditor": 3.0291
+        },
+        "Tileset/gentle forest v02.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 4.1062
+        },
+        "Tileset/gentle forest v03.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 3.2404
+        },
+        "Tileset/gentle trees 80x96 v01.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tileset/gentle trees 80x96 v02.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tileset/gentle trees 80x96 v03.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Tileset/gentle water sparkles A v01.tsx": {
+            "scaleInDock": 3.9776,
+            "scaleInEditor": 11.1826
+        },
+        "Tileset/gentle water sparkles A v02.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 7.1721
+        },
+        "Tileset/gentle water sparkles A v03.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 12.2504
+        },
+        "Tileset/gentle waterfall A v01.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 4.8894
+        },
+        "Tileset/gentle waterfall A v02.tsx": {
+            "scaleInDock": 2.4354,
+            "scaleInEditor": 4.1512
+        },
+        "Tileset/gentle waterfall A v03.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 3.2889
+        }
+    },
+    "last.imagePath": "/home/levi/the-seven-swords/Tilesets/Tileset/gentle animations",
+    "map.fixedSize": false,
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "openFiles": [
+        "Tileset/gentle 32x32 v01.tsx",
+        "Tileset/gentle 32x32 v02.tsx",
+        "Tileset/gentle 32x32 v03.tsx",
+        "Tileset/gentle forest v01.tsx",
+        "Tileset/gentle forest v02.tsx",
+        "Tileset/gentle forest v03.tsx",
+        "Tileset/gentle trees 80x96 v01.tsx",
+        "Tileset/gentle trees 80x96 v02.tsx",
+        "Tileset/gentle trees 80x96 v03.tsx",
+        "Tileset/gentle water sparkles A v01.tsx",
+        "Tileset/gentle water sparkles A v02.tsx",
+        "Tileset/gentle water sparkles A v03.tsx",
+        "Tileset/gentle waterfall A v01.tsx",
+        "Tileset/gentle waterfall A v02.tsx",
+        "Tileset/gentle waterfall A v03.tsx",
+        "Tileset/_gentle forest sample map.tmx",
+        "Tileset/Game maps/Overworld.tmx"
+    ],
+    "project": "the-sevin-swords.tiled-project",
+    "recentFiles": [
+        "Tileset/gentle 32x32 v01.tsx",
+        "Tileset/gentle 32x32 v02.tsx",
+        "Tileset/gentle 32x32 v03.tsx",
+        "Tileset/gentle forest v01.tsx",
+        "Tileset/gentle forest v02.tsx",
+        "Tileset/gentle forest v03.tsx",
+        "Tileset/gentle trees 80x96 v01.tsx",
+        "Tileset/gentle trees 80x96 v02.tsx",
+        "Tileset/gentle trees 80x96 v03.tsx",
+        "Tileset/gentle water sparkles A v01.tsx",
+        "Tileset/gentle water sparkles A v02.tsx",
+        "Tileset/gentle water sparkles A v03.tsx"
+    ]
+}
