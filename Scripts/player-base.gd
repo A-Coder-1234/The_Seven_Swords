@@ -36,7 +36,7 @@ func update():
 	elif dir.x < -0.25:
 		velocity.x -= 1
 		current_dir.x = -1
-	else:
+	elif dir.y > 0.25 or dir.y < -0.25:
 		current_dir.x = 0
 		
 	# Check direction y
@@ -46,7 +46,7 @@ func update():
 	elif dir.y < -0.25:
 		velocity.y -= 1
 		current_dir.y = 1
-	else:
+	elif dir.x > 0.25 or dir.x < -0.25:
 		current_dir.y = 0
 	
 	#print(velocity)
@@ -84,7 +84,7 @@ func update():
 		#degrees = angle * (180/PI)
 		#current_dir = round(degrees/45) % 8
 		#print("change")
-	print(current_dir)
+	print(frame_count)
 	
 	#print(player_cords)
 	
@@ -123,12 +123,43 @@ func update():
 	
 	# Update frame count
 	frame_count += 1
-	if frame_count > 7:
+	#if frame_count > 28:
+		#frame_count = 0
+	## If the player changed directon reset the frame count
+	#if dir.x == 1:
+		#if dir.x != last_dir.x:
+			#frame_count = 0
+	#elif dir.x == -1:
+		#if dir.x != last_dir.x:
+			#frame_count = 0
+	#elif dir.y != last_dir.y:
+		#frame_count = 0
+	if frame_count > 28:
 		frame_count = 0
 	
+	# Change direction
+	if current_dir.x == 1:
+		animation = "Walk right"
+		$Clotheing.animation = "Walk right"
+		$Hair.animation = "Walk right"
+	elif current_dir.x == -1:
+		animation = "Walk left"
+		$Clotheing.animation = "Walk left"
+		$Hair.animation = "Walk left"
+	elif current_dir.y == 1:
+		animation = "Walk backward"
+		$Clotheing.animation = "Walk backward"
+		$Hair.animation = "Walk backward"
+	elif current_dir.y == -1:
+		animation = "Walk forward"
+		$Clotheing.animation = "Walk forward"
+		$Hair.animation = "Walk forward"
 	
-	
-	
+	# Apply the animation
+	# The warning is ok but I don't know how to catch errors
+	frame = frame_count/4
+	$Clotheing.frame = frame_count/4
+	$Hair.frame = frame_count/4
 
 
 #func _process(delta: float) -> void:
