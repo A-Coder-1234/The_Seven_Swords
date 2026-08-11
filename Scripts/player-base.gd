@@ -138,29 +138,51 @@ func update():
 		frame_count = 0
 	
 	# Change direction
-	if current_dir.x == 1:
-		animation = "Walk right"
-		$Clotheing.animation = "Walk right"
-		$Hair.animation = "Walk right"
-	elif current_dir.x == -1:
-		animation = "Walk left"
-		$Clotheing.animation = "Walk left"
-		$Hair.animation = "Walk left"
-	elif current_dir.y == 1:
-		animation = "Walk backward"
-		$Clotheing.animation = "Walk backward"
-		$Hair.animation = "Walk backward"
-	elif current_dir.y == -1:
-		animation = "Walk forward"
-		$Clotheing.animation = "Walk forward"
-		$Hair.animation = "Walk forward"
+	if velocity.x != 0 or velocity.y != 0:
+		if 	current_dir.x == 1:
+			animation = "Walk right"
+			$Clotheing.animation = "Walk right"
+			$Hair.animation = "Walk right"
+		elif current_dir.x == -1:
+				animation = "Walk left"
+				$Clotheing.animation = "Walk left"
+				$Hair.animation = "Walk left"
+		elif current_dir.y == 1:
+				animation = "Walk backward"
+				$Clotheing.animation = "Walk backward"
+				$Hair.animation = "Walk backward"
+		elif current_dir.y == -1:
+			animation = "Walk forward"
+			$Clotheing.animation = "Walk forward"
+			$Hair.animation = "Walk forward"
+	else:
+		if 	current_dir.x == 1:
+			animation = "Idle right"
+			$Clotheing.animation = "Idle right"
+			$Hair.animation = "Idle right"
+		elif current_dir.x == -1:
+				animation = "Idle left"
+				$Clotheing.animation = "Idle left"
+				$Hair.animation = "Idle left"
+		elif current_dir.y == 1:
+				animation = "Idle backward"
+				$Clotheing.animation = "Idle backward"
+				$Hair.animation = "Idle backward"
+		elif current_dir.y == -1:
+			animation = "Idle forward"
+			$Clotheing.animation = "Idle forward"
+			$Hair.animation = "Idle forward"
 	
 	# Apply the animation
 	# The warning is ok but I don't know how to catch errors
-	frame = frame_count/4
-	$Clotheing.frame = frame_count/4
-	$Hair.frame = frame_count/4
-
+	if velocity.x != 0 or velocity.y != 0:
+		frame = frame_count/4
+		$Clotheing.frame = frame_count/4
+		$Hair.frame = frame_count/4
+	else:
+		frame = 0
+		$Clotheing.frame = 0
+		$Hair.frame = 0
 
 #func _process(delta: float) -> void:
 	#if direction > 0:
@@ -173,8 +195,6 @@ func update():
 		#elif direction == 4:
 			#pass
 
-
 #func _input(event):
 	#if event.is_action_pressed()
-	
 	
