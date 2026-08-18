@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://y1wcetrbyc3v"]
 
-[ext_resource type="PackedScene" uid="uid://c652x7dg28jwq" path="res://Tilesets/Tileset/Game maps/Overworld.tmx" id="1_iukft"]
 [ext_resource type="Script" uid="uid://bodpd7v5e4mhm" path="res://Scripts/Main_Loop.gd" id="1_j5yw3"]
 [ext_resource type="PackedScene" uid="uid://brxio3abd23fq" path="res://Scenes/Player.tscn" id="2_gl6un"]
+[ext_resource type="PackedScene" uid="uid://btvrm2e887igo" path="res://Tilesets/Tileset/Game maps/Water-fall bridge.tmx" id="3_j5yw3"]
 
 [node name="Node2D" type="Node2D" unique_id=1154430874]
 script = ExtResource("1_j5yw3")
 
-[node name="Overworld" parent="." unique_id=1208524272 instance=ExtResource("1_iukft")]
-position = Vector2(256, 305)
+[node name="Water-fall bridge" parent="." unique_id=1607277360 instance=ExtResource("3_j5yw3")]
+position = Vector2(12, 247)
 
 [node name="AnimatedSprite2D" parent="." unique_id=1041290788 instance=ExtResource("2_gl6un")]
 position = Vector2(219, 293)
