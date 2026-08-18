@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b4lt88dkq2wbe"]
+
+[ext_resource type="Script" uid="uid://b8bunttrr3dph" path="res://Scripts/FPS.gd" id="1_5oaki"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=420199614 node_paths=PackedStringArray("fps_label")]
+script = ExtResource("1_5oaki")
+fps_label = NodePath("fps_label")
+
+[node name="fps_label" type="Label" parent="." unique_id=418857141]
+offset_right = 40.0
+offset_bottom = 23.0
