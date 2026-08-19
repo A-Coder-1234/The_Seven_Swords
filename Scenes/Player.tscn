@@ -890,6 +890,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vmaen"]
+radius = 5.0
+height = 10.0
+
 [node name="Body" type="AnimatedSprite2D" unique_id=1041290788]
 sprite_frames = SubResource("SpriteFrames_vmaen")
 animation = &"Idle backward"
@@ -902,3 +906,7 @@ animation = &"Idle backward"
 [node name="Hair" type="AnimatedSprite2D" parent="." unique_id=1530960766]
 sprite_frames = SubResource("SpriteFrames_kaoc4")
 animation = &"Idle backward"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2006952907]
+position = Vector2(0, 5)
+shape = SubResource("CapsuleShape2D_vmaen")

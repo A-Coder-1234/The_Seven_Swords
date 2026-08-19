@@ -1,11 +1,11 @@
 {
-    "activeFile": "Tileset/Game maps/Overworld.tmx",
+    "activeFile": "",
     "expandedProjectPaths": [
-        "Tileset",
-        "Tileset2",
         ".",
         "Tileset/Game maps",
-        "Tileset2/tilesets"
+        "Tileset2/tilesets",
+        "Tileset",
+        "Tileset2"
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
@@ -22,19 +22,30 @@
             "scaleInEditor": 2.3566
         },
         "Tileset/Game maps/Overworld.tmx": {
-            "scale": 1.5,
+            "scale": 1.5755,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": -9.666666666666629,
-                "y": -62
+                "x": -9.838146620120597,
+                "y": -45.69977784830212
+            }
+        },
+        "Tileset/Game maps/Water-fall bridge trees.tmx": {
+            "scale": 5.2204,
+            "selectedLayer": 10,
+            "viewCenter": {
+                "x": 523.8104359819172,
+                "y": -729.6375756647001
             }
         },
         "Tileset/Game maps/Water-fall bridge.tmx": {
-            "scale": 0.9951,
-            "selectedLayer": 5,
+            "expandedObjectLayers": [
+                15
+            ],
+            "scale": 0.5459,
+            "selectedLayer": 10,
             "viewCenter": {
-                "x": 166.31494322178676,
-                "y": -226.1079288513717
+                "x": 151.1265799596996,
+                "y": -146.54698662758744
             }
         },
         "Tileset/_gentle forest sample map.tmx": {
@@ -148,23 +159,6 @@
     "map.tileHeight": 16,
     "map.tileWidth": 16,
     "openFiles": [
-        "Tileset/gentle 32x32 v01.tsx",
-        "Tileset/gentle 32x32 v02.tsx",
-        "Tileset/gentle 32x32 v03.tsx",
-        "Tileset/gentle forest v01.tsx",
-        "Tileset/gentle forest v02.tsx",
-        "Tileset/gentle forest v03.tsx",
-        "Tileset/gentle trees 80x96 v01.tsx",
-        "Tileset/gentle trees 80x96 v02.tsx",
-        "Tileset/gentle trees 80x96 v03.tsx",
-        "Tileset/gentle water sparkles A v01.tsx",
-        "Tileset/gentle water sparkles A v02.tsx",
-        "Tileset/gentle water sparkles A v03.tsx",
-        "Tileset/gentle waterfall A v01.tsx",
-        "Tileset/gentle waterfall A v02.tsx",
-        "Tileset/gentle waterfall A v03.tsx",
-        "Tileset/_gentle forest sample map.tmx",
-        "Tileset/Game maps/Overworld.tmx"
     ],
     "project": "the-sevin-swords.tiled-project",
     "recentFiles": [

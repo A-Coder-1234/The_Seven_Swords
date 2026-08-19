@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://brxio3abd23fq" path="res://Scenes/Player.tscn" id="2_gl6un"]
 [ext_resource type="PackedScene" uid="uid://btvrm2e887igo" path="res://Tilesets/Tileset/Game maps/Water-fall bridge.tmx" id="2_j5yw3"]
 [ext_resource type="PackedScene" uid="uid://b4lt88dkq2wbe" path="res://Scenes/canvas_layer.tscn" id="4_kldst"]
+[ext_resource type="PackedScene" uid="uid://d4d8cb7x5e4rq" path="res://Tilesets/Tileset/Game maps/Water-fall bridge trees.tmx" id="5_b2bpf"]
 
 [node name="Node2D" type="Node2D" unique_id=1154430874]
 script = ExtResource("1_j5yw3")
@@ -16,5 +17,8 @@ position = Vector2(219, 293)
 
 [node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D" unique_id=1862607261]
 zoom = Vector2(2, 2)
+
+[node name="Water-fall bridge trees" parent="." unique_id=708905906 instance=ExtResource("5_b2bpf")]
+position = Vector2(176, 379)
 
 [node name="CanvasLayer" parent="." unique_id=420199614 instance=ExtResource("4_kldst")]
