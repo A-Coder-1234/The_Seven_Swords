@@ -4,14 +4,14 @@ var direction: int = 3
 var velocity_Y: float = 0.0
 var velocity_X: float = 0.0
 var velocity: Vector2 = Vector2(0, 0)
-var anim_cycle: int = 0
+var anim_cycle: float = 0
 var player_cords: Vector2 = Vector2(0, 0)
 var dir = Input.get_vector("Left", "Right", "Forward", "Back")
-var frame_count: int = 0
+var frame_count: float = 0
 var last_dir: Vector2 = Vector2(0, 0)
 var current_dir: Vector2 = Vector2(0, 0)
-var angle: int = 0
-var degrees: int = 0
+var angle: float = 0
+var degrees: float = 0
 
 # Frame count is for tracking the current frame and last_dir will store the direction each frame so the program can find out if the direction has changed and reset the frame counter.
 
@@ -29,25 +29,49 @@ func update():
 	# Cache last direction
 	last_dir = current_dir
 	
+	if not Input.is_action_pressed("Sprint"):
+		
 	# Check direction X
-	if dir.x > 0.25:
-		velocity.x += 1
-		current_dir.x = 1
-	elif dir.x < -0.25:
-		velocity.x -= 1
-		current_dir.x = -1
-	elif dir.y > 0.25 or dir.y < -0.25:
-		current_dir.x = 0
+		if dir.x > 0.25:
+			velocity.x += 0.6
+			current_dir.x = 1
+		elif dir.x < -0.25:
+			velocity.x -= 0.6
+			current_dir.x = -1
+		elif dir.y > 0.25 or dir.y < -0.25:
+			current_dir.x = 0
 		
 	# Check direction y
-	if dir.y > 0.25:
-		velocity.y += 1
-		current_dir.y = -1
-	elif dir.y < -0.25:
-		velocity.y -= 1
-		current_dir.y = 1
-	elif dir.x > 0.25 or dir.x < -0.25:
-		current_dir.y = 0
+		if dir.y > 0.25:
+			velocity.y += 0.6
+			current_dir.y = -1
+		elif dir.y < -0.25:
+			velocity.y -= 0.6
+			current_dir.y = 1
+		elif dir.x > 0.25 or dir.x < -0.25:
+			current_dir.y = 0
+	
+	else:
+
+		# Check direction X
+		if dir.x > 0.25:
+			velocity.x += 1
+			current_dir.x = 1
+		elif dir.x < -0.25:
+			velocity.x -= 1
+			current_dir.x = -1
+		elif dir.y > 0.25 or dir.y < -0.25:
+			current_dir.x = 0
+		
+	# Check direction y
+		if dir.y > 0.25:
+			velocity.y += 1
+			current_dir.y = -1
+		elif dir.y < -0.25:
+			velocity.y -= 1
+			current_dir.y = 1
+		elif dir.x > 0.25 or dir.x < -0.25:
+			current_dir.y = 0	
 	
 	#print(velocity)
 	#velocity.x = 0
@@ -125,7 +149,7 @@ func update():
 	frame_count += 1
 	#if frame_count > 28:
 		#frame_count = 0
-	## If the player changed directon reset the frame count
+	# If the player changed directon reset the frame count
 	#if dir.x == 1:
 		#if dir.x != last_dir.x:
 			#frame_count = 0
@@ -176,9 +200,9 @@ func update():
 	# Apply the animation
 	# The warning is ok but I don't know how to catch errors
 	if velocity.x != 0 or velocity.y != 0:
-		frame = frame_count/4
-		$Clotheing.frame = frame_count/4
-		$Hair.frame = frame_count/4
+		frame = frame_count/6
+		$Clotheing.frame = frame_count/6
+		$Hair.frame = frame_count/6
 	else:
 		frame = 0
 		$Clotheing.frame = 0
