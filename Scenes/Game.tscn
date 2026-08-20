@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://d4d8cb7x5e4rq" path="res://Tilesets/Tileset/Game maps/Water-fall bridge trees.tmx" id="5_b2bpf"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n4kwf"]
-radius = 2.0
+radius = 5.0
 height = 16.0
 
 [node name="Node2D" type="Node2D" unique_id=1154430874]
@@ -29,8 +29,12 @@ position = Vector2(176, 379)
 [node name="CanvasLayer" parent="." unique_id=420199614 instance=ExtResource("4_kldst")]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=134974770]
+constant_linear_velocity = Vector2(0, -20.315)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1899849720]
 position = Vector2(7, 68)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_n4kwf")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=474560548]
+polygon = PackedVector2Array(32, 114, 48, 114, 64, 98, 80, 98, 96, 114, 160, 114, 176, 98, 192, 98, 208, 114, 272, 114, 288, 98, 304, 98, 320, 114, 384, 114, 400, 98, 416, 98, 432, 114, 496, 114, 512, 98, 528, 98, 544, 114, 640, 114, 640, 107, 545, 107, 529, 91, 511, 91, 495, 107, 433, 107, 417, 91, 399, 91, 383, 107, 321, 107, 305, 91, 287, 91, 271, 107, 209, 107, 193, 91, 175, 91, 159, 107, 97, 107, 81, 91, 63, 91, 47, 107, 32, 107)
