@@ -1,9 +1,9 @@
-extends AnimatedSprite2D
+extends CharacterBody2D
 
 var direction: int = 3
 var velocity_Y: float = 0.0
 var velocity_X: float = 0.0
-var velocity: Vector2 = Vector2(0, 0)
+#var velocity: Vector2 = Vector2(0, 0)
 var anim_cycle: float = 0
 var player_cords: Vector2 = Vector2(0, 0)
 var dir = Input.get_vector("Left", "Right", "Forward", "Back")
@@ -111,6 +111,9 @@ func update():
 	print(frame_count)
 	
 	#print(player_cords)
+
+	# Move player on screen
+	move_and_slide()
 	
 	# Decrease velocity by half
 	velocity.x /= 2
@@ -136,8 +139,8 @@ func update():
 		#velocity_Y += 0.05
 	
 	# Move player on screen
-	position += player_cords
-	player_cords = Vector2(0,0)
+	#position += player_cords
+	#player_cords = Vector2(0,0)
 	
 	
 	
@@ -164,47 +167,47 @@ func update():
 	# Change direction
 	if velocity.x != 0 or velocity.y != 0:
 		if 	current_dir.x == 1:
-			animation = "Walk right"
+			$Body.animation = "Walk right"
 			$Clotheing.animation = "Walk right"
 			$Hair.animation = "Walk right"
 		elif current_dir.x == -1:
-				animation = "Walk left"
+				$Body.animation = "Walk left"
 				$Clotheing.animation = "Walk left"
 				$Hair.animation = "Walk left"
 		elif current_dir.y == 1:
-				animation = "Walk backward"
+				$Body.animation = "Walk backward"
 				$Clotheing.animation = "Walk backward"
 				$Hair.animation = "Walk backward"
 		elif current_dir.y == -1:
-			animation = "Walk forward"
+			$Body.animation = "Walk forward"
 			$Clotheing.animation = "Walk forward"
 			$Hair.animation = "Walk forward"
 	else:
 		if 	current_dir.x == 1:
-			animation = "Idle right"
+			$Body.animation = "Idle right"
 			$Clotheing.animation = "Idle right"
 			$Hair.animation = "Idle right"
 		elif current_dir.x == -1:
-				animation = "Idle left"
+				$Body.animation = "Idle left"
 				$Clotheing.animation = "Idle left"
 				$Hair.animation = "Idle left"
 		elif current_dir.y == 1:
-				animation = "Idle backward"
+				$Body.animation = "Idle backward"
 				$Clotheing.animation = "Idle backward"
 				$Hair.animation = "Idle backward"
 		elif current_dir.y == -1:
-			animation = "Idle forward"
+			$Body.animation = "Idle forward"
 			$Clotheing.animation = "Idle forward"
 			$Hair.animation = "Idle forward"
 	
 	# Apply the animation
 	# The warning is ok but I don't know how to catch errors
 	if velocity.x != 0 or velocity.y != 0:
-		frame = frame_count/6
+		$Body.frame = frame_count/6
 		$Clotheing.frame = frame_count/6
 		$Hair.frame = frame_count/6
 	else:
-		frame = 0
+		$Body.frame = 0
 		$Clotheing.frame = 0
 		$Hair.frame = 0
 

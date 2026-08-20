@@ -1,5 +1,5 @@
 {
-    "activeFile": "",
+    "activeFile": "Tileset/gentle trees 80x96 v02.tsx",
     "expandedProjectPaths": [
         ".",
         "Tileset/Game maps",
@@ -30,11 +30,14 @@
             }
         },
         "Tileset/Game maps/Water-fall bridge trees.tmx": {
-            "scale": 5.2204,
+            "expandedObjectLayers": [
+                15
+            ],
+            "scale": 3.8133,
             "selectedLayer": 10,
             "viewCenter": {
-                "x": 523.8104359819172,
-                "y": -729.6375756647001
+                "x": -248.99693179136182,
+                "y": -200.6136417276375
             }
         },
         "Tileset/Game maps/Water-fall bridge.tmx": {
@@ -159,9 +162,15 @@
     "map.tileHeight": 16,
     "map.tileWidth": 16,
     "openFiles": [
+        "Tileset/Game maps/Water-fall bridge.tmx",
+        "Tileset/Game maps/Water-fall bridge trees.tmx",
+        "Tileset/gentle trees 80x96 v02.tsx"
     ],
     "project": "the-sevin-swords.tiled-project",
     "recentFiles": [
+        "Tileset/Game maps/Water-fall bridge.tmx",
+        "Tileset/Game maps/Water-fall bridge trees.tmx",
+        "Tileset/gentle trees 80x96 v02.tsx",
         "Tileset/gentle 32x32 v01.tsx",
         "Tileset/gentle 32x32 v02.tsx",
         "Tileset/gentle 32x32 v03.tsx",
@@ -169,10 +178,7 @@
         "Tileset/gentle forest v02.tsx",
         "Tileset/gentle forest v03.tsx",
         "Tileset/gentle trees 80x96 v01.tsx",
-        "Tileset/gentle trees 80x96 v02.tsx",
         "Tileset/gentle trees 80x96 v03.tsx",
-        "Tileset/gentle water sparkles A v01.tsx",
-        "Tileset/gentle water sparkles A v02.tsx",
-        "Tileset/gentle water sparkles A v03.tsx"
+        "Tileset/gentle water sparkles A v01.tsx"
     ]
 }

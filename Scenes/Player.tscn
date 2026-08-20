@@ -894,10 +894,12 @@ animations = [{
 radius = 5.0
 height = 10.0
 
-[node name="Body" type="AnimatedSprite2D" unique_id=1041290788]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=838843817]
+script = ExtResource("2_gntrk")
+
+[node name="Body" type="AnimatedSprite2D" parent="." unique_id=1041290788]
 sprite_frames = SubResource("SpriteFrames_vmaen")
 animation = &"Idle backward"
-script = ExtResource("2_gntrk")
 
 [node name="Clotheing" type="AnimatedSprite2D" parent="." unique_id=1532842608]
 sprite_frames = SubResource("SpriteFrames_n4kwf")

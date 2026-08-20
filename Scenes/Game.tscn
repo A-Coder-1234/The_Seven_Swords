@@ -6,19 +6,31 @@
 [ext_resource type="PackedScene" uid="uid://b4lt88dkq2wbe" path="res://Scenes/canvas_layer.tscn" id="4_kldst"]
 [ext_resource type="PackedScene" uid="uid://d4d8cb7x5e4rq" path="res://Tilesets/Tileset/Game maps/Water-fall bridge trees.tmx" id="5_b2bpf"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n4kwf"]
+radius = 2.0
+height = 16.0
+
 [node name="Node2D" type="Node2D" unique_id=1154430874]
 script = ExtResource("1_j5yw3")
 
 [node name="Water-fall bridge" parent="." unique_id=329532383 instance=ExtResource("2_j5yw3")]
 position = Vector2(176, 379)
 
-[node name="AnimatedSprite2D" parent="." unique_id=1041290788 instance=ExtResource("2_gl6un")]
-position = Vector2(219, 293)
+[node name="Body" parent="." unique_id=1041290788 instance=ExtResource("2_gl6un")]
+position = Vector2(-11, 90)
 
-[node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D" unique_id=1862607261]
+[node name="Camera2D" type="Camera2D" parent="Body" unique_id=1862607261]
+position = Vector2(0, -1)
 zoom = Vector2(2, 2)
 
 [node name="Water-fall bridge trees" parent="." unique_id=708905906 instance=ExtResource("5_b2bpf")]
 position = Vector2(176, 379)
 
 [node name="CanvasLayer" parent="." unique_id=420199614 instance=ExtResource("4_kldst")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=134974770]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1899849720]
+position = Vector2(7, 68)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_n4kwf")
