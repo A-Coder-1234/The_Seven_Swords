@@ -3,6 +3,7 @@ extends CharacterBody2D
 var direction: int = 3
 var velocity_Y: float = 0.0
 var velocity_X: float = 0.0
+var exelorate_by = 25
 #var velocity: Vector2 = Vector2(0, 0)
 var anim_cycle: float = 0
 var player_cords: Vector2 = Vector2(0, 0)
@@ -33,20 +34,20 @@ func update():
 		
 	# Check direction X
 		if dir.x > 0.25:
-			velocity.x += 0.6
+			velocity.x += exelorate_by
 			current_dir.x = 1
 		elif dir.x < -0.25:
-			velocity.x -= 0.6
+			velocity.x -= exelorate_by
 			current_dir.x = -1
 		elif dir.y > 0.25 or dir.y < -0.25:
 			current_dir.x = 0
 		
 	# Check direction y
 		if dir.y > 0.25:
-			velocity.y += 0.6
+			velocity.y += exelorate_by
 			current_dir.y = -1
 		elif dir.y < -0.25:
-			velocity.y -= 0.6
+			velocity.y -= exelorate_by
 			current_dir.y = 1
 		elif dir.x > 0.25 or dir.x < -0.25:
 			current_dir.y = 0
@@ -55,20 +56,20 @@ func update():
 
 		# Check direction X
 		if dir.x > 0.25:
-			velocity.x += 1
+			velocity.x += exelorate_by*2
 			current_dir.x = 1
 		elif dir.x < -0.25:
-			velocity.x -= 1
+			velocity.x -= exelorate_by*2
 			current_dir.x = -1
 		elif dir.y > 0.25 or dir.y < -0.25:
 			current_dir.x = 0
 		
 	# Check direction y
 		if dir.y > 0.25:
-			velocity.y += 1
+			velocity.y += exelorate_by*2
 			current_dir.y = -1
 		elif dir.y < -0.25:
-			velocity.y -= 1
+			velocity.y -= exelorate_by*2
 			current_dir.y = 1
 		elif dir.x > 0.25 or dir.x < -0.25:
 			current_dir.y = 0	
