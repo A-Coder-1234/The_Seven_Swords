@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://d01phr74jxpjm"]
+
+[ext_resource type="Texture2D" uid="uid://cmai4dke7esgp" path="res://Tilesets/Tileset/gentle sheets/gentle 32x32 v02.png" id="1_1oik2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ykeyw"]
+atlas = ExtResource("1_1oik2")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wqpnj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ykeyw")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j36ny"]
+radius = 6.0
+height = 20.0
+
+[node name="Bush" type="AnimatableBody2D" unique_id=1628504894]
+y_sort_enabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2028290829]
+y_sort_enabled = true
+sprite_frames = SubResource("SpriteFrames_wqpnj")
+offset = Vector2(0, -7)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=297150218]
+y_sort_enabled = true
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_j36ny")

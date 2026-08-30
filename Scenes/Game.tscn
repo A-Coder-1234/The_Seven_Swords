@@ -3,8 +3,10 @@
 [ext_resource type="Script" uid="uid://bodpd7v5e4mhm" path="res://Scripts/Main_Loop.gd" id="1_j5yw3"]
 [ext_resource type="PackedScene" uid="uid://brxio3abd23fq" path="res://Scenes/Player.tscn" id="2_gl6un"]
 [ext_resource type="PackedScene" uid="uid://btvrm2e887igo" path="res://Tilesets/Tileset/Game maps/Water-fall bridge.tmx" id="2_j5yw3"]
+[ext_resource type="PackedScene" uid="uid://bhaca043u4qb5" path="res://Scenes/Tree.tscn" id="4_7lihs"]
 [ext_resource type="PackedScene" uid="uid://b4lt88dkq2wbe" path="res://Scenes/canvas_layer.tscn" id="4_kldst"]
 [ext_resource type="PackedScene" uid="uid://d4d8cb7x5e4rq" path="res://Tilesets/Tileset/Game maps/Water-fall bridge trees.tmx" id="5_b2bpf"]
+[ext_resource type="PackedScene" uid="uid://d01phr74jxpjm" path="res://Scenes/Bush.tscn" id="5_fgofq"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n4kwf"]
 radius = 5.0
@@ -16,25 +18,121 @@ script = ExtResource("1_j5yw3")
 [node name="Water-fall bridge2" parent="." unique_id=1464631217 instance=ExtResource("2_j5yw3")]
 position = Vector2(176, 379)
 
-[node name="Body" parent="." unique_id=1041290788 instance=ExtResource("2_gl6un")]
-position = Vector2(-11, 90)
+[node name="Y-sorted objects" type="Node2D" parent="." unique_id=512931133]
+y_sort_enabled = true
+position = Vector2(176, 378)
 
-[node name="Camera2D" type="Camera2D" parent="Body" unique_id=1862607261]
+[node name="Body" parent="Y-sorted objects" unique_id=1041290788 instance=ExtResource("2_gl6un")]
+position = Vector2(-187, -288)
+
+[node name="Camera2D" type="Camera2D" parent="Y-sorted objects/Body" unique_id=1862607261]
 position = Vector2(0, -1)
 zoom = Vector2(2, 2)
 
+[node name="Trees&Stuff" type="Node2D" parent="Y-sorted objects" unique_id=1933054368]
+y_sort_enabled = true
+
+[node name="Tree" parent="Y-sorted objects/Trees&Stuff" unique_id=290204918 instance=ExtResource("4_7lihs")]
+position = Vector2(-169, -310)
+
+[node name="Tree2" parent="Y-sorted objects/Trees&Stuff" unique_id=215441574 instance=ExtResource("4_7lihs")]
+position = Vector2(-240, -232)
+
+[node name="Tree3" parent="Y-sorted objects/Trees&Stuff" unique_id=30950146 instance=ExtResource("4_7lihs")]
+position = Vector2(-283, -177)
+
+[node name="Tree4" parent="Y-sorted objects/Trees&Stuff" unique_id=1433818764 instance=ExtResource("4_7lihs")]
+position = Vector2(-168, -156)
+
+[node name="Tree5" parent="Y-sorted objects/Trees&Stuff" unique_id=506211442 instance=ExtResource("4_7lihs")]
+position = Vector2(-247, -363)
+
+[node name="Tree6" parent="Y-sorted objects/Trees&Stuff" unique_id=847121669 instance=ExtResource("4_7lihs")]
+position = Vector2(-262, -506)
+
+[node name="Tree7" parent="Y-sorted objects/Trees&Stuff" unique_id=1222537444 instance=ExtResource("4_7lihs")]
+position = Vector2(-167, -522)
+
+[node name="Tree8" parent="Y-sorted objects/Trees&Stuff" unique_id=267274167 instance=ExtResource("4_7lihs")]
+position = Vector2(-279, -618)
+
+[node name="Tree9" parent="Y-sorted objects/Trees&Stuff" unique_id=1692845653 instance=ExtResource("4_7lihs")]
+position = Vector2(-234, -715)
+
+[node name="Tree10" parent="Y-sorted objects/Trees&Stuff" unique_id=787434003 instance=ExtResource("4_7lihs")]
+position = Vector2(378, -778)
+
+[node name="Tree11" parent="Y-sorted objects/Trees&Stuff" unique_id=1988261145 instance=ExtResource("4_7lihs")]
+position = Vector2(479, -682)
+
+[node name="Tree12" parent="Y-sorted objects/Trees&Stuff" unique_id=939758503 instance=ExtResource("4_7lihs")]
+position = Vector2(537, -712)
+
+[node name="Tree13" parent="Y-sorted objects/Trees&Stuff" unique_id=1389831465 instance=ExtResource("4_7lihs")]
+position = Vector2(619, -681)
+
+[node name="Tree14" parent="Y-sorted objects/Trees&Stuff" unique_id=136855085 instance=ExtResource("4_7lihs")]
+position = Vector2(537, -602)
+
+[node name="Tree15" parent="Y-sorted objects/Trees&Stuff" unique_id=383839256 instance=ExtResource("4_7lihs")]
+position = Vector2(615, -538)
+
+[node name="Tree16" parent="Y-sorted objects/Trees&Stuff" unique_id=853309337 instance=ExtResource("4_7lihs")]
+position = Vector2(615, -442)
+
+[node name="Tree17" parent="Y-sorted objects/Trees&Stuff" unique_id=1675738337 instance=ExtResource("4_7lihs")]
+position = Vector2(536, -405)
+
+[node name="Tree18" parent="Y-sorted objects/Trees&Stuff" unique_id=453395992 instance=ExtResource("4_7lihs")]
+position = Vector2(568, -344)
+
+[node name="Tree19" parent="Y-sorted objects/Trees&Stuff" unique_id=117163732 instance=ExtResource("4_7lihs")]
+position = Vector2(488, -281)
+
+[node name="Tree20" parent="Y-sorted objects/Trees&Stuff" unique_id=419542744 instance=ExtResource("4_7lihs")]
+position = Vector2(586, -201)
+
+[node name="Tree21" parent="Y-sorted objects/Trees&Stuff" unique_id=671375105 instance=ExtResource("4_7lihs")]
+position = Vector2(538, -156)
+
+[node name="Bush" parent="Y-sorted objects/Trees&Stuff" unique_id=1628504894 instance=ExtResource("5_fgofq")]
+position = Vector2(-144, -281)
+
+[node name="Bush2" parent="Y-sorted objects/Trees&Stuff" unique_id=1694218719 instance=ExtResource("5_fgofq")]
+position = Vector2(-304, -409)
+
+[node name="Bush3" parent="Y-sorted objects/Trees&Stuff" unique_id=2012367072 instance=ExtResource("5_fgofq")]
+position = Vector2(-191, -520)
+
+[node name="Bush4" parent="Y-sorted objects/Trees&Stuff" unique_id=818220713 instance=ExtResource("5_fgofq")]
+position = Vector2(-220, -712)
+
+[node name="Bush5" parent="Y-sorted objects/Trees&Stuff" unique_id=1995314468 instance=ExtResource("5_fgofq")]
+position = Vector2(368, -745)
+
+[node name="Bush6" parent="Y-sorted objects/Trees&Stuff" unique_id=47482496 instance=ExtResource("5_fgofq")]
+position = Vector2(625, -777)
+
+[node name="Bush7" parent="Y-sorted objects/Trees&Stuff" unique_id=825575372 instance=ExtResource("5_fgofq")]
+position = Vector2(513, -600)
+
+[node name="Bush8" parent="Y-sorted objects/Trees&Stuff" unique_id=75410193 instance=ExtResource("5_fgofq")]
+position = Vector2(624, -425)
+
 [node name="Water-fall bridge trees2" parent="." unique_id=1656706963 instance=ExtResource("5_b2bpf")]
+visible = false
 position = Vector2(176, 378)
 
 [node name="CanvasLayer" parent="." unique_id=420199614 instance=ExtResource("4_kldst")]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=134974770]
+[node name="World Collisions" type="StaticBody2D" parent="." unique_id=134974770]
 constant_linear_velocity = Vector2(0, -20.315)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1899849720]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World Collisions" unique_id=1899849720]
+visible = false
 position = Vector2(7, 68)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_n4kwf")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=474560548]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="World Collisions" unique_id=474560548]
 polygon = PackedVector2Array(32, 123, 49, 123, 65, 107, 78, 107, 94, 123, 161, 123, 177, 107, 190, 107, 206, 123, 273, 123, 289, 107, 302, 107, 318, 123, 385, 123, 401, 107, 414, 107, 430, 123, 497, 123, 513, 107, 526, 107, 542, 123, 640, 123, 640, 107, 545, 107, 529, 91, 511, 91, 495, 107, 433, 107, 417, 91, 399, 91, 383, 107, 321, 107, 305, 91, 287, 91, 271, 107, 209, 107, 193, 91, 175, 91, 159, 107, 97, 107, 81, 91, 63, 91, 47, 107, 32, 107)

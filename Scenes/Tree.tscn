@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bhaca043u4qb5"]
+
+[ext_resource type="Texture2D" uid="uid://kt4hy6h4xbth" path="res://Tilesets/Tileset/gentle sheets/gentle trees 80x96 v02.png" id="1_gtca3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_itkj8"]
+atlas = ExtResource("1_gtca3")
+region = Rect2(0, 0, 80, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wqpnj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_itkj8")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0suky"]
+radius = 6.0
+
+[node name="Tree" type="AnimatableBody2D" unique_id=290204918]
+y_sort_enabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=649822842]
+y_sort_enabled = true
+sprite_frames = SubResource("SpriteFrames_wqpnj")
+offset = Vector2(0, -38)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=267197346]
+y_sort_enabled = true
+shape = SubResource("CircleShape2D_0suky")

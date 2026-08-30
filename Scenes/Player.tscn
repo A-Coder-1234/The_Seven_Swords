@@ -895,21 +895,28 @@ radius = 2.0
 height = 10.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=838843817]
+y_sort_enabled = true
 script = ExtResource("2_gntrk")
 
 [node name="Body" type="AnimatedSprite2D" parent="." unique_id=1041290788]
+y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_vmaen")
 animation = &"Idle backward"
+offset = Vector2(0, -9)
 
 [node name="Clotheing" type="AnimatedSprite2D" parent="." unique_id=1532842608]
+y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_n4kwf")
 animation = &"Idle backward"
+offset = Vector2(0, -9)
 
 [node name="Hair" type="AnimatedSprite2D" parent="." unique_id=1530960766]
+y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_kaoc4")
 animation = &"Idle backward"
+offset = Vector2(0, -9)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2006952907]
-position = Vector2(0, 9)
+y_sort_enabled = true
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_vmaen")
