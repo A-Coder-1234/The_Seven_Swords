@@ -3,7 +3,7 @@ extends CharacterBody2D
 var direction: int = 3
 var velocity_Y: float = 0.0
 var velocity_X: float = 0.0
-var exelorate_by = 25
+var exelorate_by = 30
 #var velocity: Vector2 = Vector2(0, 0)
 var anim_cycle: float = 0
 var player_cords: Vector2 = Vector2(0, 0)
