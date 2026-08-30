@@ -13,7 +13,7 @@ height = 16.0
 [node name="Node2D" type="Node2D" unique_id=1154430874]
 script = ExtResource("1_j5yw3")
 
-[node name="Water-fall bridge" parent="." unique_id=329532383 instance=ExtResource("2_j5yw3")]
+[node name="Water-fall bridge2" parent="." unique_id=1464631217 instance=ExtResource("2_j5yw3")]
 position = Vector2(176, 379)
 
 [node name="Body" parent="." unique_id=1041290788 instance=ExtResource("2_gl6un")]
@@ -23,8 +23,8 @@ position = Vector2(-11, 90)
 position = Vector2(0, -1)
 zoom = Vector2(2, 2)
 
-[node name="Water-fall bridge trees" parent="." unique_id=708905906 instance=ExtResource("5_b2bpf")]
-position = Vector2(176, 379)
+[node name="Water-fall bridge trees2" parent="." unique_id=1656706963 instance=ExtResource("5_b2bpf")]
+position = Vector2(176, 378)
 
 [node name="CanvasLayer" parent="." unique_id=420199614 instance=ExtResource("4_kldst")]
 

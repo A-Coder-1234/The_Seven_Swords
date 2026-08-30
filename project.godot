@@ -13,6 +13,8 @@ config_version=5
 config/name="The Seven Swords"
 run/main_scene="uid://y1wcetrbyc3v"
 config/features=PackedStringArray("4.7", "GL Compatibility")
+boot_splash/show_image=false
+boot_splash/use_filter=false
 config/icon="res://icon.svg"
 
 [autoload]

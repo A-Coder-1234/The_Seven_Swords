@@ -1,0 +1,23 @@
+[remap]
+
+importer="YATI"
+type="PackedScene"
+uid="uid://ecnh3b5wwdsq"
+path="res://.godot/imported/royal garden sample map 2.tmx-5a28da840be0104ab5f262fa1c2560e9.tscn"
+
+[deps]
+
+source_file="res://Tilesets/Tile sets/21.02a - Royal Garden 1/sample map/royal garden sample map 2.tmx"
+dest_files=["res://.godot/imported/royal garden sample map 2.tmx-5a28da840be0104ab5f262fa1c2560e9.tscn"]
+
+[params]
+
+use_default_filter=false
+add_class_as_metadata=false
+add_id_as_metadata=false
+no_alternative_tiles=false
+map_wangset_to_terrain=false
+custom_data_prefix="data_"
+tiled_project_file=""
+post_processor=""
+save_tileset_to=""
