@@ -30,14 +30,14 @@ position = Vector2(336, 155)
 
 [node name="Top_wall" parent="Bridge Parts" unique_id=975005520 instance=ExtResource("13_wxwew")]
 z_index = 101
-position = Vector2(336, 108)
+position = Vector2(336, 107)
 
 [node name="Botton wall" parent="Bridge Parts" unique_id=764107971 instance=ExtResource("5_3cx6b")]
 position = Vector2(337, 171)
 
 [node name="Top_bridge_area" parent="Bridge Parts" unique_id=1299167592 instance=ExtResource("6_3cx6b")]
 z_index = 4096
-position = Vector2(143, 101)
+position = Vector2(410, 163)
 
 [node name="Y-sorted objects" type="Node2D" parent="." unique_id=512931133]
 y_sort_enabled = true
@@ -170,6 +170,7 @@ position = Vector2(624, -377)
 [node name="Player" parent="Y-sorted objects" unique_id=1041290788 instance=ExtResource("2_gl6un")]
 z_index = 100
 position = Vector2(-187, -288)
+motion_mode = 1
 
 [node name="Camera2D" type="Camera2D" parent="Y-sorted objects/Player" unique_id=1862607261]
 position = Vector2(0, -1)

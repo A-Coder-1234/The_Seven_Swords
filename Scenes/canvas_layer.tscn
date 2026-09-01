@@ -9,3 +9,9 @@ fps_label = NodePath("fps_label")
 [node name="fps_label" type="Label" parent="." unique_id=418857141]
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="z_index_lable" type="Label" parent="." unique_id=239159082]
+offset_left = 1111.0
+offset_top = -1.0
+offset_right = 1151.0
+offset_bottom = 22.0

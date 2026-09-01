@@ -10,6 +10,7 @@ func _ready() -> void:
 	Global.connect("PLAYER_UPDATE", update)
 
 func _process(delta: float) -> void:
+	# fps counter
 	time_passed += delta
 	print("bannana")
 	

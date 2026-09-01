@@ -894,7 +894,7 @@ animations = [{
 radius = 2.0
 height = 10.0
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=838843817]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=838843817 groups=["player"]]
 y_sort_enabled = true
 script = ExtResource("2_gntrk")
 
