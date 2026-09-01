@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b5pugmdv0c1k1"]
+
+[ext_resource type="Texture2D" uid="uid://d28wt5q50aagc" path="res://Tilesets/Tileset/gentle sheets/gentle trees 80x96 no trunk.png" id="1_yinhk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yinhk"]
+atlas = ExtResource("1_yinhk")
+region = Rect2(0, 0, 80, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wqpnj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yinhk")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Tree Leaves" type="AnimatedSprite2D" unique_id=884021065]
+sprite_frames = SubResource("SpriteFrames_wqpnj")

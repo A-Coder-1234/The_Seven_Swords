@@ -5,31 +5,46 @@
 [ext_resource type="PackedScene" uid="uid://btvrm2e887igo" path="res://Tilesets/Tileset/Game maps/Water-fall bridge.tmx" id="2_j5yw3"]
 [ext_resource type="PackedScene" uid="uid://bhaca043u4qb5" path="res://Scenes/Tree.tscn" id="4_7lihs"]
 [ext_resource type="PackedScene" uid="uid://b4lt88dkq2wbe" path="res://Scenes/canvas_layer.tscn" id="4_kldst"]
-[ext_resource type="PackedScene" uid="uid://d4d8cb7x5e4rq" path="res://Tilesets/Tileset/Game maps/Water-fall bridge trees.tmx" id="5_b2bpf"]
+[ext_resource type="PackedScene" uid="uid://boisjuk24pxel" path="res://Tilesets/Tileset/Game maps/Botton wall.tmx" id="5_3cx6b"]
 [ext_resource type="PackedScene" uid="uid://d01phr74jxpjm" path="res://Scenes/Bush.tscn" id="5_fgofq"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n4kwf"]
-radius = 5.0
-height = 16.0
+[ext_resource type="PackedScene" uid="uid://b756ap04bi34v" path="res://Scenes/stunp.tscn" id="6_2irst"]
+[ext_resource type="PackedScene" uid="uid://ryr3fiobkedc" path="res://Scenes/top_bridge_area.tscn" id="6_3cx6b"]
+[ext_resource type="PackedScene" uid="uid://coxa4m5kneknv" path="res://Scenes/rock.tscn" id="7_71axn"]
+[ext_resource type="PackedScene" uid="uid://b5pugmdv0c1k1" path="res://Scenes/tree_leaves.tscn" id="9_bf53h"]
+[ext_resource type="PackedScene" uid="uid://dj3fkim4gijx1" path="res://Tilesets/Tileset/Game maps/Bridge.tmx" id="11_dahhg"]
+[ext_resource type="PackedScene" uid="uid://dlfnoqytq1pck" path="res://Scenes/Top wall.tscn" id="13_wxwew"]
 
 [node name="Node2D" type="Node2D" unique_id=1154430874]
 script = ExtResource("1_j5yw3")
+metadata/_edit_horizontal_guides_ = [81.0]
 
 [node name="Water-fall bridge2" parent="." unique_id=1464631217 instance=ExtResource("2_j5yw3")]
 position = Vector2(176, 379)
+
+[node name="Bridge Parts" type="Node2D" parent="." unique_id=1406958841]
+z_index = 1
+
+[node name="Bridge" parent="Bridge Parts" unique_id=162869239 instance=ExtResource("11_dahhg")]
+z_index = 98
+position = Vector2(336, 155)
+
+[node name="Top_wall" parent="Bridge Parts" unique_id=975005520 instance=ExtResource("13_wxwew")]
+z_index = 101
+position = Vector2(336, 108)
+
+[node name="Botton wall" parent="Bridge Parts" unique_id=764107971 instance=ExtResource("5_3cx6b")]
+position = Vector2(337, 171)
+
+[node name="Top_bridge_area" parent="Bridge Parts" unique_id=1299167592 instance=ExtResource("6_3cx6b")]
+z_index = 4096
+position = Vector2(143, 101)
 
 [node name="Y-sorted objects" type="Node2D" parent="." unique_id=512931133]
 y_sort_enabled = true
 position = Vector2(176, 378)
 
-[node name="Body" parent="Y-sorted objects" unique_id=1041290788 instance=ExtResource("2_gl6un")]
-position = Vector2(-187, -288)
-
-[node name="Camera2D" type="Camera2D" parent="Y-sorted objects/Body" unique_id=1862607261]
-position = Vector2(0, -1)
-zoom = Vector2(2, 2)
-
 [node name="Trees&Stuff" type="Node2D" parent="Y-sorted objects" unique_id=1933054368]
+z_index = 100
 y_sort_enabled = true
 
 [node name="Tree" parent="Y-sorted objects/Trees&Stuff" unique_id=290204918 instance=ExtResource("4_7lihs")]
@@ -119,20 +134,118 @@ position = Vector2(513, -600)
 [node name="Bush8" parent="Y-sorted objects/Trees&Stuff" unique_id=75410193 instance=ExtResource("5_fgofq")]
 position = Vector2(624, -425)
 
-[node name="Water-fall bridge trees2" parent="." unique_id=1656706963 instance=ExtResource("5_b2bpf")]
-visible = false
-position = Vector2(176, 378)
+[node name="Stunp" parent="Y-sorted objects/Trees&Stuff" unique_id=820066220 instance=ExtResource("6_2irst")]
+y_sort_enabled = true
+position = Vector2(592, -329)
+
+[node name="Stunp2" parent="Y-sorted objects/Trees&Stuff" unique_id=1420425688 instance=ExtResource("6_2irst")]
+y_sort_enabled = true
+position = Vector2(480, -169)
+
+[node name="Stunp3" parent="Y-sorted objects/Trees&Stuff" unique_id=1340329050 instance=ExtResource("6_2irst")]
+y_sort_enabled = true
+position = Vector2(464, -569)
+
+[node name="Stunp4" parent="Y-sorted objects/Trees&Stuff" unique_id=1637169471 instance=ExtResource("6_2irst")]
+y_sort_enabled = true
+position = Vector2(-304, -745)
+
+[node name="Stunp5" parent="Y-sorted objects/Trees&Stuff" unique_id=528688287 instance=ExtResource("6_2irst")]
+y_sort_enabled = true
+position = Vector2(-224, -441)
+
+[node name="Stunp6" parent="Y-sorted objects/Trees&Stuff" unique_id=1449983981 instance=ExtResource("6_2irst")]
+y_sort_enabled = true
+position = Vector2(-304, -265)
+
+[node name="Rock" parent="Y-sorted objects/Trees&Stuff" unique_id=789114559 instance=ExtResource("7_71axn")]
+position = Vector2(-288, -376)
+
+[node name="Rock2" parent="Y-sorted objects/Trees&Stuff" unique_id=1348478203 instance=ExtResource("7_71axn")]
+position = Vector2(352, -792)
+
+[node name="Rock3" parent="Y-sorted objects/Trees&Stuff" unique_id=379106147 instance=ExtResource("7_71axn")]
+position = Vector2(624, -377)
+
+[node name="Player" parent="Y-sorted objects" unique_id=1041290788 instance=ExtResource("2_gl6un")]
+z_index = 100
+position = Vector2(-187, -288)
+
+[node name="Camera2D" type="Camera2D" parent="Y-sorted objects/Player" unique_id=1862607261]
+position = Vector2(0, -1)
+zoom = Vector2(2, 2)
+
+[node name="Tree Tops" type="Node2D" parent="." unique_id=1220476865]
+z_index = 102
+
+[node name="Tree Leaves2" parent="Tree Tops" unique_id=884021065 instance=ExtResource("9_bf53h")]
+position = Vector2(8, 184)
+
+[node name="Tree Leaves3" parent="Tree Tops" unique_id=2001655316 instance=ExtResource("9_bf53h")]
+position = Vector2(-64, 108)
+
+[node name="Tree Leaves4" parent="Tree Tops" unique_id=907092912 instance=ExtResource("9_bf53h")]
+position = Vector2(-107, 163)
+
+[node name="Tree Leaves5" parent="Tree Tops" unique_id=444451262 instance=ExtResource("9_bf53h")]
+position = Vector2(7, 30)
+
+[node name="Tree Leaves6" parent="Tree Tops" unique_id=1050715580 instance=ExtResource("9_bf53h")]
+position = Vector2(-71, -23)
+
+[node name="Tree Leaves7" parent="Tree Tops" unique_id=871393259 instance=ExtResource("9_bf53h")]
+position = Vector2(-86, -166)
+
+[node name="Tree Leaves8" parent="Tree Tops" unique_id=1540289206 instance=ExtResource("9_bf53h")]
+position = Vector2(9, -182)
+
+[node name="Tree Leaves9" parent="Tree Tops" unique_id=411020094 instance=ExtResource("9_bf53h")]
+position = Vector2(-103, -278)
+
+[node name="Tree Leaves10" parent="Tree Tops" unique_id=755707368 instance=ExtResource("9_bf53h")]
+position = Vector2(-58, -375)
+
+[node name="Tree Leaves11" parent="Tree Tops" unique_id=2048439241 instance=ExtResource("9_bf53h")]
+position = Vector2(554, -438)
+
+[node name="Tree Leaves12" parent="Tree Tops" unique_id=1040984149 instance=ExtResource("9_bf53h")]
+position = Vector2(713, -372)
+
+[node name="Tree Leaves13" parent="Tree Tops" unique_id=1608944798 instance=ExtResource("9_bf53h")]
+position = Vector2(655, -342)
+
+[node name="Tree Leaves14" parent="Tree Tops" unique_id=1367438198 instance=ExtResource("9_bf53h")]
+position = Vector2(795, -341)
+
+[node name="Tree Leaves15" parent="Tree Tops" unique_id=1069675027 instance=ExtResource("9_bf53h")]
+position = Vector2(713, -262)
+
+[node name="Tree Leaves16" parent="Tree Tops" unique_id=893845859 instance=ExtResource("9_bf53h")]
+position = Vector2(791, -198)
+
+[node name="Tree Leaves17" parent="Tree Tops" unique_id=394970713 instance=ExtResource("9_bf53h")]
+position = Vector2(791, -102)
+
+[node name="Tree Leaves18" parent="Tree Tops" unique_id=992261091 instance=ExtResource("9_bf53h")]
+position = Vector2(712, -65)
+
+[node name="Tree Leaves19" parent="Tree Tops" unique_id=1693162102 instance=ExtResource("9_bf53h")]
+position = Vector2(744, -4)
+
+[node name="Tree Leaves20" parent="Tree Tops" unique_id=907585451 instance=ExtResource("9_bf53h")]
+position = Vector2(664, 59)
+
+[node name="Tree Leaves21" parent="Tree Tops" unique_id=833882805 instance=ExtResource("9_bf53h")]
+position = Vector2(762, 139)
+
+[node name="Tree Leaves22" parent="Tree Tops" unique_id=1169114 instance=ExtResource("9_bf53h")]
+position = Vector2(714, 184)
 
 [node name="CanvasLayer" parent="." unique_id=420199614 instance=ExtResource("4_kldst")]
 
 [node name="World Collisions" type="StaticBody2D" parent="." unique_id=134974770]
+z_index = 4096
 constant_linear_velocity = Vector2(0, -20.315)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World Collisions" unique_id=1899849720]
-visible = false
-position = Vector2(7, 68)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_n4kwf")
-
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="World Collisions" unique_id=474560548]
-polygon = PackedVector2Array(32, 123, 49, 123, 65, 107, 78, 107, 94, 123, 161, 123, 177, 107, 190, 107, 206, 123, 273, 123, 289, 107, 302, 107, 318, 123, 385, 123, 401, 107, 414, 107, 430, 123, 497, 123, 513, 107, 526, 107, 542, 123, 640, 123, 640, 107, 545, 107, 529, 91, 511, 91, 495, 107, 433, 107, 417, 91, 399, 91, 383, 107, 321, 107, 305, 91, 287, 91, 271, 107, 209, 107, 193, 91, 175, 91, 159, 107, 97, 107, 81, 91, 63, 91, 47, 107, 32, 107)
+polygon = PackedVector2Array(32, 123, 49, 123, 65, 107, 78, 107, 94, 123, 161, 123, 177, 107, 190, 107, 206, 123, 273, 123, 289, 107, 302, 107, 318, 123, 385, 123, 401, 107, 414, 107, 430, 123, 497, 123, 513, 107, 526, 107, 542, 123, 640, 123, 640, 118, 542, 118, 526, 102, 513, 102, 497, 118, 430, 118, 414, 102, 401, 102, 385, 118, 318, 118, 302, 102, 289, 102, 273, 118, 206, 118, 190, 102, 177, 102, 161, 118, 94, 118, 78, 102, 65, 102, 49, 118, 32, 118)

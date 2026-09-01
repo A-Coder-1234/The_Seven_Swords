@@ -72,6 +72,11 @@ Sprint={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Genral"
+2d_physics/layer_3="Bridge"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

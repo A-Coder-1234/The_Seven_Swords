@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ryr3fiobkedc"]
+
+[ext_resource type="Script" uid="uid://cag8rw3swuw3h" path="res://Scripts/Top_bridge_layer.gd" id="1_tpgkq"]
+
+[node name="Top_bridge_area" type="Area2D" unique_id=1299167592]
+script = ExtResource("1_tpgkq")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1876205490]
+position = Vector2(-111, -10)
+polygon = PackedVector2Array(0, 33, 17, 33, 33, 17, 47, 17, 63, 33, 129, 33, 145, 17, 159, 17, 175, 33, 241, 33, 257, 17, 271, 17, 287, 33, 353, 33, 368, 17, 368, 17, 383, 17, 399, 33, 465, 33, 481, 17, 495, 17, 511, 33, 608, 33, 608, 51, 0, 50)
+disabled = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

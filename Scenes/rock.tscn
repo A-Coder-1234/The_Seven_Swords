@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://coxa4m5kneknv"]
+
+[ext_resource type="Texture2D" uid="uid://cmai4dke7esgp" path="res://Tilesets/Tileset/gentle sheets/gentle 32x32 v02.png" id="1_lgx4v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mkji"]
+atlas = ExtResource("1_lgx4v")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wqpnj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5mkji")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0ts1m"]
+radius = 6.0
+height = 22.0
+
+[node name="Rock" type="AnimatableBody2D" unique_id=789114559]
+y_sort_enabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=364655250]
+y_sort_enabled = true
+sprite_frames = SubResource("SpriteFrames_wqpnj")
+offset = Vector2(0, -7)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=401578938]
+y_sort_enabled = true
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_0ts1m")

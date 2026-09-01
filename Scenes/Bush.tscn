@@ -18,8 +18,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j36ny"]
-radius = 6.0
-height = 20.0
+radius = 4.0
+height = 18.0
 
 [node name="Bush" type="AnimatableBody2D" unique_id=1628504894]
 y_sort_enabled = true

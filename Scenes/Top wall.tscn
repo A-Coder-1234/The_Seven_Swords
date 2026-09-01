@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dlfnoqytq1pck"]
+
+[ext_resource type="PackedScene" uid="uid://bm05w842d3wko" path="res://Tilesets/Tileset/Game maps/Top wall.tmx" id="1_24j57"]
+
+[node name="Top_wall" type="Node2D" unique_id=975005520]
+
+[node name="Top wall" parent="." unique_id=748549459 instance=ExtResource("1_24j57")]
