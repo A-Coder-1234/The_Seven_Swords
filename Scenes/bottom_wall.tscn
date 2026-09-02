@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://6tr5tnnfddo8"]
+
+[ext_resource type="PackedScene" uid="uid://boisjuk24pxel" path="res://Tilesets/Tileset/Game maps/Botton wall.tmx" id="1_0sx38"]
+
+[node name="Bottom_wall" type="Node2D" unique_id=198176371]
+
+[node name="Botton wall" parent="." unique_id=764107971 instance=ExtResource("1_0sx38")]

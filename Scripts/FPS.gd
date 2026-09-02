@@ -12,13 +12,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	# fps counter
 	time_passed += delta
-	print("bannana")
 	
 	# Every time 1 full second passes, update the text and reset
 	if time_passed >= 1.0:
-		print("orrange")
 		if fps_label:
-			print("apple")
 			fps_label.text = "Signal Rate: " + str(signal_count) + " Hz"
 		
 		# Reset tracking variables for the next second

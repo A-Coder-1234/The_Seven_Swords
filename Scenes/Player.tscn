@@ -896,6 +896,7 @@ height = 10.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=838843817 groups=["player"]]
 y_sort_enabled = true
+motion_mode = 1
 script = ExtResource("2_gntrk")
 
 [node name="Body" type="AnimatedSprite2D" parent="." unique_id=1041290788]

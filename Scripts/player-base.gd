@@ -109,7 +109,6 @@ func update():
 		#degrees = angle * (180/PI)
 		#current_dir = round(degrees/45) % 8
 		#print("change")
-	print(frame_count)
 	
 	#print(player_cords)
 

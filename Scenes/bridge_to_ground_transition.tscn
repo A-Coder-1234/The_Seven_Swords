@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dpjitnd2of04d"]
+
+[ext_resource type="Script" uid="uid://oy5dccupxe58" path="res://Scripts/bridge_to_ground_transition.gd" id="1_k0xax"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wqpnj"]
+size = Vector2(15.5, 48)
+
+[node name="Bridge_to_ground_transition" type="Area2D" unique_id=1179519094]
+script = ExtResource("1_k0xax")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=201715286]
+shape = SubResource("RectangleShape2D_wqpnj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

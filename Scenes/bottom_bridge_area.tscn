@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://n0n8ocssy4gg"]
+
+[ext_resource type="Script" uid="uid://c222ac2bjkg6b" path="res://Scripts/bottom_bridge_layer.gd" id="1_680cu"]
+
+[node name="Bottom_bridge_layer" type="Area2D" unique_id=1310265967]
+script = ExtResource("1_680cu")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=564501052]
+position = Vector2(-269.99734, 72.73204)
+polygon = PackedVector2Array(-3.002655, -12.73204, -3.002655, 22.26796, 15.997345, 22.26796, 31.997345, 38.26796, 47.997345, 38.26796, 63.997345, 22.26796, 127.997345, 22.26796, 143.99734, 38.26796, 159.99734, 38.26796, 175.99734, 22.26796, 239.99734, 22.26796, 255.99734, 38.26796, 271.99734, 38.26796, 287.99734, 22.26796, 351.99734, 22.26796, 367.99734, 38.26796, 383.99734, 38.26796, 399.99734, 22.26796, 463.99734, 22.26796, 479.99734, 38.26796, 495.99734, 38.26796, 511.99734, 22.26796, 575.9973, 22.26796, 591.9973, 38.26796, 591.9973, 22.26796, 610.9973, 22.26796, 610.9973, -12.73204)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
