@@ -5,14 +5,16 @@ var velocity_Y: float = 0.0
 var velocity_X: float = 0.0
 var exelorate_by = 30
 #var velocity: Vector2 = Vector2(0, 0)
-var anim_cycle: float = 0
+var anim_cycle: float = 0.0
 var player_cords: Vector2 = Vector2(0, 0)
 var dir = Input.get_vector("Left", "Right", "Forward", "Back")
-var frame_count: float = 0
+var frame_count: float = 0.0
 var last_dir: Vector2 = Vector2(0, 0)
 var current_dir: Vector2 = Vector2(0, 0)
-var angle: float = 0
-var degrees: float = 0
+var angle: float = 0.0
+var degrees: float = 0.0
+var z_depth: int = 0
+var fall_distance: int = 0
 
 # Frame count is for tracking the current frame and last_dir will store the direction each frame so the program can find out if the direction has changed and reset the frame counter.
 

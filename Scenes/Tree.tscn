@@ -2,15 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://kt4hy6h4xbth" path="res://Tilesets/Tileset/gentle sheets/gentle trees 80x96 v02.png" id="1_gtca3"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_itkj8"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtca3"]
 atlas = ExtResource("1_gtca3")
-region = Rect2(0, 0, 80, 96)
+region = Rect2(80, 0, 80, 96)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wqpnj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_itkj8")
+"texture": SubResource("AtlasTexture_gtca3")
 }],
 "loop": 1,
 "name": &"default",

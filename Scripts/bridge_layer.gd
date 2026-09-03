@@ -15,11 +15,7 @@ func _on_body_entered(body: Node2D) -> void:
 	body.z_index = 102
 
 func _on_body_exited(body: Node2D) -> void:
-	if body.position.x > 32 and body.position.x < 640:
-		body.z_index = 98
-		print("Down")
-		print(body.position.x)
+	if body.position.x > 29 and body.position.x < 643:
+		body.z_index = 100
 	else:
 		body.z_index = 100
-		print("Out")
-		print(body.position.x)

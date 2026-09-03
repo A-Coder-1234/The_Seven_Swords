@@ -12,15 +12,8 @@ func _process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	body.z_index = 98
+	body.z_index = 105
 
 
 func _on_body_exited(body: Node2D) -> void:
-	if body.position.x > 32 and body.position.x < 640:
-		body.z_index = 102
-		print("Up")
-		print(body.position.x)
-	else:
-		body.z_index = 100
-		print("Out")
-		print(body.position.x)
+	body.z_index = 100
