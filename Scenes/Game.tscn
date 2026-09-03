@@ -175,6 +175,7 @@ position = Vector2(624, -377)
 [node name="Player" parent="Y-sorted objects" unique_id=1041290788 instance=ExtResource("2_gl6un")]
 z_index = 100
 position = Vector2(0, 125)
+motion_mode = 0
 
 [node name="Camera2D" type="Camera2D" parent="Y-sorted objects/Player" unique_id=1862607261]
 position = Vector2(0, -1)

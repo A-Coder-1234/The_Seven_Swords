@@ -4,7 +4,6 @@ var direction: int = 3
 var velocity_Y: float = 0.0
 var velocity_X: float = 0.0
 var exelorate_by = 30
-#var velocity: Vector2 = Vector2(0, 0)
 var anim_cycle: float = 0.0
 var player_cords: Vector2 = Vector2(0, 0)
 var dir = Input.get_vector("Left", "Right", "Forward", "Back")
@@ -15,6 +14,10 @@ var angle: float = 0.0
 var degrees: float = 0.0
 var z_depth: int = 0
 var fall_distance: int = 0
+var units_to_fall: int = 0
+var units_fallen: int = 0
+var fall_unit: int = 250
+var fall_steps: int = 2
 
 # Frame count is for tracking the current frame and last_dir will store the direction each frame so the program can find out if the direction has changed and reset the frame counter.
 
@@ -27,7 +30,6 @@ func update():
 	# 0.25
 	# Create input vector
 	dir = Input.get_vector("Left", "Right", "Forward", "Back")
-	#print(dir)
 	
 	# Cache last direction
 	last_dir = current_dir
@@ -55,7 +57,7 @@ func update():
 			current_dir.y = 0
 	
 	else:
-
+	
 		# Check direction X
 		if dir.x > 0.25:
 			velocity.x += exelorate_by*2
@@ -74,46 +76,26 @@ func update():
 			velocity.y -= exelorate_by*2
 			current_dir.y = 1
 		elif dir.x > 0.25 or dir.x < -0.25:
-			current_dir.y = 0	
+			current_dir.y = 0
 	
-	#print(velocity)
-	#velocity.x = 0
-	#velocity.y = 0
-	
-	#Check for input
-	#if Input.is_action_pressed("Forward"):
-		#velocity_Y += 0.5
-		# print("Forward")
-	#elif Input.is_action_pressed("Back"):
-		#velocity_Y -= 0.5
-		# print("Back")
-	#elif Input.is_action_pressed("Right"):
-		#velocity_X += 0.5
-		# print("Right")
-	#elif Input.is_action_pressed("Left"):
-		#velocity_X -= 0.5
-		# print("Left")
+	# Calculate falling logic
+	if fall_distance > 0:
+		if units_to_fall == 0:
+			units_to_fall = fall_distance * fall_steps
+		if units_fallen == units_to_fall:
+			z_depth -= fall_distance
+			units_to_fall = 0
+			units_fallen = 0
+			fall_distance = 0
+		else:
+			velocity.x = 0
+			velocity.y = fall_unit
+			units_fallen += 1
 	
 	# Update player cords
 	player_cords.x += velocity.x
 	player_cords.y += velocity.y
 	
-	#angle = atan2(player_cords.y, player_cords.x)
-	#degrees = angle * (180/PI)
-	#current_dir = round(degrees/45) % 8
-	
-	# Calcule the directon the player is is faceing
-	# Will only change if the player moved
-	# The warn is ok because this is just computeing an angle and does not need a float level of presision. It also must return a hole number.
-	# If anyone knows how to dissable the warning pleas do so.
-	#if player_cords.x != 0 and player_cords.y != 0:
-		#angle = atan2(player_cords.x, player_cords.y)
-		#degrees = angle * (180/PI)
-		#current_dir = round(degrees/45) % 8
-		#print("change")
-	
-	#print(player_cords)
-
 	# Move player on screen
 	move_and_slide()
 	
@@ -126,43 +108,10 @@ func update():
 	if velocity.y < 0.001 and velocity.y > -0.001:
 		velocity.y = 0
 	
-	#velocity_X = 0
-	#velocity_Y = 0
-	
-	#Update velocity X
-	#if velocity_X > 0:
-		#velocity_X -= 0.05
-	#if velocity_X < 0:
-		#velocity_X += 0.05
-	# Update velocity Y
-	#if velocity_Y > 0:
-		#velocity_Y -= 0.05
-	#elif velocity_Y <0:
-		#velocity_Y += 0.05
-	
-	# Move player on screen
-	#position += player_cords
-	#player_cords = Vector2(0,0)
-	
-	
-	
-	
-	
-#Animate Player
+	#Animate Player
 	
 	# Update frame count
 	frame_count += 1
-	#if frame_count > 28:
-		#frame_count = 0
-	# If the player changed directon reset the frame count
-	#if dir.x == 1:
-		#if dir.x != last_dir.x:
-			#frame_count = 0
-	#elif dir.x == -1:
-		#if dir.x != last_dir.x:
-			#frame_count = 0
-	#elif dir.y != last_dir.y:
-		#frame_count = 0
 	if frame_count > 28:
 		frame_count = 0
 	
@@ -203,7 +152,6 @@ func update():
 			$Hair.animation = "Idle forward"
 	
 	# Apply the animation
-	# The warning is ok but I don't know how to catch errors
 	if velocity.x != 0 or velocity.y != 0:
 		$Body.frame = frame_count/6
 		$Clotheing.frame = frame_count/6
@@ -212,18 +160,4 @@ func update():
 		$Body.frame = 0
 		$Clotheing.frame = 0
 		$Hair.frame = 0
-
-#func _process(delta: float) -> void:
-	#if direction > 0:
-		#if direction == 1:
-			#pass
-		#elif direction == 2:
-			#pass
-		#elif  direction == 3:
-			#pass
-		#elif direction == 4:
-			#pass
-
-#func _input(event):
-	#if event.is_action_pressed()
-	
+	print(z_depth)
