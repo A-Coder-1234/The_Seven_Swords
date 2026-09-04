@@ -15,9 +15,13 @@
 [ext_resource type="PackedScene" uid="uid://dlfnoqytq1pck" path="res://Scenes/Top wall.tscn" id="13_wxwew"]
 [ext_resource type="PackedScene" uid="uid://n0n8ocssy4gg" path="res://Scenes/bottom_bridge_area.tscn" id="14_wxwew"]
 [ext_resource type="Script" uid="uid://bgmcuq84wndd0" path="res://Scripts/River_Banks_Collisions.gd" id="15_acvyw"]
+[ext_resource type="Script" uid="uid://cjrhsxsacf7cm" path="res://Scenes/Not_Hit_Bridge.gd" id="16_alh3a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wqpnj"]
-size = Vector2(9.125, 123)
+size = Vector2(9.125, 240.125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ts1m"]
+size = Vector2(592, 112)
 
 [node name="Node2D" type="Node2D" unique_id=1154430874]
 script = ExtResource("1_j5yw3")
@@ -265,6 +269,20 @@ position = Vector2(52.4375, -74.5)
 script = ExtResource("15_acvyw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World_Falling/Area2D" unique_id=584105397]
+position = Vector2(9.5625, 43.4375)
 shape = SubResource("RectangleShape2D_wqpnj")
 
+[node name="World not colliding" type="Node2D" parent="." unique_id=1271012840]
+position = Vector2(0, -16)
+
+[node name="Area2D" type="Area2D" parent="World not colliding" unique_id=380182060]
+script = ExtResource("16_alh3a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World not colliding/Area2D" unique_id=1348157923]
+z_index = 4096
+position = Vector2(344, 155)
+shape = SubResource("RectangleShape2D_0ts1m")
+
 [connection signal="body_entered" from="World_Falling/Area2D" to="World_Falling/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="World not colliding/Area2D" to="World not colliding/Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="World not colliding/Area2D" to="World not colliding/Area2D" method="_on_body_exited"]

@@ -10,6 +10,7 @@ Alpha Testing
 Render layering:
 0:Tile Map
 1: Containers
+98: Player Under Bridge
 99: Bridge
 100: Player Defult, Y sorting objects
 101: Bridge Top Wall

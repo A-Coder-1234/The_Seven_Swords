@@ -160,4 +160,4 @@ func update():
 		$Body.frame = 0
 		$Clotheing.frame = 0
 		$Hair.frame = 0
-	print(z_depth)
+	print(z_index)
