@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b4hx28b306741"]
+
+[ext_resource type="Script" uid="uid://0mvij008l700" path="res://Scripts/bridge_supports_layering.gd" id="1_dvf2x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wqpnj"]
+size = Vector2(576, 22)
+
+[node name="Bridge supports layering" type="Area2D" unique_id=1894840998]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_dvf2x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1565801184]
+position = Vector2(0, 55)
+shape = SubResource("RectangleShape2D_wqpnj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

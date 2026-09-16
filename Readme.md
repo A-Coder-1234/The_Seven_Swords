@@ -16,7 +16,7 @@ Render layering:
 101: Bridge Top Wall
 102: Player On Bridge
 103: Bridge Bottom Wall
-104: Player below bottom part of bridge
+104: Player above bottom part of bridge
 105: Tree Tops
 9999: Colision/Debug Objects
 
@@ -24,3 +24,5 @@ Z-Depth:
 1000 = flying
 
 FINISH THE GAME AND IT WILL BE OVER!!!!!
+
+If a body has a z_depth variable then it is an entity.

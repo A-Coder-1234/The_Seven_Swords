@@ -13,6 +13,7 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	body.z_index = 102
+	print("bad")
 
 func _on_body_exited(body: Node2D) -> void:
 	if "z_depth" in body:
