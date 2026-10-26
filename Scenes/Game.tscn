@@ -995,10 +995,10 @@ position = Vector2(-208, -384)
 collision_layer = 7
 collision_mask = 7
 
-[node name="Left_of_bridge_cliff1" type="CollisionPolygon2D" parent="Cliff&river edges" unique_id=1401125676]
+[node name="Left_of_river_cliff1" type="CollisionPolygon2D" parent="Cliff&river edges" unique_id=1401125676]
 polygon = PackedVector2Array(662, 176, 663, 179, 669, 182, 760, 182, 760, 183, 668, 183, 662, 180, 660, 176)
 
-[node name="Left_of_bridge_cliff2" type="CollisionPolygon2D" parent="Cliff&river edges" unique_id=817232970]
+[node name="Left_of_river_cliff2" type="CollisionPolygon2D" parent="Cliff&river edges" unique_id=817232970]
 polygon = PackedVector2Array(768, 183, 848, 183, 848, 182, 768, 182)
 
 [node name="Right_river_bank" type="CollisionPolygon2D" parent="Cliff&river edges" unique_id=899167856]
@@ -1008,9 +1008,12 @@ polygon = PackedVector2Array(672, 128, 676, 125, 677, 121, 677, 46, 675, 44, 667
 position = Vector2(2, 0)
 polygon = PackedVector2Array(75, 124, 75, -129, 58, -139, 58, -161, 29, -202, 29, -220, 11, -234, 11, -234, 11, -375, 21, -376, 26, -384, 26, -452, 37, -455, 43, -461, 43, -576, 45, -576, 45, -461, 38, -454, 28, -451, 28, -384, 22, -375, 13, -374, 13, -235, 31, -221, 31, -202, 59, -162, 59, -140, 76, -130, 76, 124)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cliff&river edges" unique_id=610005874]
+[node name="Right_of_river_cliff1" type="CollisionPolygon2D" parent="Cliff&river edges" unique_id=610005874]
 position = Vector2(2, 0)
 polygon = PackedVector2Array(66, 187, 74, 179, 74, 176, 72, 176, 72, 179, 65, 186, -42, 187, -42, 188)
+
+[node name="Right_of_river_cliff2" type="CollisionPolygon2D" parent="Cliff&river edges" unique_id=929964189]
+polygon = PackedVector2Array(-48, 187, -112, 187, -128, 204, -207, 204, -242, 236, -306, 236, -321, 220, -399, 220, -417, 236, -496, 236, -530, 204, -562, 204, -577, 188, -623, 188, -675, 236, -751, 236, -769, 252, -816, 252, -832, 236, -848, 236, -866, 252, -944, 252, -961, 268, -977, 268, -997, 284, -1057, 284, -1073, 268, -1264, 268, -1298, 301, -1394, 301, -1410, 285, -1490, 285, -1505, 269, -1552, 269, -1552, 270, -1505, 270, -1491, 285, -1489, 286, -1411, 286, -1394, 303, -1298, 302, -1264, 270, -1074, 269, -1057, 286, -997, 286, -976, 269, -960, 269, -944, 253, -865, 253, -848, 237, -833, 237, -816, 254, -768, 253, -750, 237, -674, 237, -622, 189, -578, 189, -563, 205, -532, 205, -496, 238, -417, 238, -398, 222, -322, 221, -306, 238, -242, 238, -207, 206, -128, 206, -112, 188, -48, 188)
 
 [node name="Stone_bridge" type="Node2D" parent="." unique_id=687166342]
 

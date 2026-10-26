@@ -1,5 +1,4 @@
 To do:
-More collisions
 Enemies
 Refine player movement
 Combat system
@@ -21,9 +20,9 @@ Dev log:
 	Finished right fort
 	Finished stone bridge
 	Finished sus house
+	Added collisions along the cliff top so players can't walk over the cliff anymore.
 	
 Todo:
 	Sprint cooldown
 	Shooty guy
-	Right fort
 	Entities interact with forts
