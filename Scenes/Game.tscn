@@ -8,8 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://iy03khapbrmq" path="res://Scenes/Forts/fort_l_side_wall.tscn" id="5_bf53h"]
 [ext_resource type="PackedScene" uid="uid://dwtoajs7wx57y" path="res://Scenes/Forts/fort_l_catwalk.tscn" id="6_7lihs"]
 [ext_resource type="PackedScene" uid="uid://j4a41nvoe560" path="res://Scenes/Forts/fort_r_top_wall.tscn" id="6_wxwew"]
+[ext_resource type="PackedScene" uid="uid://c2vv6te67k4u6" path="res://Tilesets/Tileset/Game maps/Sus_house.tmx" id="7_356ba"]
 [ext_resource type="PackedScene" uid="uid://b3wf0bt1yh3fl" path="res://Scenes/Forts/fort_gate_l_top.tscn" id="7_fgofq"]
 [ext_resource type="PackedScene" uid="uid://e5cwivbikf3n" path="res://Scenes/Forts/fort_gate_l_bottom.tscn" id="8_2irst"]
+[ext_resource type="PackedScene" uid="uid://7xvydm44sho" path="res://Tilesets/Tileset/Game maps/Sus_house_roof.tmx" id="8_i4lct"]
 [ext_resource type="Script" uid="uid://cyqtfk3bh4tde" path="res://Scripts/walk_on_catwalk.gd" id="10_71axn"]
 [ext_resource type="Script" uid="uid://c370r1fmsys14" path="res://Scripts/walk_behind_catwalk.gd" id="11_dahhg"]
 [ext_resource type="Script" uid="uid://su1ld1vxguid" path="res://Scripts/walk_infront_of_gates.gd" id="12_3so38"]
@@ -27,6 +29,9 @@
 [ext_resource type="PackedScene" uid="uid://clyjbhhpp7t48" path="res://Scenes/stone_bridge_bottom_wall.tscn" id="24_raj38"]
 [ext_resource type="Script" uid="uid://bwn8xbq5q5qk7" path="res://Scripts/walk_behind_top_wall.gd" id="26_i0vto"]
 [ext_resource type="Script" uid="uid://cj4ctm8jsgj80" path="res://Scripts/walk_infront_of_bottom_wall.gd" id="27_3jf1l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fqnvg"]
+size = Vector2(112, 96)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bf53h"]
 size = Vector2(130, 6)
@@ -400,7 +405,7 @@ position = Vector2(889, -391)
 position = Vector2(695, -520)
 
 [node name="Player" parent="Y_sorting_container" unique_id=838843817 instance=ExtResource("2_gl6un")]
-position = Vector2(-314, -296)
+position = Vector2(-797, -580)
 
 [node name="Camera2D" type="Camera2D" parent="Y_sorting_container/Player" unique_id=2046303742]
 zoom = Vector2(2, 2)
@@ -427,6 +432,26 @@ y_sort_enabled = true
 [node name="Fort_r_top_wall" parent="Y_sorting_container/Y_sorting_fort_sceens/Right_fort" unique_id=575604553 instance=ExtResource("6_wxwew")]
 y_sort_enabled = true
 position = Vector2(496, -384)
+
+[node name="Sus_house_base" parent="Y_sorting_container" unique_id=857142950 instance=ExtResource("7_356ba")]
+y_sort_enabled = true
+position = Vector2(-800, -720)
+
+[node name="Sus_house" type="Node2D" parent="." unique_id=1501796693]
+
+[node name="Sceens" type="Node2D" parent="Sus_house" unique_id=1379005514]
+
+[node name="Sus_house_roof" parent="Sus_house/Sceens" unique_id=1104964276 instance=ExtResource("8_i4lct")]
+position = Vector2(-800, -721)
+
+[node name="Collisions" type="Node2D" parent="Sus_house" unique_id=67268030]
+
+[node name="Sus_house_collision" type="StaticBody2D" parent="Sus_house/Collisions" unique_id=844188900]
+position = Vector2(-800, -720)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sus_house/Collisions/Sus_house_collision" unique_id=1287530567]
+position = Vector2(8, 48)
+shape = SubResource("RectangleShape2D_fqnvg")
 
 [node name="Tree_leafs" type="Node2D" parent="." unique_id=1946730505]
 

@@ -20,10 +20,10 @@ Dev log:
 	Finished left fort
 	Finished right fort
 	Finished stone bridge
+	Finished sus house
 	
 Todo:
 	Sprint cooldown
 	Shooty guy
 	Right fort
 	Entities interact with forts
-	House

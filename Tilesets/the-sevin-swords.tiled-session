@@ -9,6 +9,22 @@
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
+        "Tileset/Game maps/Botton wall.tmx": {
+            "scale": 1.0919433593749999,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": -0.45789920851404986,
+                "y": -0.4578992085141067
+            }
+        },
+        "Tileset/Game maps/Bridge.tmx": {
+            "scale": 1.09,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": -0.45871559633030756,
+                "y": -0.4587155963302507
+            }
+        },
         "Tileset/Game maps/Briges.tsx": {
             "scaleInDock": 2.0529,
             "scaleInEditor": 2.291
@@ -22,33 +38,49 @@
             "scaleInEditor": 2.3566
         },
         "Tileset/Game maps/Overworld.tmx": {
-            "scale": 1.5755,
+            "scale": 2.28,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": -9.838146620120597,
-                "y": -45.69977784830212
+                "x": -4.166666666666629,
+                "y": -64.69298245614038
+            }
+        },
+        "Tileset/Game maps/Sus_house.tmx": {
+            "scale": 1.74228515625,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": -0.28697942940419807,
+                "y": -0.28697942940419807
+            }
+        },
+        "Tileset/Game maps/Top wall.tmx": {
+            "scale": 1.0919433593749999,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": -0.45789920851404986,
+                "y": -0.4578992085141067
             }
         },
         "Tileset/Game maps/Water-fall bridge trees.tmx": {
             "expandedObjectLayers": [
                 15
             ],
-            "scale": 3.8133,
+            "scale": 3.81,
             "selectedLayer": 10,
             "viewCenter": {
-                "x": -248.99693179136182,
-                "y": -200.6136417276375
+                "x": -248.9501312335958,
+                "y": -200.65616797900262
             }
         },
         "Tileset/Game maps/Water-fall bridge.tmx": {
             "expandedObjectLayers": [
                 15
             ],
-            "scale": 0.5459,
-            "selectedLayer": 10,
+            "scale": 2.9617,
+            "selectedLayer": 11,
             "viewCenter": {
-                "x": 151.1265799596996,
-                "y": -146.54698662758744
+                "x": -800.3849140696223,
+                "y": -691.3259276766721
             }
         },
         "Tileset/_gentle forest sample map.tmx": {
@@ -168,9 +200,9 @@
     ],
     "project": "the-sevin-swords.tiled-project",
     "recentFiles": [
-        "Tileset/Game maps/Water-fall bridge.tmx",
-        "Tileset/Game maps/Water-fall bridge trees.tmx",
         "Tileset/gentle trees 80x96 v02.tsx",
+        "Tileset/Game maps/Water-fall bridge trees.tmx",
+        "Tileset/Game maps/Water-fall bridge.tmx",
         "Tileset/gentle 32x32 v01.tsx",
         "Tileset/gentle 32x32 v02.tsx",
         "Tileset/gentle 32x32 v03.tsx",
