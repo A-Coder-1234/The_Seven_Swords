@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+const Is_entity = true
+
+# Defines important variables
 var direction: int = 3
 var velocity_Y: float = 0.0
 var velocity_X: float = 0.0
@@ -12,23 +15,11 @@ var last_dir: Vector2 = Vector2(0, 0)
 var current_dir: Vector2 = Vector2(0, 0)
 var angle: float = 0.0
 var degrees: float = 0.0
-var z_depth: int = 0
-var fall_distance: int = 0
-var units_to_fall: int = 0
-var units_fallen: int = 0
-var fall_unit: int = 250
-var fall_steps: int = 2
-var in_water: bool = false
 
-# Frame count is for tracking the current frame and last_dir will store the direction each frame so the program can find out if the direction has changed and reset the frame counter.
-
-func _ready() -> void:
-	Global.connect("PLAYER_UPDATE", update)
+func _process(_delta: float) -> void:
 	
-func update():
-	
-# Move Player
-	# 0.25
+	# Move Player
+	# 0.25 degrees is the window for each of the 8 directions on the joy stick
 	# Create input vector
 	dir = Input.get_vector("Left", "Right", "Forward", "Back")
 	
@@ -78,21 +69,7 @@ func update():
 			current_dir.y = 1
 		elif dir.x > 0.25 or dir.x < -0.25:
 			current_dir.y = 0
-	
-	# Calculate falling logic
-	if fall_distance > 0:
-		if units_to_fall == 0:
-			units_to_fall = fall_distance * fall_steps
-		if units_fallen == units_to_fall:
-			z_depth -= fall_distance
-			units_to_fall = 0
-			units_fallen = 0
-			fall_distance = 0
-		else:
-			velocity.x = 0
-			velocity.y = fall_unit
-			units_fallen += 1
-	
+		
 	# Update player cords
 	player_cords.x += velocity.x
 	player_cords.y += velocity.y
@@ -119,78 +96,38 @@ func update():
 	# Change direction
 	if velocity.x != 0 or velocity.y != 0:
 		if 	current_dir.x == 1:
-			if in_water:
-				$Body.animation = "Swim right"
-				$Clotheing.animation = "Swim right"
-				$Hair.animation = "Walk right"
-			else:
-				$Body.animation = "Walk right"
-				$Clotheing.animation = "Walk right"
-				$Hair.animation = "Walk right"
+			$Body.animation = "Walk right"
+			$Clotheing.animation = "Walk right"
+			$Hair.animation = "Walk right"
 		elif current_dir.x == -1:
-			if in_water:
-				$Body.animation = "Swim left"
-				$Clotheing.animation = "Swim left"
-				$Hair.animation = "Walk left"
-			else:
-				$Body.animation = "Walk left"
-				$Clotheing.animation = "Walk left"
-				$Hair.animation = "Walk left"
+			$Body.animation = "Walk left"
+			$Clotheing.animation = "Walk left"
+			$Hair.animation = "Walk left"
 		elif current_dir.y == 1:
-			if in_water:
-				$Body.animation = "Swim backward"
-				$Clotheing.animation = "Swim backward"
-				$Hair.animation = "Walk backward"
-			else:
-				$Body.animation = "Walk backward"
-				$Clotheing.animation = "Walk backward"
-				$Hair.animation = "Walk backward"
+			$Body.animation = "Walk backward"
+			$Clotheing.animation = "Walk backward"
+			$Hair.animation = "Walk backward"
 		elif current_dir.y == -1:
-			if in_water:
-				$Body.animation = "Swim forward"
-				$Clotheing.animation = "Swim forward"
-				$Hair.animation = "Walk forward"
-			else:
-				$Body.animation = "Walk forward"
-				$Clotheing.animation = "Walk forward"
-				$Hair.animation = "Walk forward"
+			$Body.animation = "Walk forward"
+			$Clotheing.animation = "Walk forward"
+			$Hair.animation = "Walk forward"
 	else:
 		if 	current_dir.x == 1:
-			if in_water:
-				$Body.animation = "Idle water right"
-				$Clotheing.animation = "Idle water right"
-				$Hair.animation = "Idle water right"
-			else:
-				$Body.animation = "Idle right"
-				$Clotheing.animation = "Idle right"
-				$Hair.animation = "Idle right"
+			$Body.animation = "Idle right"
+			$Clotheing.animation = "Idle right"
+			$Hair.animation = "Idle right"
 		elif current_dir.x == -1:
-			if in_water:
-				$Body.animation = "Idle water left"
-				$Clotheing.animation = "Idle water left"
-				$Hair.animation = "Idle water left"
-			else:
-				$Body.animation = "Idle left"
-				$Clotheing.animation = "Idle left"
-				$Hair.animation = "Idle left"
+			$Body.animation = "Idle left"
+			$Clotheing.animation = "Idle left"
+			$Hair.animation = "Idle left"
 		elif current_dir.y == 1:
-			if in_water:
-				$Body.animation = "Idle water backward"
-				$Clotheing.animation = "Idle water backward"
-				$Hair.animation = "Idle water backward"
-			else:
-				$Body.animation = "Idle backward"
-				$Clotheing.animation = "Idle backward"
-				$Hair.animation = "Idle backward"
+			$Body.animation = "Idle backward"
+			$Clotheing.animation = "Idle backward"
+			$Hair.animation = "Idle backward"
 		elif current_dir.y == -1:
-			if in_water:
-				$Body.animation = "Idle water forward"
-				$Clotheing.animation = "Idle water forward"
-				$Hair.animation = "Idle water forward"
-			else:
-				$Body.animation = "Idle forward"
-				$Clotheing.animation = "Idle forward"
-				$Hair.animation = "Idle forward"
+			$Body.animation = "Idle forward"
+			$Clotheing.animation = "Idle forward"
+			$Hair.animation = "Idle forward"
 	
 	# Apply the animation
 	if velocity.x != 0 or velocity.y != 0:
@@ -201,10 +138,4 @@ func update():
 		$Body.frame = 0
 		$Clotheing.frame = 0
 		$Hair.frame = 0
-		#print(collision_layer)
-		#print(collision_mask)
-	
-	# If in water, move hitbox acordingly
-	if in_water:
-		$CollisionShape2D.position.y = -12
-	print(z_depth)
+	print(z_index)

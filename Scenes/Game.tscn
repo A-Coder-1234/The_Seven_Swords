@@ -1,336 +1,1054 @@
-[gd_scene format=4 uid="uid://y1wcetrbyc3v"]
+[gd_scene format=3 uid="uid://y1wcetrbyc3v"]
 
-[ext_resource type="Script" uid="uid://bodpd7v5e4mhm" path="res://Scripts/Main_Loop.gd" id="1_j5yw3"]
 [ext_resource type="PackedScene" uid="uid://brxio3abd23fq" path="res://Scenes/Player.tscn" id="2_gl6un"]
 [ext_resource type="PackedScene" uid="uid://btvrm2e887igo" path="res://Tilesets/Tileset/Game maps/Water-fall bridge.tmx" id="2_j5yw3"]
-[ext_resource type="PackedScene" uid="uid://bhaca043u4qb5" path="res://Scenes/Tree.tscn" id="4_7lihs"]
-[ext_resource type="PackedScene" uid="uid://b4lt88dkq2wbe" path="res://Scenes/canvas_layer.tscn" id="4_kldst"]
-[ext_resource type="PackedScene" uid="uid://6tr5tnnfddo8" path="res://Scenes/bottom_wall.tscn" id="5_3cx6b"]
-[ext_resource type="PackedScene" uid="uid://d01phr74jxpjm" path="res://Scenes/Bush.tscn" id="5_fgofq"]
-[ext_resource type="PackedScene" uid="uid://b756ap04bi34v" path="res://Scenes/stunp.tscn" id="6_2irst"]
-[ext_resource type="PackedScene" uid="uid://ryr3fiobkedc" path="res://Scenes/bridge_area.tscn" id="6_3cx6b"]
-[ext_resource type="PackedScene" uid="uid://coxa4m5kneknv" path="res://Scenes/rock.tscn" id="7_71axn"]
-[ext_resource type="PackedScene" uid="uid://b5pugmdv0c1k1" path="res://Scenes/tree_leaves.tscn" id="9_bf53h"]
-[ext_resource type="PackedScene" uid="uid://dj3fkim4gijx1" path="res://Tilesets/Tileset/Game maps/Bridge.tmx" id="11_dahhg"]
-[ext_resource type="PackedScene" uid="uid://dlfnoqytq1pck" path="res://Scenes/Top wall.tscn" id="13_wxwew"]
-[ext_resource type="PackedScene" uid="uid://n0n8ocssy4gg" path="res://Scenes/bottom_bridge_area.tscn" id="14_wxwew"]
-[ext_resource type="Script" uid="uid://bgmcuq84wndd0" path="res://Scripts/River_Banks_Collisions.gd" id="15_acvyw"]
-[ext_resource type="Script" uid="uid://bgte6jcuojdhf" path="res://Scripts/water.gd" id="15_x3xnh"]
-[ext_resource type="Script" uid="uid://cjrhsxsacf7cm" path="res://Scenes/Not_Hit_Bridge.gd" id="16_alh3a"]
-[ext_resource type="PackedScene" uid="uid://b4hx28b306741" path="res://Scenes/bridge_supports_layering.tscn" id="17_4q8tf"]
+[ext_resource type="PackedScene" uid="uid://bhaca043u4qb5" path="res://Scenes/Tree.tscn" id="3_j5yw3"]
+[ext_resource type="PackedScene" uid="uid://b5pugmdv0c1k1" path="res://Scenes/tree_leaves.tscn" id="4_kldst"]
+[ext_resource type="PackedScene" uid="uid://w83r0itf6usu" path="res://Scenes/Forts/fort_l_top_wall.tscn" id="5_b2bpf"]
+[ext_resource type="PackedScene" uid="uid://iy03khapbrmq" path="res://Scenes/Forts/fort_l_side_wall.tscn" id="5_bf53h"]
+[ext_resource type="PackedScene" uid="uid://dwtoajs7wx57y" path="res://Scenes/Forts/fort_l_catwalk.tscn" id="6_7lihs"]
+[ext_resource type="PackedScene" uid="uid://j4a41nvoe560" path="res://Scenes/Forts/fort_r_top_wall.tscn" id="6_wxwew"]
+[ext_resource type="PackedScene" uid="uid://b3wf0bt1yh3fl" path="res://Scenes/Forts/fort_gate_l_top.tscn" id="7_fgofq"]
+[ext_resource type="PackedScene" uid="uid://e5cwivbikf3n" path="res://Scenes/Forts/fort_gate_l_bottom.tscn" id="8_2irst"]
+[ext_resource type="Script" uid="uid://cyqtfk3bh4tde" path="res://Scripts/walk_on_catwalk.gd" id="10_71axn"]
+[ext_resource type="Script" uid="uid://c370r1fmsys14" path="res://Scripts/walk_behind_catwalk.gd" id="11_dahhg"]
+[ext_resource type="Script" uid="uid://su1ld1vxguid" path="res://Scripts/walk_infront_of_gates.gd" id="12_3so38"]
+[ext_resource type="Script" uid="uid://djqgdu0xqe1g1" path="res://Scripts/walk_behind_gates.gd" id="13_3cx6b"]
+[ext_resource type="PackedScene" uid="uid://btxr2dslo2667" path="res://Scenes/Forts/fort_r_catwalk.tscn" id="15_acvyw"]
+[ext_resource type="PackedScene" uid="uid://ckbk8ga8qbje7" path="res://Scenes/Forts/fort_gate_r_top.tscn" id="16_alh3a"]
+[ext_resource type="PackedScene" uid="uid://cng4rirgu5g36" path="res://Scenes/Forts/fort_gate_r_bottom.tscn" id="17_4q8tf"]
+[ext_resource type="PackedScene" uid="uid://c1nqg3l4ris6n" path="res://Scenes/Forts/fort_r_side_wall.tscn" id="18_x3xnh"]
+[ext_resource type="Script" uid="uid://clmhhedhnbh13" path="res://Scripts/walk_on_catwalk2.gd" id="19_8r6kd"]
+[ext_resource type="Script" uid="uid://c8c4le77df8x4" path="res://Scripts/walk_behind_catwalk2.gd" id="20_tfod6"]
+[ext_resource type="Script" uid="uid://d0asc4q5npfws" path="res://Scripts/walk_infront_of_gates2.gd" id="21_rajel"]
+[ext_resource type="Script" uid="uid://dcgxbd3r7eqha" path="res://Scripts/walk_behind_gates2.gd" id="22_vvhu1"]
+[ext_resource type="PackedScene" uid="uid://c35pk7amsap8l" path="res://Scenes/stone_bridge_top_wall.tscn" id="23_lbihj"]
+[ext_resource type="Script" uid="uid://cix6wgbjhw0qv" path="res://Scripts/debug1.gd" id="24_i0vto"]
+[ext_resource type="PackedScene" uid="uid://clyjbhhpp7t48" path="res://Scenes/stone_bridge_bottom_wall.tscn" id="24_raj38"]
+[ext_resource type="Script" uid="uid://bwn8xbq5q5qk7" path="res://Scripts/walk_behind_top_wall.gd" id="26_i0vto"]
+[ext_resource type="Script" uid="uid://cj4ctm8jsgj80" path="res://Scripts/walk_infront_of_bottom_wall.gd" id="27_3jf1l"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wqpnj"]
-size = Vector2(9.125, 240.125)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bf53h"]
+size = Vector2(130, 6)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ts1m"]
-size = Vector2(592, 142)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4bxau"]
+size = Vector2(135, 34)
 
-[node name="Node2D" type="Node2D" unique_id=1154430874]
-script = ExtResource("1_j5yw3")
-metadata/_edit_horizontal_guides_ = [81.0]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gq3fl"]
+size = Vector2(8, 80)
 
-[node name="Water-fall bridge2" parent="." unique_id=1464631217 instance=ExtResource("2_j5yw3")]
-position = Vector2(176, 379)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yxy7w"]
+size = Vector2(8, 55)
 
-[node name="Bridge Parts" type="Node2D" parent="." unique_id=1406958841]
-z_index = 1
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kfr6r"]
+size = Vector2(135, 6)
 
-[node name="Bridge" parent="Bridge Parts" unique_id=162869239 instance=ExtResource("11_dahhg")]
-z_index = 99
-position = Vector2(336, 155)
-tile_map_data = PackedByteArray("AADu//z/AAAMAAsAAADv//z/AAANAAsAAADt//3/AAAHAAwAAADu//3/AAAHAAwAAADv//3/AAAHAAwAAADs//7/AAAFAA0AAADt//7/AAAHAAwAAADu//7/AAAMAAwAAADv//7/AAANAAwAAADs////AAAFAA0AAADt////AAAHAA0AAADu////AAAMAA0AAADv////AAANAA0AAADw//z/AAAOAAsAAAD1//z/AAAMAAsAAAD2//z/AAANAAsAAAD3//z/AAAOAAsAAAD8//z/AAAMAAsAAAD9//z/AAANAAsAAAD+//z/AAAOAAsAAADw//3/AAAHAAwAAADx//3/AAAHAAwAAADy//3/AAAHAAwAAADz//3/AAAHAAwAAAD0//3/AAAHAAwAAAD1//3/AAAHAAwAAAD2//3/AAAHAAwAAAD3//3/AAAHAAwAAAD4//3/AAAHAAwAAAD5//3/AAAHAAwAAAD6//3/AAAHAAwAAAD7//3/AAAHAAwAAAD8//3/AAAHAAwAAAD9//3/AAAHAAwAAAD+//3/AAAHAAwAAAD///3/AAAHAAwAAADw//7/AAAOAAwAAADx//7/AAAPAAwAAADy//7/AAAQAAwAAADz//7/AAARAAwAAAD0//7/AAASAAwAAAD1//7/AAAMAAwAAAD2//7/AAANAAwAAAD3//7/AAAOAAwAAAD4//7/AAAPAAwAAAD5//7/AAAQAAwAAAD6//7/AAARAAwAAAD7//7/AAASAAwAAAD8//7/AAAMAAwAAAD9//7/AAANAAwAAAD+//7/AAAOAAwAAAD///7/AAAPAAwAAADw////AAAOAA0AAADx////AAAPAA0AAADy////AAAQAA0AAADz////AAARAA0AAAD0////AAASAA0AAAD1////AAAMAA0AAAD2////AAANAA0AAAD3////AAAOAA0AAAD4////AAAPAA0AAAD5////AAAQAA0AAAD6////AAARAA0AAAD7////AAASAA0AAAD8////AAAMAA0AAAD9////AAANAA0AAAD+////AAAOAA0AAAD/////AAAPAA0AAAADAPz/AAAMAAsAAAAEAPz/AAANAAsAAAAFAPz/AAAOAAsAAAAKAPz/AAAMAAsAAAALAPz/AAANAAsAAAAMAPz/AAAOAAsAAAAAAP3/AAAHAAwAAAABAP3/AAAHAAwAAAACAP3/AAAHAAwAAAADAP3/AAAHAAwAAAAEAP3/AAAHAAwAAAAFAP3/AAAHAAwAAAAGAP3/AAAHAAwAAAAHAP3/AAAHAAwAAAAIAP3/AAAHAAwAAAAJAP3/AAAHAAwAAAAKAP3/AAAHAAwAAAALAP3/AAAHAAwAAAAMAP3/AAAHAAwAAAANAP3/AAAHAAwAAAAOAP3/AAAHAAwAAAAPAP3/AAAHAAwAAAAAAP7/AAAQAAwAAAABAP7/AAARAAwAAAACAP7/AAASAAwAAAADAP7/AAAMAAwAAAAEAP7/AAANAAwAAAAFAP7/AAAOAAwAAAAGAP7/AAAPAAwAAAAHAP7/AAAQAAwAAAAIAP7/AAARAAwAAAAJAP7/AAASAAwAAAAKAP7/AAAMAAwAAAALAP7/AAANAAwAAAAMAP7/AAAOAAwAAAANAP7/AAAPAAwAAAAOAP7/AAAQAAwAAAAPAP7/AAARAAwAAAAAAP//AAAQAA0AAAABAP//AAARAA0AAAACAP//AAASAA0AAAADAP//AAAMAA0AAAAEAP//AAANAA0AAAAFAP//AAAOAA0AAAAGAP//AAAPAA0AAAAHAP//AAAQAA0AAAAIAP//AAARAA0AAAAJAP//AAASAA0AAAAKAP//AAAMAA0AAAALAP//AAANAA0AAAAMAP//AAAOAA0AAAANAP//AAAPAA0AAAAOAP//AAAQAA0AAAAPAP//AAARAA0AAAAQAP3/AAAHAAwAAAARAP3/AAAHAAwAAAASAP3/AAAHAAwAAAAQAP7/AAASAAwAAAARAP7/AAATAAwAAAASAP7/AAANAA0AAAATAP7/AAAUAA0AAAAQAP//AAASAA0AAAARAP//AAATAA0AAAASAP//AAANAA0AAAATAP//AAAUAA0AAADs/wAAAAAFAA4AAADt/wAAAAAHAA4AAADu/wAAAAAMAA4AAADv/wAAAAANAA4AAADw/wAAAAAOAA4AAADx/wAAAAAPAA4AAADy/wAAAAAQAA4AAADz/wAAAAARAA4AAAD0/wAAAAASAA4AAAD1/wAAAAAMAA4AAAD2/wAAAAANAA4AAAD3/wAAAAAOAA4AAAD4/wAAAAAPAA4AAAD5/wAAAAAQAA4AAAD6/wAAAAARAA4AAAD7/wAAAAASAA4AAAD8/wAAAAAMAA4AAAD9/wAAAAANAA4AAAD+/wAAAAAOAA4AAAD//wAAAAAPAA4AAADx/wEAAAAPAA8AAADy/wEAAAAQAA8AAADz/wEAAAARAA8AAAD0/wEAAAASAA8AAAD4/wEAAAAPAA8AAAD5/wEAAAAQAA8AAAD6/wEAAAARAA8AAAD7/wEAAAASAA8AAAD//wEAAAAPAA8AAADx/wIAAAAPABAAAADy/wIAAAAQABAAAADz/wIAAAARABAAAAD0/wIAAAASABAAAAD4/wIAAAAPABAAAAD5/wIAAAAQABAAAAD6/wIAAAARABAAAAD7/wIAAAASABAAAAD//wIAAAAPABAAAAAAAAAAAAAQAA4AAAABAAAAAAARAA4AAAACAAAAAAASAA4AAAADAAAAAAAMAA4AAAAEAAAAAAANAA4AAAAFAAAAAAAOAA4AAAAGAAAAAAAPAA4AAAAHAAAAAAAQAA4AAAAIAAAAAAARAA4AAAAJAAAAAAASAA4AAAAKAAAAAAAMAA4AAAALAAAAAAANAA4AAAAMAAAAAAAOAA4AAAANAAAAAAAPAA4AAAAOAAAAAAAQAA4AAAAPAAAAAAARAA4AAAAAAAEAAAAQAA8AAAABAAEAAAARAA8AAAACAAEAAAASAA8AAAAGAAEAAAAPAA8AAAAHAAEAAAAQAA8AAAAIAAEAAAARAA8AAAAJAAEAAAASAA8AAAANAAEAAAAPAA8AAAAOAAEAAAAQAA8AAAAPAAEAAAARAA8AAAAAAAIAAAAQABAAAAABAAIAAAARABAAAAACAAIAAAASABAAAAAGAAIAAAAPABAAAAAHAAIAAAAQABAAAAAIAAIAAAARABAAAAAJAAIAAAASABAAAAANAAIAAAAPABAAAAAOAAIAAAAQABAAAAAPAAIAAAARABAAAAAQAAAAAAASAA4AAAARAAAAAAAPAA4AAAASAAAAAAATAA4AAAATAAAAAAAUAA4AAAAQAAEAAAASAA8AAAAQAAIAAAASABAAAADs//3/AAAFAAwAAAATAP3/AAAUAAwAAAAKAPv/AAAMAAoAAAALAPv/AAANAAoAAAAMAPv/AAAOAAoAAAANAPz/AAAPAAsAAAAOAPz/AAAQAAsAAAAPAPz/AAARAAsAAAAQAPz/AAASAAsAAAADAPv/AAAMAAoAAAAEAPv/AAANAAoAAAAFAPv/AAAOAAoAAAAGAPz/AAAPAAsAAAAHAPz/AAAQAAsAAAAIAPz/AAARAAsAAAAJAPz/AAASAAsAAAD8//v/AAAMAAoAAAD9//v/AAANAAoAAAD+//v/AAAOAAoAAAD///z/AAAPAAsAAAAAAPz/AAAQAAsAAAABAPz/AAARAAsAAAACAPz/AAASAAsAAAD1//v/AAAMAAoAAAD2//v/AAANAAoAAAD3//v/AAAOAAoAAAD4//z/AAAPAAsAAAD5//z/AAAQAAsAAAD6//z/AAARAAsAAAD7//z/AAASAAsAAADu//v/AAAMAAoAAADv//v/AAANAAoAAADw//v/AAAOAAoAAADx//z/AAAPAAsAAADy//z/AAAQAAsAAADz//z/AAARAAsAAAD0//z/AAASAAsAAAARAPz/AAASAAsAAAASAPz/AAATAAsAAADt//z/AAAHAAsAAAA=")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0nqot"]
+size = Vector2(135, 35)
 
-[node name="Top_wall" parent="Bridge Parts" unique_id=975005520 instance=ExtResource("13_wxwew")]
-z_index = 101
-position = Vector2(336, 91)
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wqpnj"]
 
-[node name="Bottom_wall" parent="Bridge Parts" unique_id=198176371 instance=ExtResource("5_3cx6b")]
-z_index = 104
-position = Vector2(336, 171)
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0ts1m"]
+normal = Vector2(-1, 0)
 
-[node name="Top_bridge_area" parent="Bridge Parts" unique_id=1299167592 instance=ExtResource("6_3cx6b")]
-visible = false
-z_index = 4096
-position = Vector2(410, 147)
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_j36ny"]
+normal = Vector2(0, 1)
 
-[node name="Bottom_bridge_layer" parent="Bridge Parts" unique_id=1310265967 instance=ExtResource("14_wxwew")]
-visible = false
-z_index = 4096
-position = Vector2(336, 195)
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_skiy4"]
+normal = Vector2(1, 0)
 
-[node name="Y-sorted objects" type="Node2D" parent="." unique_id=512931133]
+[node name="World" type="Node2D" unique_id=271459397]
+
+[node name="Water_fall_bridge" parent="." unique_id=344678522 instance=ExtResource("2_j5yw3")]
+z_index = -100
 y_sort_enabled = true
 
-[node name="Trees&Stuff" type="Node2D" parent="Y-sorted objects" unique_id=1933054368]
-z_index = 100
+[node name="Y_sorting_container" type="Node2D" parent="." unique_id=1020526317]
 y_sort_enabled = true
-position = Vector2(176, 378)
 
-[node name="Tree" parent="Y-sorted objects/Trees&Stuff" unique_id=290204918 instance=ExtResource("4_7lihs")]
-position = Vector2(-169, -310)
-
-[node name="Tree2" parent="Y-sorted objects/Trees&Stuff" unique_id=215441574 instance=ExtResource("4_7lihs")]
-position = Vector2(-243, -212)
-
-[node name="Tree5" parent="Y-sorted objects/Trees&Stuff" unique_id=506211442 instance=ExtResource("4_7lihs")]
-position = Vector2(-247, -363)
-
-[node name="Tree6" parent="Y-sorted objects/Trees&Stuff" unique_id=847121669 instance=ExtResource("4_7lihs")]
-position = Vector2(-262, -506)
-
-[node name="Tree7" parent="Y-sorted objects/Trees&Stuff" unique_id=1222537444 instance=ExtResource("4_7lihs")]
-position = Vector2(-167, -522)
-
-[node name="Tree8" parent="Y-sorted objects/Trees&Stuff" unique_id=267274167 instance=ExtResource("4_7lihs")]
-position = Vector2(-279, -618)
-
-[node name="Tree9" parent="Y-sorted objects/Trees&Stuff" unique_id=1692845653 instance=ExtResource("4_7lihs")]
-position = Vector2(-234, -715)
-
-[node name="Tree10" parent="Y-sorted objects/Trees&Stuff" unique_id=787434003 instance=ExtResource("4_7lihs")]
-position = Vector2(378, -778)
-
-[node name="Tree11" parent="Y-sorted objects/Trees&Stuff" unique_id=1988261145 instance=ExtResource("4_7lihs")]
-position = Vector2(479, -682)
-
-[node name="Tree12" parent="Y-sorted objects/Trees&Stuff" unique_id=939758503 instance=ExtResource("4_7lihs")]
-position = Vector2(537, -712)
-
-[node name="Tree13" parent="Y-sorted objects/Trees&Stuff" unique_id=1389831465 instance=ExtResource("4_7lihs")]
-position = Vector2(619, -681)
-
-[node name="Tree14" parent="Y-sorted objects/Trees&Stuff" unique_id=136855085 instance=ExtResource("4_7lihs")]
-position = Vector2(537, -602)
-
-[node name="Tree15" parent="Y-sorted objects/Trees&Stuff" unique_id=383839256 instance=ExtResource("4_7lihs")]
-position = Vector2(615, -538)
-
-[node name="Tree16" parent="Y-sorted objects/Trees&Stuff" unique_id=853309337 instance=ExtResource("4_7lihs")]
-position = Vector2(615, -442)
-
-[node name="Tree17" parent="Y-sorted objects/Trees&Stuff" unique_id=1675738337 instance=ExtResource("4_7lihs")]
-position = Vector2(536, -405)
-
-[node name="Tree18" parent="Y-sorted objects/Trees&Stuff" unique_id=453395992 instance=ExtResource("4_7lihs")]
-position = Vector2(568, -344)
-
-[node name="Tree19" parent="Y-sorted objects/Trees&Stuff" unique_id=117163732 instance=ExtResource("4_7lihs")]
-position = Vector2(488, -281)
-
-[node name="Tree20" parent="Y-sorted objects/Trees&Stuff" unique_id=419542744 instance=ExtResource("4_7lihs")]
-position = Vector2(586, -201)
-
-[node name="Tree21" parent="Y-sorted objects/Trees&Stuff" unique_id=671375105 instance=ExtResource("4_7lihs")]
-position = Vector2(538, -156)
-
-[node name="Bush" parent="Y-sorted objects/Trees&Stuff" unique_id=1628504894 instance=ExtResource("5_fgofq")]
-position = Vector2(-144, -281)
-
-[node name="Bush2" parent="Y-sorted objects/Trees&Stuff" unique_id=1694218719 instance=ExtResource("5_fgofq")]
-position = Vector2(-304, -409)
-
-[node name="Bush3" parent="Y-sorted objects/Trees&Stuff" unique_id=2012367072 instance=ExtResource("5_fgofq")]
-position = Vector2(-191, -520)
-
-[node name="Bush4" parent="Y-sorted objects/Trees&Stuff" unique_id=818220713 instance=ExtResource("5_fgofq")]
-position = Vector2(-220, -712)
-
-[node name="Bush5" parent="Y-sorted objects/Trees&Stuff" unique_id=1995314468 instance=ExtResource("5_fgofq")]
-position = Vector2(368, -745)
-
-[node name="Bush6" parent="Y-sorted objects/Trees&Stuff" unique_id=47482496 instance=ExtResource("5_fgofq")]
-position = Vector2(625, -777)
-
-[node name="Bush7" parent="Y-sorted objects/Trees&Stuff" unique_id=825575372 instance=ExtResource("5_fgofq")]
-position = Vector2(513, -600)
-
-[node name="Bush8" parent="Y-sorted objects/Trees&Stuff" unique_id=75410193 instance=ExtResource("5_fgofq")]
-position = Vector2(624, -425)
-
-[node name="Stunp" parent="Y-sorted objects/Trees&Stuff" unique_id=820066220 instance=ExtResource("6_2irst")]
+[node name="Trees" type="Node2D" parent="Y_sorting_container" unique_id=922699355]
 y_sort_enabled = true
-position = Vector2(592, -329)
+position = Vector2(-299, -407)
 
-[node name="Stunp2" parent="Y-sorted objects/Trees&Stuff" unique_id=1420425688 instance=ExtResource("6_2irst")]
-y_sort_enabled = true
-position = Vector2(480, -169)
+[node name="Tree" parent="Y_sorting_container/Trees" unique_id=290204918 instance=ExtResource("3_j5yw3")]
 
-[node name="Stunp3" parent="Y-sorted objects/Trees&Stuff" unique_id=1340329050 instance=ExtResource("6_2irst")]
-y_sort_enabled = true
-position = Vector2(464, -569)
+[node name="Tree2" parent="Y_sorting_container/Trees" unique_id=657910293 instance=ExtResource("3_j5yw3")]
+position = Vector2(-110, 46)
 
-[node name="Stunp4" parent="Y-sorted objects/Trees&Stuff" unique_id=1637169471 instance=ExtResource("6_2irst")]
-y_sort_enabled = true
-position = Vector2(-304, -745)
+[node name="Tree3" parent="Y_sorting_container/Trees" unique_id=2011276913 instance=ExtResource("3_j5yw3")]
+position = Vector2(-171, 27)
 
-[node name="Stunp5" parent="Y-sorted objects/Trees&Stuff" unique_id=528688287 instance=ExtResource("6_2irst")]
-y_sort_enabled = true
-position = Vector2(-224, -441)
+[node name="Tree4" parent="Y_sorting_container/Trees" unique_id=966287302 instance=ExtResource("3_j5yw3")]
+position = Vector2(-174, -40)
 
-[node name="Stunp6" parent="Y-sorted objects/Trees&Stuff" unique_id=1449983981 instance=ExtResource("6_2irst")]
-y_sort_enabled = true
-position = Vector2(-304, -265)
+[node name="Tree5" parent="Y_sorting_container/Trees" unique_id=1052143105 instance=ExtResource("3_j5yw3")]
+position = Vector2(-276, 54)
 
-[node name="Rock" parent="Y-sorted objects/Trees&Stuff" unique_id=789114559 instance=ExtResource("7_71axn")]
-position = Vector2(-288, -376)
+[node name="Tree6" parent="Y_sorting_container/Trees" unique_id=992205669 instance=ExtResource("3_j5yw3")]
+position = Vector2(-316, 5)
 
-[node name="Rock2" parent="Y-sorted objects/Trees&Stuff" unique_id=1348478203 instance=ExtResource("7_71axn")]
-position = Vector2(352, -792)
+[node name="Tree7" parent="Y_sorting_container/Trees" unique_id=1287274643 instance=ExtResource("3_j5yw3")]
+position = Vector2(-394, 60)
 
-[node name="Rock3" parent="Y-sorted objects/Trees&Stuff" unique_id=379106147 instance=ExtResource("7_71axn")]
-position = Vector2(624, -377)
+[node name="Tree8" parent="Y_sorting_container/Trees" unique_id=1619292012 instance=ExtResource("3_j5yw3")]
+position = Vector2(-452, 146)
 
-[node name="Player" parent="Y-sorted objects" unique_id=1041290788 instance=ExtResource("2_gl6un")]
-z_index = 100
-position = Vector2(-69, 99)
-motion_mode = 0
+[node name="Tree9" parent="Y_sorting_container/Trees" unique_id=1256155043 instance=ExtResource("3_j5yw3")]
+position = Vector2(-544, 194)
 
-[node name="Camera2D" type="Camera2D" parent="Y-sorted objects/Player" unique_id=1862607261]
-position = Vector2(0, -1)
+[node name="Tree10" parent="Y_sorting_container/Trees" unique_id=1299161762 instance=ExtResource("3_j5yw3")]
+position = Vector2(-616, 234)
+
+[node name="Tree11" parent="Y_sorting_container/Trees" unique_id=236699782 instance=ExtResource("3_j5yw3")]
+position = Vector2(-741, 214)
+
+[node name="Tree12" parent="Y_sorting_container/Trees" unique_id=341758966 instance=ExtResource("3_j5yw3")]
+position = Vector2(-695, 172)
+
+[node name="Tree13" parent="Y_sorting_container/Trees" unique_id=1667909661 instance=ExtResource("3_j5yw3")]
+position = Vector2(-686, 96)
+
+[node name="Tree14" parent="Y_sorting_container/Trees" unique_id=436762935 instance=ExtResource("3_j5yw3")]
+position = Vector2(-859, 102)
+
+[node name="Tree15" parent="Y_sorting_container/Trees" unique_id=2061048408 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1021, 139)
+
+[node name="Tree16" parent="Y_sorting_container/Trees" unique_id=1751537622 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1070, 216)
+
+[node name="Tree17" parent="Y_sorting_container/Trees" unique_id=955732032 instance=ExtResource("3_j5yw3")]
+position = Vector2(-944, 268)
+
+[node name="Tree18" parent="Y_sorting_container/Trees" unique_id=332233973 instance=ExtResource("3_j5yw3")]
+position = Vector2(-804, 215)
+
+[node name="Tree19" parent="Y_sorting_container/Trees" unique_id=103254543 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1166, 276)
+
+[node name="Tree20" parent="Y_sorting_container/Trees" unique_id=1849380 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1258, 197)
+
+[node name="Tree21" parent="Y_sorting_container/Trees" unique_id=1012840915 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1137, 140)
+
+[node name="Tree22" parent="Y_sorting_container/Trees" unique_id=906190794 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1266, 90)
+
+[node name="Tree23" parent="Y_sorting_container/Trees" unique_id=824252830 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1335, 72)
+
+[node name="Tree24" parent="Y_sorting_container/Trees" unique_id=715453574 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1392, 120)
+
+[node name="Tree25" parent="Y_sorting_container/Trees" unique_id=923515517 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1440, -24)
+
+[node name="Tree26" parent="Y_sorting_container/Trees" unique_id=1558833620 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1443, 235)
+
+[node name="Tree27" parent="Y_sorting_container/Trees" unique_id=1135558802 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1360, 290)
+
+[node name="Tree28" parent="Y_sorting_container/Trees" unique_id=1646184044 instance=ExtResource("3_j5yw3")]
+position = Vector2(-338, 231)
+
+[node name="Tree29" parent="Y_sorting_container/Trees" unique_id=1729450075 instance=ExtResource("3_j5yw3")]
+position = Vector2(-199, 232)
+
+[node name="Tree30" parent="Y_sorting_container/Trees" unique_id=1155028646 instance=ExtResource("3_j5yw3")]
+position = Vector2(-224, 170)
+
+[node name="Tree31" parent="Y_sorting_container/Trees" unique_id=662609398 instance=ExtResource("3_j5yw3")]
+position = Vector2(-61, 210)
+
+[node name="Tree32" parent="Y_sorting_container/Trees" unique_id=152170649 instance=ExtResource("3_j5yw3")]
+position = Vector2(37, -98)
+
+[node name="Tree33" parent="Y_sorting_container/Trees" unique_id=1981836186 instance=ExtResource("3_j5yw3")]
+position = Vector2(132, -115)
+
+[node name="Tree34" parent="Y_sorting_container/Trees" unique_id=1112222724 instance=ExtResource("3_j5yw3")]
+position = Vector2(-53, -144)
+
+[node name="Tree35" parent="Y_sorting_container/Trees" unique_id=440156027 instance=ExtResource("3_j5yw3")]
+position = Vector2(21, -211)
+
+[node name="Tree36" parent="Y_sorting_container/Trees" unique_id=1689219756 instance=ExtResource("3_j5yw3")]
+position = Vector2(65, -309)
+
+[node name="Tree37" parent="Y_sorting_container/Trees" unique_id=1081997833 instance=ExtResource("3_j5yw3")]
+position = Vector2(76, -414)
+
+[node name="Tree38" parent="Y_sorting_container/Trees" unique_id=1636544619 instance=ExtResource("3_j5yw3")]
+position = Vector2(-23, -491)
+
+[node name="Tree39" parent="Y_sorting_container/Trees" unique_id=380700197 instance=ExtResource("3_j5yw3")]
+position = Vector2(30, -543)
+
+[node name="Tree40" parent="Y_sorting_container/Trees" unique_id=1247066698 instance=ExtResource("3_j5yw3")]
+position = Vector2(113, -538)
+
+[node name="Tree41" parent="Y_sorting_container/Trees" unique_id=65803558 instance=ExtResource("3_j5yw3")]
+position = Vector2(-123, -400)
+
+[node name="Tree42" parent="Y_sorting_container/Trees" unique_id=1396795912 instance=ExtResource("3_j5yw3")]
+position = Vector2(-216, -374)
+
+[node name="Tree43" parent="Y_sorting_container/Trees" unique_id=1388202392 instance=ExtResource("3_j5yw3")]
+position = Vector2(-93, -305)
+
+[node name="Tree44" parent="Y_sorting_container/Trees" unique_id=60402963 instance=ExtResource("3_j5yw3")]
+position = Vector2(-164, -213)
+
+[node name="Tree45" parent="Y_sorting_container/Trees" unique_id=1641168311 instance=ExtResource("3_j5yw3")]
+position = Vector2(-213, -206)
+
+[node name="Tree46" parent="Y_sorting_container/Trees" unique_id=336298117 instance=ExtResource("3_j5yw3")]
+position = Vector2(-333, -223)
+
+[node name="Tree47" parent="Y_sorting_container/Trees" unique_id=1169634698 instance=ExtResource("3_j5yw3")]
+position = Vector2(-359, -295)
+
+[node name="Tree48" parent="Y_sorting_container/Trees" unique_id=355300359 instance=ExtResource("3_j5yw3")]
+position = Vector2(-422, -362)
+
+[node name="Tree49" parent="Y_sorting_container/Trees" unique_id=1123650890 instance=ExtResource("3_j5yw3")]
+position = Vector2(-417, -444)
+
+[node name="Tree50" parent="Y_sorting_container/Trees" unique_id=597037355 instance=ExtResource("3_j5yw3")]
+position = Vector2(-281, -441)
+
+[node name="Tree51" parent="Y_sorting_container/Trees" unique_id=949493131 instance=ExtResource("3_j5yw3")]
+position = Vector2(-316, -493)
+
+[node name="Tree52" parent="Y_sorting_container/Trees" unique_id=1957085924 instance=ExtResource("3_j5yw3")]
+position = Vector2(-203, -546)
+
+[node name="Tree53" parent="Y_sorting_container/Trees" unique_id=1948282885 instance=ExtResource("3_j5yw3")]
+position = Vector2(-283, -85)
+
+[node name="Tree54" parent="Y_sorting_container/Trees" unique_id=1042824856 instance=ExtResource("3_j5yw3")]
+position = Vector2(-385, -80)
+
+[node name="Tree55" parent="Y_sorting_container/Trees" unique_id=462689686 instance=ExtResource("3_j5yw3")]
+position = Vector2(-446, -136)
+
+[node name="Tree56" parent="Y_sorting_container/Trees" unique_id=1417468660 instance=ExtResource("3_j5yw3")]
+position = Vector2(-481, -18)
+
+[node name="Tree57" parent="Y_sorting_container/Trees" unique_id=377662463 instance=ExtResource("3_j5yw3")]
+position = Vector2(-561, 28)
+
+[node name="Tree58" parent="Y_sorting_container/Trees" unique_id=536540594 instance=ExtResource("3_j5yw3")]
+position = Vector2(-535, -93)
+
+[node name="Tree59" parent="Y_sorting_container/Trees" unique_id=1295213380 instance=ExtResource("3_j5yw3")]
+position = Vector2(-523, -502)
+
+[node name="Tree60" parent="Y_sorting_container/Trees" unique_id=844337836 instance=ExtResource("3_j5yw3")]
+position = Vector2(-573, -396)
+
+[node name="Tree61" parent="Y_sorting_container/Trees" unique_id=352980261 instance=ExtResource("3_j5yw3")]
+position = Vector2(-591, -332)
+
+[node name="Tree62" parent="Y_sorting_container/Trees" unique_id=666117147 instance=ExtResource("3_j5yw3")]
+position = Vector2(-676, -260)
+
+[node name="Tree63" parent="Y_sorting_container/Trees" unique_id=157110840 instance=ExtResource("3_j5yw3")]
+position = Vector2(-578, -219)
+
+[node name="Tree64" parent="Y_sorting_container/Trees" unique_id=1613826629 instance=ExtResource("3_j5yw3")]
+position = Vector2(-603, -210)
+
+[node name="Tree65" parent="Y_sorting_container/Trees" unique_id=540146604 instance=ExtResource("3_j5yw3")]
+position = Vector2(-687, -70)
+
+[node name="Tree66" parent="Y_sorting_container/Trees" unique_id=544215021 instance=ExtResource("3_j5yw3")]
+position = Vector2(-715, -151)
+
+[node name="Tree67" parent="Y_sorting_container/Trees" unique_id=1647742343 instance=ExtResource("3_j5yw3")]
+position = Vector2(-824, -209)
+
+[node name="Tree68" parent="Y_sorting_container/Trees" unique_id=1199287046 instance=ExtResource("3_j5yw3")]
+position = Vector2(-884, -122)
+
+[node name="Tree69" parent="Y_sorting_container/Trees" unique_id=898403881 instance=ExtResource("3_j5yw3")]
+position = Vector2(-950, -114)
+
+[node name="Tree70" parent="Y_sorting_container/Trees" unique_id=860510724 instance=ExtResource("3_j5yw3")]
+position = Vector2(-999, -204)
+
+[node name="Tree71" parent="Y_sorting_container/Trees" unique_id=1106838875 instance=ExtResource("3_j5yw3")]
+position = Vector2(-888, -250)
+
+[node name="Tree72" parent="Y_sorting_container/Trees" unique_id=1736616872 instance=ExtResource("3_j5yw3")]
+position = Vector2(-901, -309)
+
+[node name="Tree73" parent="Y_sorting_container/Trees" unique_id=328253259 instance=ExtResource("3_j5yw3")]
+position = Vector2(-683, -486)
+
+[node name="Tree74" parent="Y_sorting_container/Trees" unique_id=1711609795 instance=ExtResource("3_j5yw3")]
+position = Vector2(-790, -491)
+
+[node name="Tree75" parent="Y_sorting_container/Trees" unique_id=118527363 instance=ExtResource("3_j5yw3")]
+position = Vector2(-949, -433)
+
+[node name="Tree76" parent="Y_sorting_container/Trees" unique_id=40657092 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1009, -490)
+
+[node name="Tree77" parent="Y_sorting_container/Trees" unique_id=1060231299 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1082, -316)
+
+[node name="Tree78" parent="Y_sorting_container/Trees" unique_id=834877926 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1062, -346)
+
+[node name="Tree79" parent="Y_sorting_container/Trees" unique_id=896148678 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1103, -225)
+
+[node name="Tree80" parent="Y_sorting_container/Trees" unique_id=775090245 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1122, -117)
+
+[node name="Tree81" parent="Y_sorting_container/Trees" unique_id=533319126 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1032, -46)
+
+[node name="Tree82" parent="Y_sorting_container/Trees" unique_id=8054883 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1181, -87)
+
+[node name="Tree83" parent="Y_sorting_container/Trees" unique_id=625489067 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1274, -180)
+
+[node name="Tree84" parent="Y_sorting_container/Trees" unique_id=1140573871 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1341, -161)
+
+[node name="Tree85" parent="Y_sorting_container/Trees" unique_id=1989656196 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1260, -253)
+
+[node name="Tree86" parent="Y_sorting_container/Trees" unique_id=646534394 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1281, -287)
+
+[node name="Tree87" parent="Y_sorting_container/Trees" unique_id=1685253606 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1174, -267)
+
+[node name="Tree88" parent="Y_sorting_container/Trees" unique_id=590668539 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1190, -393)
+
+[node name="Tree89" parent="Y_sorting_container/Trees" unique_id=2119237373 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1224, -514)
+
+[node name="Tree90" parent="Y_sorting_container/Trees" unique_id=3394364 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1156, -505)
+
+[node name="Tree91" parent="Y_sorting_container/Trees" unique_id=1318743924 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1326, -393)
+
+[node name="Tree92" parent="Y_sorting_container/Trees" unique_id=2029684246 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1367, -490)
+
+[node name="Tree93" parent="Y_sorting_container/Trees" unique_id=1523249189 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1368, -306)
+
+[node name="Tree94" parent="Y_sorting_container/Trees" unique_id=1877250954 instance=ExtResource("3_j5yw3")]
+position = Vector2(-1429, -246)
+
+[node name="Tree95" parent="Y_sorting_container/Trees" unique_id=278295293 instance=ExtResource("3_j5yw3")]
+position = Vector2(917, 196)
+
+[node name="Tree96" parent="Y_sorting_container/Trees" unique_id=678351924 instance=ExtResource("3_j5yw3")]
+position = Vector2(-823, -36)
+
+[node name="Tree97" parent="Y_sorting_container/Trees" unique_id=1563742879 instance=ExtResource("3_j5yw3")]
+position = Vector2(-749, -314)
+
+[node name="Tree98" parent="Y_sorting_container/Trees" unique_id=386109618 instance=ExtResource("3_j5yw3")]
+position = Vector2(914, -34)
+
+[node name="Tree99" parent="Y_sorting_container/Trees" unique_id=1322163595 instance=ExtResource("3_j5yw3")]
+position = Vector2(813, -40)
+
+[node name="Tree100" parent="Y_sorting_container/Trees" unique_id=201030743 instance=ExtResource("3_j5yw3")]
+position = Vector2(914, -130)
+
+[node name="Tree101" parent="Y_sorting_container/Trees" unique_id=1791481328 instance=ExtResource("3_j5yw3")]
+position = Vector2(835, -195)
+
+[node name="Tree102" parent="Y_sorting_container/Trees" unique_id=981297755 instance=ExtResource("3_j5yw3")]
+position = Vector2(918, -274)
+
+[node name="Tree103" parent="Y_sorting_container/Trees" unique_id=1891249696 instance=ExtResource("3_j5yw3")]
+position = Vector2(838, -308)
+
+[node name="Tree104" parent="Y_sorting_container/Trees" unique_id=1415655260 instance=ExtResource("3_j5yw3")]
+position = Vector2(773, -271)
+
+[node name="Tree105" parent="Y_sorting_container/Trees" unique_id=1412443091 instance=ExtResource("3_j5yw3")]
+position = Vector2(677, -371)
+
+[node name="Tree106" parent="Y_sorting_container/Trees" unique_id=52928056 instance=ExtResource("3_j5yw3")]
+position = Vector2(754, -395)
+
+[node name="Tree107" parent="Y_sorting_container/Trees" unique_id=774288571 instance=ExtResource("3_j5yw3")]
+position = Vector2(833, -470)
+
+[node name="Tree108" parent="Y_sorting_container/Trees" unique_id=1390346657 instance=ExtResource("3_j5yw3")]
+position = Vector2(900, -506)
+
+[node name="Tree109" parent="Y_sorting_container/Trees" unique_id=1795108884 instance=ExtResource("3_j5yw3")]
+position = Vector2(889, -391)
+
+[node name="Tree110" parent="Y_sorting_container/Trees" unique_id=2120086726 instance=ExtResource("3_j5yw3")]
+position = Vector2(695, -520)
+
+[node name="Player" parent="Y_sorting_container" unique_id=838843817 instance=ExtResource("2_gl6un")]
+position = Vector2(-314, -296)
+
+[node name="Camera2D" type="Camera2D" parent="Y_sorting_container/Player" unique_id=2046303742]
 zoom = Vector2(2, 2)
+limit_left = -1760
+limit_top = -960
+limit_right = 640
+limit_bottom = 480
 
-[node name="Tree Tops" type="Node2D" parent="." unique_id=1220476865]
-z_index = 105
+[node name="Y_sorting_fort_sceens" type="Node2D" parent="Y_sorting_container" unique_id=1798674851]
+y_sort_enabled = true
 
-[node name="Tree Leaves3" parent="Tree Tops" unique_id=2001655316 instance=ExtResource("9_bf53h")]
-position = Vector2(-67, 128)
+[node name="Left_fort" type="Node2D" parent="Y_sorting_container/Y_sorting_fort_sceens" unique_id=2138862045]
+y_sort_enabled = true
 
-[node name="Tree Leaves5" parent="Tree Tops" unique_id=444451262 instance=ExtResource("9_bf53h")]
-position = Vector2(7, 30)
+[node name="Fort_L_top_wall" parent="Y_sorting_container/Y_sorting_fort_sceens/Left_fort" unique_id=553502928 instance=ExtResource("5_b2bpf")]
+position = Vector2(-208, -384)
 
-[node name="Tree Leaves6" parent="Tree Tops" unique_id=1050715580 instance=ExtResource("9_bf53h")]
-position = Vector2(-71, -23)
+[node name="Fort_l_side_wall" parent="Y_sorting_container/Y_sorting_fort_sceens/Left_fort" unique_id=648249776 instance=ExtResource("5_bf53h")]
+position = Vector2(-256, -272)
 
-[node name="Tree Leaves7" parent="Tree Tops" unique_id=871393259 instance=ExtResource("9_bf53h")]
-position = Vector2(-86, -166)
+[node name="Right_fort" type="Node2D" parent="Y_sorting_container/Y_sorting_fort_sceens" unique_id=1427289241]
+y_sort_enabled = true
 
-[node name="Tree Leaves8" parent="Tree Tops" unique_id=1540289206 instance=ExtResource("9_bf53h")]
-position = Vector2(9, -182)
+[node name="Fort_r_top_wall" parent="Y_sorting_container/Y_sorting_fort_sceens/Right_fort" unique_id=575604553 instance=ExtResource("6_wxwew")]
+y_sort_enabled = true
+position = Vector2(496, -384)
 
-[node name="Tree Leaves9" parent="Tree Tops" unique_id=411020094 instance=ExtResource("9_bf53h")]
-position = Vector2(-103, -278)
+[node name="Tree_leafs" type="Node2D" parent="." unique_id=1946730505]
 
-[node name="Tree Leaves10" parent="Tree Tops" unique_id=755707368 instance=ExtResource("9_bf53h")]
-position = Vector2(-58, -375)
+[node name="Tree Leaves" parent="Tree_leafs" unique_id=884021065 instance=ExtResource("4_kldst")]
+position = Vector2(-751, -299)
 
-[node name="Tree Leaves11" parent="Tree Tops" unique_id=2048439241 instance=ExtResource("9_bf53h")]
-position = Vector2(554, -438)
+[node name="Tree Leaves2" parent="Tree_leafs" unique_id=1108256204 instance=ExtResource("4_kldst")]
+position = Vector2(-637, -214)
 
-[node name="Tree Leaves12" parent="Tree Tops" unique_id=1040984149 instance=ExtResource("9_bf53h")]
-position = Vector2(713, -372)
+[node name="Tree Leaves3" parent="Tree_leafs" unique_id=1100659116 instance=ExtResource("4_kldst")]
+position = Vector2(-523, -275)
 
-[node name="Tree Leaves13" parent="Tree Tops" unique_id=1608944798 instance=ExtResource("9_bf53h")]
-position = Vector2(655, -342)
+[node name="Tree Leaves4" parent="Tree_leafs" unique_id=162475614 instance=ExtResource("4_kldst")]
+position = Vector2(-498, -213)
 
-[node name="Tree Leaves14" parent="Tree Tops" unique_id=1367438198 instance=ExtResource("9_bf53h")]
-position = Vector2(795, -341)
+[node name="Tree Leaves5" parent="Tree_leafs" unique_id=746749142 instance=ExtResource("4_kldst")]
+position = Vector2(-360, -235)
 
-[node name="Tree Leaves15" parent="Tree Tops" unique_id=1069675027 instance=ExtResource("9_bf53h")]
-position = Vector2(713, -262)
+[node name="Tree Leaves6" parent="Tree_leafs" unique_id=1487574145 instance=ExtResource("4_kldst")]
+position = Vector2(-843, -251)
 
-[node name="Tree Leaves16" parent="Tree Tops" unique_id=893845859 instance=ExtResource("9_bf53h")]
-position = Vector2(791, -198)
+[node name="Tree Leaves11" parent="Tree_leafs" unique_id=1105604103 instance=ExtResource("4_kldst")]
+position = Vector2(-985, -349)
 
-[node name="Tree Leaves17" parent="Tree Tops" unique_id=394970713 instance=ExtResource("9_bf53h")]
-position = Vector2(791, -102)
+[node name="Tree Leaves7" parent="Tree_leafs" unique_id=1760514524 instance=ExtResource("4_kldst")]
+position = Vector2(-915, -211)
 
-[node name="Tree Leaves18" parent="Tree Tops" unique_id=992261091 instance=ExtResource("9_bf53h")]
-position = Vector2(712, -65)
+[node name="Tree Leaves8" parent="Tree_leafs" unique_id=768106861 instance=ExtResource("4_kldst")]
+position = Vector2(-994, -273)
 
-[node name="Tree Leaves19" parent="Tree Tops" unique_id=1693162102 instance=ExtResource("9_bf53h")]
-position = Vector2(744, -4)
+[node name="Tree Leaves9" parent="Tree_leafs" unique_id=2093540674 instance=ExtResource("4_kldst")]
+position = Vector2(-1040, -231)
 
-[node name="Tree Leaves20" parent="Tree Tops" unique_id=907585451 instance=ExtResource("9_bf53h")]
-position = Vector2(664, 59)
+[node name="Tree Leaves10" parent="Tree_leafs" unique_id=1958331704 instance=ExtResource("4_kldst")]
+position = Vector2(-1103, -231)
 
-[node name="Tree Leaves21" parent="Tree Tops" unique_id=833882805 instance=ExtResource("9_bf53h")]
-position = Vector2(762, 139)
+[node name="Tree Leaves12" parent="Tree_leafs" unique_id=1014975033 instance=ExtResource("4_kldst")]
+position = Vector2(-1158, -343)
 
-[node name="Tree Leaves22" parent="Tree Tops" unique_id=1169114 instance=ExtResource("9_bf53h")]
-position = Vector2(714, 184)
+[node name="Tree Leaves13" parent="Tree_leafs" unique_id=201181149 instance=ExtResource("4_kldst")]
+position = Vector2(-1243, -177)
 
-[node name="CanvasLayer" parent="." unique_id=420199614 instance=ExtResource("4_kldst")]
+[node name="Tree Leaves14" parent="Tree_leafs" unique_id=46806832 instance=ExtResource("4_kldst")]
+position = Vector2(-1369, -229)
 
-[node name="Bridge collisions" type="StaticBody2D" parent="." unique_id=134974770]
-visible = false
-z_index = 4096
-constant_linear_velocity = Vector2(0, -20.315)
+[node name="Tree Leaves15" parent="Tree_leafs" unique_id=70908959 instance=ExtResource("4_kldst")]
+position = Vector2(-1320, -306)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bridge collisions" unique_id=474560548]
-position = Vector2(0, -16)
-polygon = PackedVector2Array(32, 123, 49, 123, 65, 107, 78, 107, 94, 123, 161, 123, 177, 107, 190, 107, 206, 123, 273, 123, 289, 107, 302, 107, 318, 123, 385, 123, 401, 107, 414, 107, 430, 123, 497, 123, 513, 107, 526, 107, 542, 123, 640, 123, 640, 118, 542, 118, 526, 102, 513, 102, 497, 118, 430, 118, 414, 102, 401, 102, 385, 118, 318, 118, 302, 102, 289, 102, 273, 118, 206, 118, 190, 102, 177, 102, 161, 118, 94, 118, 78, 102, 65, 102, 49, 118, 32, 118)
+[node name="Tree Leaves16" parent="Tree_leafs" unique_id=309543175 instance=ExtResource("4_kldst")]
+position = Vector2(-1436, -305)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Bridge collisions" unique_id=488614627]
-position = Vector2(639.9303, 166.27423)
-polygon = PackedVector2Array(0.06970215, -0.27423096, -94.9303, -0.27423096, -110.9303, 15.725769, -128.9303, 15.725769, -144.9303, -0.27423096, -206.9303, -0.27423096, -222.9303, 15.725769, -240.9303, 15.725769, -256.9303, -0.27423096, -318.9303, -0.27423096, -334.9303, 15.725769, -352.9303, 15.725769, -368.9303, -0.27423096, -430.9303, -0.27423096, -446.9303, 15.725769, -464.9303, 15.725769, -480.9303, -0.27423096, -542.9303, -0.27423096, -558.9303, 15.725769, -576.9303, 15.725769, -592.9303, -0.27423096, -607.9303, -0.27423096, -607.9303, 4.725769, -591.9303, 4.725769, -575.9303, 20.725769, -559.9303, 20.725769, -543.9303, 4.725769, -479.9303, 4.725769, -463.9303, 20.725769, -447.9303, 20.725769, -431.9303, 4.725769, -367.9303, 4.725769, -351.9303, 20.725769, -335.9303, 20.725769, -319.9303, 4.725769, -255.9303, 4.725769, -239.9303, 20.725769, -223.9303, 20.725769, -207.9303, 4.725769, -143.9303, 4.725769, -127.9303, 20.725769, -111.9303, 20.725769, -95.9303, 4.725769, 0.06970215, 4.725769)
+[node name="Tree Leaves17" parent="Tree_leafs" unique_id=1271428868 instance=ExtResource("4_kldst")]
+position = Vector2(-1369, -229)
 
-[node name="Bridge supports" type="StaticBody2D" parent="." unique_id=694124896]
-z_index = 4096
-position = Vector2(113, 39)
+[node name="Tree Leaves18" parent="Tree_leafs" unique_id=1839268046 instance=ExtResource("4_kldst")]
+position = Vector2(-1465, -169)
+
+[node name="Tree Leaves19" parent="Tree_leafs" unique_id=359442050 instance=ExtResource("4_kldst")]
+position = Vector2(-1557, -249)
+
+[node name="Tree Leaves20" parent="Tree_leafs" unique_id=1478000407 instance=ExtResource("4_kldst")]
+position = Vector2(-1634, -373)
+
+[node name="Tree Leaves21" parent="Tree_leafs" unique_id=925245689 instance=ExtResource("4_kldst")]
+position = Vector2(-1565, -355)
+
+[node name="Tree Leaves22" parent="Tree_leafs" unique_id=1448616087 instance=ExtResource("4_kldst")]
+position = Vector2(-1692, -325)
+
+[node name="Tree Leaves23" parent="Tree_leafs" unique_id=1395808497 instance=ExtResource("4_kldst")]
+position = Vector2(-1742, -210)
+
+[node name="Tree Leaves24" parent="Tree_leafs" unique_id=1662623249 instance=ExtResource("4_kldst")]
+position = Vector2(-1659, -156)
+
+[node name="Tree Leaves25" parent="Tree_leafs" unique_id=570591329 instance=ExtResource("4_kldst")]
+position = Vector2(-1739, -469)
+
+[node name="Tree Leaves26" parent="Tree_leafs" unique_id=2109778666 instance=ExtResource("4_kldst")]
+position = Vector2(-186, -983)
+
+[node name="Tree Leaves27" parent="Tree_leafs" unique_id=1249496906 instance=ExtResource("4_kldst")]
+position = Vector2(-269, -988)
+
+[node name="Tree Leaves28" parent="Tree_leafs" unique_id=1495702594 instance=ExtResource("4_kldst")]
+position = Vector2(-322, -936)
+
+[node name="Tree Leaves29" parent="Tree_leafs" unique_id=96611233 instance=ExtResource("4_kldst")]
+position = Vector2(-502, -991)
+
+[node name="Tree Leaves30" parent="Tree_leafs" unique_id=948007124 instance=ExtResource("4_kldst")]
+position = Vector2(-615, -938)
+
+[node name="Tree Leaves31" parent="Tree_leafs" unique_id=1714878784 instance=ExtResource("4_kldst")]
+position = Vector2(-580, -886)
+
+[node name="Tree Leaves32" parent="Tree_leafs" unique_id=1898817091 instance=ExtResource("4_kldst")]
+position = Vector2(-716, -889)
+
+[node name="Tree Leaves33" parent="Tree_leafs" unique_id=1419927938 instance=ExtResource("4_kldst")]
+position = Vector2(-822, -947)
+
+[node name="Tree Leaves34" parent="Tree_leafs" unique_id=1370441719 instance=ExtResource("4_kldst")]
+position = Vector2(-982, -931)
+
+[node name="Tree Leaves35" parent="Tree_leafs" unique_id=1700224687 instance=ExtResource("4_kldst")]
+position = Vector2(-1089, -936)
+
+[node name="Tree Leaves36" parent="Tree_leafs" unique_id=1594949861 instance=ExtResource("4_kldst")]
+position = Vector2(-1308, -935)
+
+[node name="Tree Leaves37" parent="Tree_leafs" unique_id=478445824 instance=ExtResource("4_kldst")]
+position = Vector2(-1249, -878)
+
+[node name="Tree Leaves38" parent="Tree_leafs" unique_id=1209517674 instance=ExtResource("4_kldst")]
+position = Vector2(618, -249)
+
+[node name="Tree Leaves39" parent="Tree_leafs" unique_id=1127343562 instance=ExtResource("4_kldst")]
+position = Vector2(615, -479)
+
+[node name="Tree Leaves40" parent="Tree_leafs" unique_id=440051846 instance=ExtResource("4_kldst")]
+position = Vector2(514, -485)
+
+[node name="Tree Leaves41" parent="Tree_leafs" unique_id=235781320 instance=ExtResource("4_kldst")]
+position = Vector2(615, -575)
+
+[node name="Tree Leaves42" parent="Tree_leafs" unique_id=449583642 instance=ExtResource("4_kldst")]
+position = Vector2(536, -640)
+
+[node name="Tree Leaves43" parent="Tree_leafs" unique_id=172241849 instance=ExtResource("4_kldst")]
+position = Vector2(619, -719)
+
+[node name="Tree Leaves44" parent="Tree_leafs" unique_id=855647424 instance=ExtResource("4_kldst")]
+position = Vector2(474, -716)
+
+[node name="Tree Leaves45" parent="Tree_leafs" unique_id=236538690 instance=ExtResource("4_kldst")]
+position = Vector2(539, -753)
+
+[node name="Tree Leaves46" parent="Tree_leafs" unique_id=661440078 instance=ExtResource("4_kldst")]
+position = Vector2(590, -836)
+
+[node name="Tree Leaves47" parent="Tree_leafs" unique_id=789035111 instance=ExtResource("4_kldst")]
+position = Vector2(455, -840)
+
+[node name="Tree Leaves48" parent="Tree_leafs" unique_id=1330652887 instance=ExtResource("4_kldst")]
+position = Vector2(378, -816)
+
+[node name="Tree Leaves49" parent="Tree_leafs" unique_id=207282425 instance=ExtResource("4_kldst")]
+position = Vector2(534, -915)
+
+[node name="Tree Leaves50" parent="Tree_leafs" unique_id=1352853944 instance=ExtResource("4_kldst")]
+position = Vector2(601, -951)
+
+[node name="Tree Leaves51" parent="Tree_leafs" unique_id=21044478 instance=ExtResource("4_kldst")]
+position = Vector2(396, -965)
+
+[node name="Tree Leaves54" parent="Tree_leafs" unique_id=1614825944 instance=ExtResource("4_kldst")]
+position = Vector2(-223, -859)
+
+[node name="Tree Leaves52" parent="Tree_leafs" unique_id=1459875329 instance=ExtResource("4_kldst")]
+position = Vector2(-422, -845)
+
+[node name="Tree Leaves53" parent="Tree_leafs" unique_id=1785370198 instance=ExtResource("4_kldst")]
+position = Vector2(-234, -754)
+
+[node name="Tree Leaves55" parent="Tree_leafs" unique_id=671136367 instance=ExtResource("4_kldst")]
+position = Vector2(-392, -750)
+
+[node name="Tree Leaves56" parent="Tree_leafs" unique_id=475830995 instance=ExtResource("4_kldst")]
+position = Vector2(-278, -656)
+
+[node name="Tree Leaves57" parent="Tree_leafs" unique_id=2001464103 instance=ExtResource("4_kldst")]
+position = Vector2(-463, -658)
+
+[node name="Tree Leaves58" parent="Tree_leafs" unique_id=615103783 instance=ExtResource("4_kldst")]
+position = Vector2(-512, -651)
+
+[node name="Tree Leaves59" parent="Tree_leafs" unique_id=1199097186 instance=ExtResource("4_kldst")]
+position = Vector2(-352, -589)
+
+[node name="Tree Leaves60" parent="Tree_leafs" unique_id=1760495865 instance=ExtResource("4_kldst")]
+position = Vector2(-167, -560)
+
+[node name="Tree Leaves61" parent="Tree_leafs" unique_id=1099993087 instance=ExtResource("4_kldst")]
+position = Vector2(-262, -543)
+
+[node name="Tree Leaves62" parent="Tree_leafs" unique_id=627767387 instance=ExtResource("4_kldst")]
+position = Vector2(-299, -445)
+
+[node name="Tree Leaves63" parent="Tree_leafs" unique_id=133745294 instance=ExtResource("4_kldst")]
+position = Vector2(-473, -485)
+
+[node name="Tree Leaves64" parent="Tree_leafs" unique_id=66711594 instance=ExtResource("4_kldst")]
+position = Vector2(-470, -417)
+
+[node name="Tree Leaves65" parent="Tree_leafs" unique_id=1831669528 instance=ExtResource("4_kldst")]
+position = Vector2(-409, -399)
+
+[node name="Tree Leaves66" parent="Tree_leafs" unique_id=1135428692 instance=ExtResource("4_kldst")]
+position = Vector2(-515, -819)
+
+[node name="Tree Leaves67" parent="Tree_leafs" unique_id=2029680834 instance=ExtResource("4_kldst")]
+position = Vector2(-721, -807)
+
+[node name="Tree Leaves68" parent="Tree_leafs" unique_id=1722326069 instance=ExtResource("4_kldst")]
+position = Vector2(-658, -740)
+
+[node name="Tree Leaves69" parent="Tree_leafs" unique_id=1037166400 instance=ExtResource("4_kldst")]
+position = Vector2(-632, -668)
+
+[node name="Tree Leaves70" parent="Tree_leafs" unique_id=1898104704 instance=ExtResource("4_kldst")]
+position = Vector2(-745, -581)
+
+[node name="Tree Leaves71" parent="Tree_leafs" unique_id=635897604 instance=ExtResource("4_kldst")]
+position = Vector2(-684, -525)
+
+[node name="Tree Leaves72" parent="Tree_leafs" unique_id=68018717 instance=ExtResource("4_kldst")]
+position = Vector2(-582, -530)
+
+[node name="Tree Leaves73" parent="Tree_leafs" unique_id=1189592459 instance=ExtResource("4_kldst")]
+position = Vector2(-615, -440)
+
+[node name="Tree Leaves74" parent="Tree_leafs" unique_id=226050656 instance=ExtResource("4_kldst")]
+position = Vector2(-575, -391)
+
+[node name="Tree Leaves75" parent="Tree_leafs" unique_id=1174974060 instance=ExtResource("4_kldst")]
+position = Vector2(-693, -385)
+
+[node name="Tree Leaves76" parent="Tree_leafs" unique_id=915883316 instance=ExtResource("4_kldst")]
+position = Vector2(-780, -463)
+
+[node name="Tree Leaves77" parent="Tree_leafs" unique_id=2061267147 instance=ExtResource("4_kldst")]
+position = Vector2(-860, -417)
+
+[node name="Tree Leaves78" parent="Tree_leafs" unique_id=146304279 instance=ExtResource("4_kldst")]
+position = Vector2(-834, -538)
+
+[node name="Tree Leaves79" parent="Tree_leafs" unique_id=789266280 instance=ExtResource("4_kldst")]
+position = Vector2(-872, -841)
+
+[node name="Tree Leaves80" parent="Tree_leafs" unique_id=1018242053 instance=ExtResource("4_kldst")]
+position = Vector2(-890, -777)
+
+[node name="Tree Leaves81" parent="Tree_leafs" unique_id=2072872542 instance=ExtResource("4_kldst")]
+position = Vector2(-877, -664)
+
+[node name="Tree Leaves82" parent="Tree_leafs" unique_id=1170072502 instance=ExtResource("4_kldst")]
+position = Vector2(-902, -655)
+
+[node name="Tree Leaves83" parent="Tree_leafs" unique_id=1177092201 instance=ExtResource("4_kldst")]
+position = Vector2(-975, -705)
+
+[node name="Tree Leaves84" parent="Tree_leafs" unique_id=840826705 instance=ExtResource("4_kldst")]
+position = Vector2(-1048, -759)
+
+[node name="Tree Leaves85" parent="Tree_leafs" unique_id=1853625871 instance=ExtResource("4_kldst")]
+position = Vector2(-1200, -754)
+
+[node name="Tree Leaves86" parent="Tree_leafs" unique_id=1083071418 instance=ExtResource("4_kldst")]
+position = Vector2(-1188, -694)
+
+[node name="Tree Leaves87" parent="Tree_leafs" unique_id=579339563 instance=ExtResource("4_kldst")]
+position = Vector2(-1123, -654)
+
+[node name="Tree Leaves88" parent="Tree_leafs" unique_id=2104693385 instance=ExtResource("4_kldst")]
+position = Vector2(-1014, -596)
+
+[node name="Tree Leaves89" parent="Tree_leafs" unique_id=1731364515 instance=ExtResource("4_kldst")]
+position = Vector2(-986, -515)
+
+[node name="Tree Leaves90" parent="Tree_leafs" unique_id=387827080 instance=ExtResource("4_kldst")]
+position = Vector2(-1183, -567)
+
+[node name="Tree Leaves91" parent="Tree_leafs" unique_id=760657919 instance=ExtResource("4_kldst")]
+position = Vector2(-1249, -559)
+
+[node name="Tree Leaves92" parent="Tree_leafs" unique_id=1675791253 instance=ExtResource("4_kldst")]
+position = Vector2(-1299, -649)
+
+[node name="Tree Leaves93" parent="Tree_leafs" unique_id=53651440 instance=ExtResource("4_kldst")]
+position = Vector2(-1331, -491)
+
+[node name="Tree Leaves94" parent="Tree_leafs" unique_id=478343678 instance=ExtResource("4_kldst")]
+position = Vector2(-1122, -481)
+
+[node name="Tree Leaves95" parent="Tree_leafs" unique_id=563908456 instance=ExtResource("4_kldst")]
+position = Vector2(-1523, -959)
+
+[node name="Tree Leaves96" parent="Tree_leafs" unique_id=337444383 instance=ExtResource("4_kldst")]
+position = Vector2(-1455, -950)
+
+[node name="Tree Leaves97" parent="Tree_leafs" unique_id=1349721051 instance=ExtResource("4_kldst")]
+position = Vector2(-1489, -838)
+
+[node name="Tree Leaves98" parent="Tree_leafs" unique_id=1888595359 instance=ExtResource("4_kldst")]
+position = Vector2(-1625, -838)
+
+[node name="Tree Leaves99" parent="Tree_leafs" unique_id=1850868414 instance=ExtResource("4_kldst")]
+position = Vector2(-1666, -935)
+
+[node name="Tree Leaves100" parent="Tree_leafs" unique_id=1514990998 instance=ExtResource("4_kldst")]
+position = Vector2(-1580, -732)
+
+[node name="Tree Leaves101" parent="Tree_leafs" unique_id=819150225 instance=ExtResource("4_kldst")]
+position = Vector2(-1559, -698)
+
+[node name="Tree Leaves102" parent="Tree_leafs" unique_id=1789898458 instance=ExtResource("4_kldst")]
+position = Vector2(-1361, -791)
+
+[node name="Tree Leaves103" parent="Tree_leafs" unique_id=1339184903 instance=ExtResource("4_kldst")]
+position = Vector2(-1382, -760)
+
+[node name="Tree Leaves104" parent="Tree_leafs" unique_id=760812215 instance=ExtResource("4_kldst")]
+position = Vector2(-1667, -751)
+
+[node name="Tree Leaves105" parent="Tree_leafs" unique_id=67979330 instance=ExtResource("4_kldst")]
+position = Vector2(-1473, -712)
+
+[node name="Tree Leaves106" parent="Tree_leafs" unique_id=2053885752 instance=ExtResource("4_kldst")]
+position = Vector2(-1573, -625)
+
+[node name="Tree Leaves107" parent="Tree_leafs" unique_id=1669674500 instance=ExtResource("4_kldst")]
+position = Vector2(-1640, -606)
+
+[node name="Tree Leaves108" parent="Tree_leafs" unique_id=885592609 instance=ExtResource("4_kldst")]
+position = Vector2(-1728, -691)
+
+[node name="Tree Leaves109" parent="Tree_leafs" unique_id=15947642 instance=ExtResource("4_kldst")]
+position = Vector2(-1402, -670)
+
+[node name="Tree Leaves110" parent="Tree_leafs" unique_id=348057033 instance=ExtResource("4_kldst")]
+position = Vector2(-1421, -563)
+
+[node name="Tree Leaves111" parent="Tree_leafs" unique_id=226518894 instance=ExtResource("4_kldst")]
+position = Vector2(-1480, -532)
+
+[node name="Fort_sceens&collisions_(non_Y_sorting)" type="Node2D" parent="." unique_id=2109952035]
+position = Vector2(-208, -384)
+
+[node name="Left_fort" type="Node2D" parent="Fort_sceens&collisions_(non_Y_sorting)" unique_id=894244491]
+
+[node name="Fort_sceenes" type="Node2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Left_fort" unique_id=2067914241]
+
+[node name="Fort_L_catwalk" parent="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_sceenes" unique_id=697326546 instance=ExtResource("6_7lihs")]
+position = Vector2(-16, 16)
+
+[node name="Fort_gate_l_top" parent="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_sceenes" unique_id=647635147 instance=ExtResource("7_fgofq")]
+position = Vector2(-48, 80)
+
+[node name="Fort_gate_l_bottom" parent="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_sceenes" unique_id=452656283 instance=ExtResource("8_2irst")]
+position = Vector2(-48, 112)
+
+[node name="Fort_collisions" type="Node2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Left_fort" unique_id=235369318]
+
+[node name="Side_wall_collisions" type="Node2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions" unique_id=910148431]
+
+[node name="Side_wall_collision1" type="StaticBody2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Side_wall_collisions" unique_id=515654034]
+editor_description = "Inside and outside"
+collision_layer = 7
+collision_mask = 7
+
+[node name="Side_wall_collision1" type="CollisionPolygon2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Side_wall_collisions/Side_wall_collision1" unique_id=1058297125]
+position = Vector2(-42, 22)
+polygon = PackedVector2Array(2, 0, 2, 23, 0, 26, -14, 26, -14, -28, 2, -28)
+
+[node name="Side_wall_collison2" type="StaticBody2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Side_wall_collisions" unique_id=1688995702]
+
+[node name="Side_wall_collision2" type="CollisionPolygon2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Side_wall_collisions/Side_wall_collison2" unique_id=298489215]
+position = Vector2(-44, 147.5)
+polygon = PackedVector2Array(-4, 44.5, 4, 44.5, 4, -44.5, -11, -44.5, -11, -36.5, -4, -36.5)
+
+[node name="Top_wall_collisions" type="Node2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions" unique_id=1844682927]
+
+[node name="Top_wall_collisions_outside" type="StaticBody2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Top_wall_collisions" unique_id=541968789]
+editor_description = "Outside"
 collision_layer = 2
 collision_mask = 2
 
-[node name="Bridge support" type="CollisionPolygon2D" parent="Bridge supports" unique_id=22312741]
-position = Vector2(-113, 0)
-polygon = PackedVector2Array(48, 91, 64, 75, 80, 75, 96, 91, 96, 93, 106, 93, 106, 161, 96, 161, 96, 163, 80, 179, 64, 179, 48, 163, 48, 93)
+[node name="Top_wall_collision_outside" type="CollisionShape2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Top_wall_collisions/Top_wall_collisions_outside" unique_id=1263840316]
+position = Vector2(15, -3)
+shape = SubResource("RectangleShape2D_bf53h")
 
-[node name="Bridge support2" type="CollisionPolygon2D" parent="Bridge supports" unique_id=340823839]
-polygon = PackedVector2Array(48, 91, 64, 75, 80, 75, 96, 91, 96, 93, 106, 93, 106, 161, 96, 161, 96, 163, 80, 179, 64, 179, 48, 163, 48, 161, 38, 161, 38, 93, 48, 93)
+[node name="Top_wall_collisions_inside" type="StaticBody2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Top_wall_collisions" unique_id=624054067]
+editor_description = "Inside"
+collision_layer = 4
+collision_mask = 4
 
-[node name="Bridge support3" type="CollisionPolygon2D" parent="Bridge supports" unique_id=1667447755]
-position = Vector2(112, -1)
-polygon = PackedVector2Array(48, 91, 64, 75, 80, 75, 96, 91, 96, 93, 106, 93, 106, 161, 96, 161, 96, 163, 80, 179, 64, 179, 48, 163, 48, 161, 38, 161, 38, 93, 48, 93)
+[node name="Top_wall_collision_inside" type="CollisionPolygon2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Top_wall_collisions/Top_wall_collisions_inside" unique_id=2086172203]
+polygon = PackedVector2Array(80, 0, 33, 0, 2, -32, -48, -32, -48, -14, -1, -14, 30, 16, -51, 16, -51, -35, 4, -35, 36, -3, 80, -3)
 
-[node name="Bridge support4" type="CollisionPolygon2D" parent="Bridge supports" unique_id=2009378156]
-position = Vector2(224, 0)
-polygon = PackedVector2Array(48, 91, 64, 75, 80, 75, 96, 91, 96, 93, 106, 93, 106, 161, 96, 161, 96, 163, 80, 179, 64, 179, 48, 163, 48, 161, 38, 161, 38, 93, 48, 93)
+[node name="Area_collisions" type="Node2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions" unique_id=479738367]
 
-[node name="Bridge support5" type="CollisionPolygon2D" parent="Bridge supports" unique_id=386733653]
-position = Vector2(335, 0)
-polygon = PackedVector2Array(48, 91, 64, 75, 80, 75, 96, 91, 96, 93, 106, 93, 106, 161, 96, 161, 96, 163, 80, 179, 64, 179, 48, 163, 48, 161, 38, 161, 38, 93, 48, 93)
+[node name="Walk_on_catwalk" type="Area2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Area_collisions" unique_id=2071299972]
+collision_layer = 5
+collision_mask = 5
+script = ExtResource("10_71axn")
 
-[node name="Bridge support6" type="CollisionPolygon2D" parent="Bridge supports" unique_id=1093593813]
-position = Vector2(448, 0)
-polygon = PackedVector2Array(48, 91, 64, 75, 64, 179, 48, 163, 48, 161, 38, 161, 38, 93, 48, 93)
+[node name="Walk_on_catwalk_collision" type="CollisionPolygon2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Area_collisions/Walk_on_catwalk" unique_id=451887459]
+polygon = PackedVector2Array(-40, 45, 80, 45, 80, -1, 35, -1, 3, -33, -49, -33, -49, -6, -40, -6)
 
-[node name="Water" type="Area2D" parent="." unique_id=1246115903]
+[node name="Walk_behind_catwalk" type="Area2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Area_collisions" unique_id=497810585]
 collision_layer = 3
 collision_mask = 3
-script = ExtResource("15_x3xnh")
+script = ExtResource("11_dahhg")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Water" unique_id=2118333294]
-z_index = 4096
-polygon = PackedVector2Array(45, 219, 624, 220, 624, 217, 609, 202, 609, 130, 640, 100, 640, 83, 633, 83, 627, 80, 625, 75, 627, 70, 624, 36, 617, 34, 611, 32, 610, 28, 609, 27, 610, 24, 611, 22, 611, 18, 609, 15, 608, 13, 608, 8, 611, 4, 611, 0, 610, -2, 608, -5, 608, -88, 614, -92, 618, -97, 624, -97, 624, -124, 615, -126, 610, -129, 610, -132, 608, -133, 608, -134, 610, -137, 611, -143, 608, -151, 611, -157, 609, -164, 608, -196, 599, -197, 596, -201, 592, -204, 586, -205, 581, -216, 570, -221, 563, -224, 561, -229, 563, -234, 563, -239, 559, -244, 562, -250, 562, -251, 554, -253, 547, -256, 545, -262, 547, -267, 547, -271, 544, -275, 544, -281, 546, -283, 544, -284, 534, -285, 532, -288, 529, -293, 530, -297, 531, -301, 529, -306, 529, -311, 531, -315, 521, -318, 515, -321, 512, -326, 514, -329, 515, -330, 515, -334, 511, -340, 512, -344, 514, -346, 513, -348, 505, -349, 499, -352, 496, -357, 498, -362, 499, -364, 499, -367, 496, -371, 496, -375, 498, -380, 498, -383, 496, -389, 496, -421, 0, -421, -1, -340, -8, -335, -16, -333, -17, -240, -5, -236, -1, -229, 28, -164, 33, -159, 32, -145, 44, -141, 48, -134, 48, -30)
+[node name="Walk_behind_catwalk_collision" type="CollisionShape2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Area_collisions/Walk_behind_catwalk" unique_id=1930933066]
+position = Vector2(11.5, -22)
+shape = SubResource("RectangleShape2D_4bxau")
 
-[node name="World_Falling" type="Node2D" parent="." unique_id=906870685]
-z_index = 4096
+[node name="Walk_infront_of_gates" type="Area2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Area_collisions" unique_id=738711339]
+script = ExtResource("12_3so38")
 
-[node name="Area2D" type="Area2D" parent="World_Falling" unique_id=163896474]
-position = Vector2(52.4375, -74.5)
-script = ExtResource("15_acvyw")
+[node name="Walk_infront_of_gates_collision" type="CollisionPolygon2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Area_collisions/Walk_infront_of_gates" unique_id=727762174]
+polygon = PackedVector2Array(-48, 111, -64, 87, -64, 147, -48, 147)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World_Falling/Area2D" unique_id=584105397]
-position = Vector2(9.5625, 43.4375)
-shape = SubResource("RectangleShape2D_wqpnj")
+[node name="Walk_behind_gates" type="Area2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Area_collisions" unique_id=1554368349]
+script = ExtResource("13_3cx6b")
 
-[node name="World not colliding" type="Node2D" parent="." unique_id=1271012840]
-position = Vector2(0, -16)
+[node name="Walk_behind_gates_collision" type="CollisionPolygon2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Area_collisions/Walk_behind_gates" unique_id=1454579603]
+polygon = PackedVector2Array(-47, 103, -58, 86, -58, 77, -47, 48, -42, 48, -42, 103)
 
-[node name="Walk under bridge" type="Area2D" parent="World not colliding" unique_id=380182060]
+[node name="Gate_collisions" type="Node2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions" unique_id=1834124963]
+
+[node name="Gate_collision" type="StaticBody2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Gate_collisions" unique_id=227273984]
+
+[node name="Gate_collision" type="CollisionPolygon2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Gate_collisions/Gate_collision" unique_id=593020624]
+polygon = PackedVector2Array(-56, 48, -47, 48, -58, 77, -58, 86, -47, 103, -55, 103, -64, 86, -64, 77)
+
+[node name="Right_fort" type="Node2D" parent="Fort_sceens&collisions_(non_Y_sorting)" unique_id=1219590366]
+
+[node name="Fort_sceenes" type="Node2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort" unique_id=1287721462]
+
+[node name="Fort_r_catwalk" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_sceenes" unique_id=1846603861 instance=ExtResource("15_acvyw")]
+position = Vector2(752, 16)
+
+[node name="Fort_gate_r_top" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_sceenes" unique_id=199717253 instance=ExtResource("16_alh3a")]
+position = Vector2(768, 112)
+
+[node name="Fort_gate_r_bottom" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_sceenes" unique_id=640366470 instance=ExtResource("17_4q8tf")]
+position = Vector2(768, 144)
+
+[node name="Fort_r_side_wall" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_sceenes" unique_id=1490067368 instance=ExtResource("18_x3xnh")]
+position = Vector2(760, 160)
+
+[node name="Fort_collisions" type="Node2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort" unique_id=1517629169]
+
+[node name="Side_wall_collisions" type="Node2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions" unique_id=374615350]
+
+[node name="Side_wall_collision1" type="StaticBody2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Side_wall_collisions" unique_id=1141890473]
+
+[node name="Side_wall_collision1" type="CollisionShape2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Side_wall_collisions/Side_wall_collision1" unique_id=72687266]
+position = Vector2(772, 40)
+shape = SubResource("RectangleShape2D_gq3fl")
+
+[node name="Side_wall_collision2" type="StaticBody2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Side_wall_collisions" unique_id=1359188996]
+
+[node name="Side_wall_collision2" type="CollisionShape2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Side_wall_collisions/Side_wall_collision2" unique_id=1987822437]
+position = Vector2(764, 164.5)
+shape = SubResource("RectangleShape2D_yxy7w")
+
+[node name="Top_wall_collisions" type="Node2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions" unique_id=1868022164]
+
+[node name="Top_wall_collisions_outside" type="StaticBody2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Top_wall_collisions" unique_id=2034659501]
 collision_layer = 3
 collision_mask = 3
-script = ExtResource("16_alh3a")
 
-[node name="Walk under bridge" type="CollisionShape2D" parent="World not colliding/Walk under bridge" unique_id=1348157923]
-z_index = 4096
-position = Vector2(344, 170)
-shape = SubResource("RectangleShape2D_0ts1m")
+[node name="Top_wall_collision_outside" type="CollisionShape2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Top_wall_collisions/Top_wall_collisions_outside" unique_id=1034901685]
+position = Vector2(708.5, -3)
+shape = SubResource("RectangleShape2D_kfr6r")
 
-[node name="Bridge supports layering" parent="." unique_id=1894840998 instance=ExtResource("17_4q8tf")]
-position = Vector2(333, 154)
+[node name="Top_wall_collisions_inside" type="StaticBody2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Top_wall_collisions" unique_id=206237629]
+collision_layer = 4
+collision_mask = 4
 
-[connection signal="body_entered" from="Water" to="Water" method="_on_body_entered"]
-[connection signal="body_exited" from="Water" to="Water" method="_on_body_exited"]
-[connection signal="body_entered" from="World_Falling/Area2D" to="World_Falling/Area2D" method="_on_body_entered"]
-[connection signal="body_entered" from="World not colliding/Walk under bridge" to="World not colliding/Walk under bridge" method="_on_body_entered"]
-[connection signal="body_exited" from="World not colliding/Walk under bridge" to="World not colliding/Walk under bridge" method="_on_body_exited"]
+[node name="Top_wall_collision_inside1" type="CollisionPolygon2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Top_wall_collisions/Top_wall_collisions_inside" unique_id=442912645]
+polygon = PackedVector2Array(720, -14, 689, 16, 751, 16, 751, -14)
+
+[node name="Top_wall_collision_inside2" type="CollisionPolygon2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Top_wall_collisions/Top_wall_collisions_inside" unique_id=1903662748]
+polygon = PackedVector2Array(717, -33, 686, -2, 641, -2, 641, 0, 686, 0, 717, -31, 768, -31, 768, -6, 768, 16, 752, 16, 752, 48, 760, 48, 760, 80, 776, 80, 776, -33, 768, -33)
+
+[node name="Area_collisions" type="Node2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions" unique_id=1620097984]
+
+[node name="Walk_on_catwalk" type="Area2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Area_collisions" unique_id=466877085]
+collision_layer = 5
+collision_mask = 5
+script = ExtResource("19_8r6kd")
+
+[node name="Walk_on_catwalk_collision" type="CollisionPolygon2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Area_collisions/Walk_on_catwalk" unique_id=246747753]
+polygon = PackedVector2Array(768, 85, 673, 85, 673, -3, 688, -3, 717, -32, 768, -32)
+
+[node name="Walk_behind_catwalk" type="Area2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Area_collisions" unique_id=2014336166]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("20_tfod6")
+
+[node name="Walk_behind_catwalk_collision" type="CollisionShape2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Area_collisions/Walk_behind_catwalk" unique_id=746361191]
+position = Vector2(708.5, -23.5)
+shape = SubResource("RectangleShape2D_0nqot")
+
+[node name="Walk_infront_of_gates" type="Area2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Area_collisions" unique_id=1501521651]
+script = ExtResource("21_rajel")
+
+[node name="Walk_infront_of_gates_collision" type="CollisionPolygon2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Area_collisions/Walk_infront_of_gates" unique_id=24646983]
+polygon = PackedVector2Array(768, 143, 768, 168, 781, 168, 790, 122, 790, 106, 784, 106, 784, 118, 775, 143)
+
+[node name="Walk_behind_gates" type="Area2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Area_collisions" unique_id=888913606]
+script = ExtResource("22_vvhu1")
+
+[node name="Walk_infront_of_gates_collision" type="CollisionPolygon2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Area_collisions/Walk_behind_gates" unique_id=2112090845]
+polygon = PackedVector2Array(760, 80, 768, 80, 778, 107, 778, 114, 760, 137)
+
+[node name="Gate_collisions" type="Node2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions" unique_id=1242098117]
+
+[node name="Gate_collision" type="StaticBody2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Gate_collisions" unique_id=1457281628]
+collision_layer = 5
+collision_mask = 5
+
+[node name="Gate_collision" type="CollisionPolygon2D" parent="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Gate_collisions/Gate_collision" unique_id=832989743]
+polygon = PackedVector2Array(768, 80, 778, 107, 778, 114, 760, 137, 768, 137, 768, 143, 775, 143, 784, 118, 784, 107, 776, 80)
+
+[node name="World_Border" type="StaticBody2D" parent="." unique_id=644688481]
+
+[node name="World_ edge_B" type="CollisionShape2D" parent="World_Border" unique_id=1546162596]
+position = Vector2(-149, 481)
+shape = SubResource("WorldBoundaryShape2D_wqpnj")
+
+[node name="World_edge_R" type="CollisionShape2D" parent="World_Border" unique_id=68626070]
+position = Vector2(642, -655)
+shape = SubResource("WorldBoundaryShape2D_0ts1m")
+
+[node name="World_edge_T" type="CollisionShape2D" parent="World_Border" unique_id=442741231]
+position = Vector2(17, -962)
+shape = SubResource("WorldBoundaryShape2D_j36ny")
+
+[node name="World_edge_L" type="CollisionShape2D" parent="World_Border" unique_id=429133078]
+position = Vector2(-1762, -544)
+shape = SubResource("WorldBoundaryShape2D_skiy4")
+
+[node name="Cliff&river edges" type="StaticBody2D" parent="." unique_id=1407761905]
+position = Vector2(-208, -384)
+collision_layer = 7
+collision_mask = 7
+
+[node name="Left_of_bridge_cliff1" type="CollisionPolygon2D" parent="Cliff&river edges" unique_id=1401125676]
+polygon = PackedVector2Array(662, 176, 663, 179, 669, 182, 760, 182, 760, 183, 668, 183, 662, 180, 660, 176)
+
+[node name="Left_of_bridge_cliff2" type="CollisionPolygon2D" parent="Cliff&river edges" unique_id=817232970]
+polygon = PackedVector2Array(768, 183, 848, 183, 848, 182, 768, 182)
+
+[node name="Right_river_bank" type="CollisionPolygon2D" parent="Cliff&river edges" unique_id=899167856]
+polygon = PackedVector2Array(672, 128, 676, 125, 677, 121, 677, 46, 675, 44, 667, 44, 661, 37, 660, 31, 660, 0, 646, -4, 646, -84, 662, -96, 662, -160, 657, -165, 647, -168, 645, -177, 646, -184, 646, -221, 596, -269, 596, -280, 596, -290, 580, -300, 580, -320, 565, -332, 565, -348, 555, -360, 549, -364, 549, -381, 543, -388, 533, -393, 533, -450, 536, -454, 549, -459, 548, -576, 547, -576, 548, -460, 536, -456, 531, -450, 531, -393, 542, -387, 547, -381, 547, -364, 555, -359, 563, -348, 563, -332, 578, -320, 578, -300, 594, -290, 594, -280, 594, -269, 645, -221, 645, -184, 644, -178, 646, -167, 656, -164, 661, -159, 661, -96, 644, -84, 644, -3, 658, 0, 658, 30, 659, 37, 666, 45, 674, 45, 675, 47, 675, 121, 672, 123)
+
+[node name="Left_river_bank" type="CollisionPolygon2D" parent="Cliff&river edges" unique_id=1946563165]
+position = Vector2(2, 0)
+polygon = PackedVector2Array(75, 124, 75, -129, 58, -139, 58, -161, 29, -202, 29, -220, 11, -234, 11, -234, 11, -375, 21, -376, 26, -384, 26, -452, 37, -455, 43, -461, 43, -576, 45, -576, 45, -461, 38, -454, 28, -451, 28, -384, 22, -375, 13, -374, 13, -235, 31, -221, 31, -202, 59, -162, 59, -140, 76, -130, 76, 124)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Cliff&river edges" unique_id=610005874]
+position = Vector2(2, 0)
+polygon = PackedVector2Array(66, 187, 74, 179, 74, 176, 72, 176, 72, 179, 65, 186, -42, 187, -42, 188)
+
+[node name="Stone_bridge" type="Node2D" parent="." unique_id=687166342]
+
+[node name="Stone_bridge_sceenes" type="Node2D" parent="Stone_bridge" unique_id=11790173]
+
+[node name="Stone_bridge_top_wall" parent="Stone_bridge/Stone_bridge_sceenes" unique_id=1795121558 instance=ExtResource("23_lbihj")]
+z_index = -1
+position = Vector2(96, -240)
+script = ExtResource("24_i0vto")
+
+[node name="Stone_bridge_bottom_wall" parent="Stone_bridge/Stone_bridge_sceenes" unique_id=469077599 instance=ExtResource("24_raj38")]
+position = Vector2(96, -240)
+
+[node name="Stone_bridge_collisions" type="Node2D" parent="Stone_bridge" unique_id=1971069064]
+
+[node name="Wall_collisions" type="StaticBody2D" parent="Stone_bridge/Stone_bridge_collisions" unique_id=1433357877]
+
+[node name="Top_wall_collision" type="CollisionPolygon2D" parent="Stone_bridge/Stone_bridge_collisions/Wall_collisions" unique_id=583998215]
+polygon = PackedVector2Array(-144, -256, -127, -256, -111, -272, -98, -272, -82, -256, -15, -256, 1, -272, 14, -272, 30, -256, 97, -256, 113, -272, 126, -272, 142, -256, 209, -256, 225, -272, 238, -272, 254, -256, 321, -256, 337, -272, 350, -272, 366, -256, 464, -256, 464, -261, 368, -261, 352, -277, 336, -277, 320, -261, 256, -261, 240, -277, 224, -277, 208, -261, 144, -261, 128, -277, 112, -277, 96, -261, 32, -261, 16, -277, 0, -277, -16, -261, -80, -261, -96, -277, -112, -277, -128, -261, -144, -261)
+
+[node name="Bottom_wall_collision" type="CollisionPolygon2D" parent="Stone_bridge/Stone_bridge_collisions/Wall_collisions" unique_id=1026621887]
+polygon = PackedVector2Array(464, -201, 451.33563, -208, 368, -208, 353, -192, 335, -192, 320, -208, 256, -208, 241, -192, 223, -192, 208, -207, 144, -207, 129, -192, 111, -192, 96, -208, 33, -208, 17, -192, -1, -192, -16, -208, -80, -208, -95, -192, -113, -192, -128, -208, -144, -208, -144, -213, -127, -213, -112, -197, -96, -197, -80, -213, -15, -213, 0, -197, 16, -197, 32, -213, 97, -213, 112, -197, 128, -197, 144, -213, 209, -213, 224, -197, 240, -197, 256, -213, 321, -213, 336, -197, 352, -197, 368, -213, 464, -213)
+
+[node name="Area_collisions" type="Node2D" parent="Stone_bridge/Stone_bridge_collisions" unique_id=228876550]
+
+[node name="Walk_behind_top_wall" type="Area2D" parent="Stone_bridge/Stone_bridge_collisions/Area_collisions" unique_id=1761459478]
+script = ExtResource("26_i0vto")
+
+[node name="Walk_behind_top_wall_collision" type="CollisionPolygon2D" parent="Stone_bridge/Stone_bridge_collisions/Area_collisions/Walk_behind_top_wall" unique_id=298053391]
+polygon = PackedVector2Array(-144, -261, -144, -273, -128, -273, -113, -288, -95, -288, -79, -272, -17, -272, -1, -288, 17, -288, 33, -272, 95, -272, 111, -288, 129, -288, 145, -272, 207, -272, 223, -288, 241, -288, 257, -272, 319, -272, 335, -288, 353, -288, 369, -272, 464, -272, 464, -261, 368, -261, 352, -277, 336, -277, 320, -261, 256, -261, 240, -277, 224, -277, 208, -261, 144, -261, 128, -277, 112, -277, 96, -261, 32, -261, 16, -277, 0, -277, -16, -261, -80, -261, -96, -277, -112, -277, -128, -261)
+
+[node name="Walk_infront_of_bottom_wall" type="Area2D" parent="Stone_bridge/Stone_bridge_collisions/Area_collisions" unique_id=1117926552]
+script = ExtResource("27_3jf1l")
+
+[node name="Walk_infront_of_bottom_wall" type="CollisionPolygon2D" parent="Stone_bridge/Stone_bridge_collisions/Area_collisions/Walk_infront_of_bottom_wall" unique_id=676457406]
+polygon = PackedVector2Array(-155, -213, -155, -197, -132, -197, -132, -213)
+
+[node name="Walk_infront_of_bottom_wall2" type="Area2D" parent="Stone_bridge/Stone_bridge_collisions/Area_collisions" unique_id=1645248569]
+script = ExtResource("27_3jf1l")
+
+[node name="Walk_infront_of_bottom_wall" type="CollisionPolygon2D" parent="Stone_bridge/Stone_bridge_collisions/Area_collisions/Walk_infront_of_bottom_wall2" unique_id=1228850113]
+position = Vector2(604, 0)
+polygon = PackedVector2Array(-155, -213, -155, -201, -132, -201, -132, -213)
+
+[connection signal="body_entered" from="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Area_collisions/Walk_on_catwalk" to="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Area_collisions/Walk_on_catwalk" method="_on_body_entered"]
+[connection signal="body_exited" from="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Area_collisions/Walk_on_catwalk" to="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Area_collisions/Walk_on_catwalk" method="_on_body_exited"]
+[connection signal="body_entered" from="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Area_collisions/Walk_behind_catwalk" to="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Area_collisions/Walk_behind_catwalk" method="_on_body_entered"]
+[connection signal="body_exited" from="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Area_collisions/Walk_behind_catwalk" to="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Area_collisions/Walk_behind_catwalk" method="_on_body_exited"]
+[connection signal="body_entered" from="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Area_collisions/Walk_infront_of_gates" to="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Area_collisions/Walk_infront_of_gates" method="_on_body_entered"]
+[connection signal="body_exited" from="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Area_collisions/Walk_infront_of_gates" to="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Area_collisions/Walk_infront_of_gates" method="_on_body_exited"]
+[connection signal="body_entered" from="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Area_collisions/Walk_behind_gates" to="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Area_collisions/Walk_behind_gates" method="_on_body_entered"]
+[connection signal="body_exited" from="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Area_collisions/Walk_behind_gates" to="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Area_collisions/Walk_behind_gates" method="_on_body_exited"]
+[connection signal="body_entered" from="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Area_collisions/Walk_on_catwalk" to="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Area_collisions/Walk_on_catwalk" method="_on_body_entered"]
+[connection signal="body_exited" from="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Area_collisions/Walk_on_catwalk" to="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Area_collisions/Walk_on_catwalk" method="_on_body_exited"]
+[connection signal="body_entered" from="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Area_collisions/Walk_behind_catwalk" to="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Area_collisions/Walk_behind_catwalk" method="_on_body_entered"]
+[connection signal="body_exited" from="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Area_collisions/Walk_behind_catwalk" to="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Area_collisions/Walk_behind_catwalk" method="_on_body_exited"]
+[connection signal="body_entered" from="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Area_collisions/Walk_infront_of_gates" to="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Area_collisions/Walk_infront_of_gates" method="_on_body_entered"]
+[connection signal="body_exited" from="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Area_collisions/Walk_infront_of_gates" to="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Area_collisions/Walk_infront_of_gates" method="_on_body_exited"]
+[connection signal="body_entered" from="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Area_collisions/Walk_behind_gates" to="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Area_collisions/Walk_behind_gates" method="_on_body_entered"]
+[connection signal="body_exited" from="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Area_collisions/Walk_behind_gates" to="Fort_sceens&collisions_(non_Y_sorting)/Right_fort/Fort_collisions/Area_collisions/Walk_behind_gates" method="_on_body_exited"]
+[connection signal="body_entered" from="Stone_bridge/Stone_bridge_collisions/Area_collisions/Walk_behind_top_wall" to="Stone_bridge/Stone_bridge_collisions/Area_collisions/Walk_behind_top_wall" method="_on_body_entered"]
+[connection signal="body_exited" from="Stone_bridge/Stone_bridge_collisions/Area_collisions/Walk_behind_top_wall" to="Stone_bridge/Stone_bridge_collisions/Area_collisions/Walk_behind_top_wall" method="_on_body_exited"]
+[connection signal="body_entered" from="Stone_bridge/Stone_bridge_collisions/Area_collisions/Walk_infront_of_bottom_wall" to="Stone_bridge/Stone_bridge_collisions/Area_collisions/Walk_infront_of_bottom_wall" method="_on_body_entered"]
+[connection signal="body_exited" from="Stone_bridge/Stone_bridge_collisions/Area_collisions/Walk_infront_of_bottom_wall" to="Stone_bridge/Stone_bridge_collisions/Area_collisions/Walk_infront_of_bottom_wall" method="_on_body_exited"]
+[connection signal="body_entered" from="Stone_bridge/Stone_bridge_collisions/Area_collisions/Walk_infront_of_bottom_wall2" to="Stone_bridge/Stone_bridge_collisions/Area_collisions/Walk_infront_of_bottom_wall2" method="_on_body_entered"]
+[connection signal="body_exited" from="Stone_bridge/Stone_bridge_collisions/Area_collisions/Walk_infront_of_bottom_wall2" to="Stone_bridge/Stone_bridge_collisions/Area_collisions/Walk_infront_of_bottom_wall2" method="_on_body_exited"]

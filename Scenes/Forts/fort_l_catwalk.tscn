@@ -1,0 +1,46 @@
+[gd_scene format=4 uid="uid://dwtoajs7wx57y"]
+
+[ext_resource type="Texture2D" uid="uid://cbthp0rw5u6g3" path="res://Tilesets/18.10a - Fences & Walls 3/timber fort catwalk 16x16.png" id="1_cyknq"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tw6sv"]
+texture = ExtResource("1_cyknq")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+6:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_kfr6r"]
+sources/2 = SubResource("TileSetAtlasSource_tw6sv")
+
+[node name="Fort_L_catwalk" type="Node2D" unique_id=697326546]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1898491745]
+tile_map_data = PackedByteArray("AAD/////AgAAAAQAAAAAAP//AgABAAQAAAAAAP7/AgADAAIAAAD///7/AgACAAIAAAD///3/AgABAAAAAAAAAP3/AgADAAAAAAD+//3/AgAEAAAAAAD+//7/AgAEAAEAAAACAP7/AgAGAAAAAAACAP//AgAGAAEAAAABAP3/AgAGAAAAAAABAP7/AgAGAAEAAAABAP//AgAGAAIAAAA=")
+tile_set = SubResource("TileSet_kfr6r")

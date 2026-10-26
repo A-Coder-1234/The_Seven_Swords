@@ -1,0 +1,23 @@
+[remap]
+
+importer="YATI"
+type="PackedScene"
+uid="uid://bcdm1iwpjdlt4"
+path="res://.godot/imported/room sample.tmx-505dbe42045178abdee6e1ebecd29aed.tscn"
+
+[deps]
+
+source_file="res://Tilesets/22.09a - Stonework Home 3/sample map/room sample.tmx"
+dest_files=["res://.godot/imported/room sample.tmx-505dbe42045178abdee6e1ebecd29aed.tscn"]
+
+[params]
+
+use_default_filter=false
+add_class_as_metadata=false
+add_id_as_metadata=false
+no_alternative_tiles=false
+map_wangset_to_terrain=false
+custom_data_prefix="data_"
+tiled_project_file=""
+post_processor=""
+save_tileset_to=""

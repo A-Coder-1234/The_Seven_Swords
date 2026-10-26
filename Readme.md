@@ -1,28 +1,29 @@
 To do:
-Y sorting
 More collisions
 Enemies
 Refine player movement
 Combat system
 Alpha Testing
 
+Some fort sceenes are located in the Y_sorting_container
 
-Render layering:
-0:Tile Map
-1: Containers
-98: Player Under Bridge
-99: Bridge
-100: Player Defult, Y sorting objects
-101: Bridge Top Wall
-102: Player On Bridge
-103: Bridge Bottom Wall
-104: Player above bottom part of bridge
-105: Tree Tops
-9999: Colision/Debug Objects
+Collision layers:
+	Use collision layer 1 unless otherwise specified.
+	Use collision layer 3 when near catwalk inside wooden fort.
+	Use collision layer 2 when behind catwalk.
 
-Z-Depth:
-1000 = flying
-
-FINISH THE GAME AND IT WILL BE OVER!!!!!
-
-If a body has a z_depth variable then it is an entity.
+Dev log:
+	Debugged
+	Fixing fort
+	Debugged
+	Fixed fort
+	Finished left fort
+	Finished right fort
+	Finished stone bridge
+	
+Todo:
+	Sprint cooldown
+	Shooty guy
+	Right fort
+	Entities interact with forts
+	House
