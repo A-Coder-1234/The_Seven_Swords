@@ -25,10 +25,10 @@
 [ext_resource type="Script" uid="uid://d0asc4q5npfws" path="res://Scripts/walk_infront_of_gates2.gd" id="21_rajel"]
 [ext_resource type="Script" uid="uid://dcgxbd3r7eqha" path="res://Scripts/walk_behind_gates2.gd" id="22_vvhu1"]
 [ext_resource type="PackedScene" uid="uid://c35pk7amsap8l" path="res://Scenes/stone_bridge_top_wall.tscn" id="23_lbihj"]
-[ext_resource type="Script" uid="uid://cix6wgbjhw0qv" path="res://Scripts/debug1.gd" id="24_i0vto"]
 [ext_resource type="PackedScene" uid="uid://clyjbhhpp7t48" path="res://Scenes/stone_bridge_bottom_wall.tscn" id="24_raj38"]
 [ext_resource type="Script" uid="uid://bwn8xbq5q5qk7" path="res://Scripts/walk_behind_top_wall.gd" id="26_i0vto"]
 [ext_resource type="Script" uid="uid://cj4ctm8jsgj80" path="res://Scripts/walk_infront_of_bottom_wall.gd" id="27_3jf1l"]
+[ext_resource type="PackedScene" uid="uid://b7eixdlw13mci" path="res://Scenes/enemie.tscn" id="30_iyesh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fqnvg"]
 size = Vector2(112, 96)
@@ -1022,7 +1022,6 @@ polygon = PackedVector2Array(-48, 187, -112, 187, -128, 204, -207, 204, -242, 23
 [node name="Stone_bridge_top_wall" parent="Stone_bridge/Stone_bridge_sceenes" unique_id=1795121558 instance=ExtResource("23_lbihj")]
 z_index = -1
 position = Vector2(96, -240)
-script = ExtResource("24_i0vto")
 
 [node name="Stone_bridge_bottom_wall" parent="Stone_bridge/Stone_bridge_sceenes" unique_id=469077599 instance=ExtResource("24_raj38")]
 position = Vector2(96, -240)
@@ -1057,6 +1056,9 @@ script = ExtResource("27_3jf1l")
 [node name="Walk_infront_of_bottom_wall" type="CollisionPolygon2D" parent="Stone_bridge/Stone_bridge_collisions/Area_collisions/Walk_infront_of_bottom_wall2" unique_id=1228850113]
 position = Vector2(604, 0)
 polygon = PackedVector2Array(-155, -213, -155, -201, -132, -201, -132, -213)
+
+[node name="Enemie" parent="." unique_id=2133818058 instance=ExtResource("30_iyesh")]
+position = Vector2(-906, -344)
 
 [connection signal="body_entered" from="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Area_collisions/Walk_on_catwalk" to="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Area_collisions/Walk_on_catwalk" method="_on_body_entered"]
 [connection signal="body_exited" from="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Area_collisions/Walk_on_catwalk" to="Fort_sceens&collisions_(non_Y_sorting)/Left_fort/Fort_collisions/Area_collisions/Walk_on_catwalk" method="_on_body_exited"]

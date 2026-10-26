@@ -20,4 +20,3 @@ func _on_body_exited(body: Node2D) -> void:
 		# layer
 		body.set_collision_layer_value(1, true)
 		body.set_collision_layer_value(3, false)
-		print("out")

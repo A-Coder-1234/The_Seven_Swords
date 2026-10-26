@@ -1,56 +1,77 @@
 {
-    "activeFile": "Tileset/gentle trees 80x96 v02.tsx",
+    "activeFile": "Tileset/Game maps/Sus_house_roof.tmx",
     "expandedProjectPaths": [
-        ".",
+        "Tileset",
         "Tileset/Game maps",
         "Tileset2/tilesets",
-        "Tileset",
-        "Tileset2"
+        "Tileset2",
+        "."
     ],
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
+        "18.10a - Fences & Walls 3/Tile Sets/Timber Fort.tsx": {
+            "scaleInDock": 1
+        },
+        "18.10a - Fences & Walls 3/Tile Sets/timber fort wall.tsx": {
+            "scaleInDock": 1
+        },
+        "20.05a - Timber Roof Home 4/sample map/TSX files/home exteriors, timber roof v2.tsx": {
+            "scaleInDock": 1
+        },
         "Tileset/Game maps/Botton wall.tmx": {
             "scale": 1.0919433593749999,
             "selectedLayer": 0,
             "viewCenter": {
                 "x": -0.45789920851404986,
-                "y": -0.4578992085141067
+                "y": -0.45789920851404986
             }
         },
         "Tileset/Game maps/Bridge.tmx": {
             "scale": 1.09,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": -0.45871559633030756,
-                "y": -0.4587155963302507
+                "x": -0.4587155963302507,
+                "y": -0.45871559633030756
             }
+        },
+        "Tileset/Game maps/Bridges no cobbles.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 2.35
         },
         "Tileset/Game maps/Briges.tsx": {
             "scaleInDock": 2.0529,
-            "scaleInEditor": 2.291
+            "scaleInEditor": 2.35
         },
         "Tileset/Game maps/Cliff to water transp.tsx": {
             "scaleInDock": 4.7372,
-            "scaleInEditor": 2.8798
+            "scaleInEditor": 2.35
         },
         "Tileset/Game maps/Cliff to water.tsx": {
             "scaleInDock": 3.355,
-            "scaleInEditor": 2.3566
+            "scaleInEditor": 2.35
         },
         "Tileset/Game maps/Overworld.tmx": {
             "scale": 2.28,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": -4.166666666666629,
-                "y": -64.69298245614038
+                "x": -0.2192982456140271,
+                "y": -127.85087719298247
             }
         },
         "Tileset/Game maps/Sus_house.tmx": {
             "scale": 1.74228515625,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": -0.28697942940419807,
+                "x": -0.28697942940416965,
                 "y": -0.28697942940419807
+            }
+        },
+        "Tileset/Game maps/Sus_house_roof.tmx": {
+            "scale": 3.9514,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": -79.8451181859594,
+                "y": -40.871589816267644
             }
         },
         "Tileset/Game maps/Top wall.tmx": {
@@ -58,7 +79,7 @@
             "selectedLayer": 0,
             "viewCenter": {
                 "x": -0.45789920851404986,
-                "y": -0.4578992085141067
+                "y": -0.45789920851404986
             }
         },
         "Tileset/Game maps/Water-fall bridge trees.tmx": {
@@ -68,8 +89,8 @@
             "scale": 3.81,
             "selectedLayer": 10,
             "viewCenter": {
-                "x": -248.9501312335958,
-                "y": -200.65616797900262
+                "x": 127.9527559055118,
+                "y": -256.03674540682414
             }
         },
         "Tileset/Game maps/Water-fall bridge.tmx": {
@@ -79,8 +100,8 @@
             "scale": 2.9617,
             "selectedLayer": 11,
             "viewCenter": {
-                "x": -800.3849140696223,
-                "y": -691.3259276766721
+                "x": -512.037005773711,
+                "y": -258.1287773913631
             }
         },
         "Tileset/_gentle forest sample map.tmx": {
@@ -195,22 +216,31 @@
     "map.tileWidth": 16,
     "openFiles": [
         "Tileset/Game maps/Water-fall bridge.tmx",
+        "Tileset/Game maps/Botton wall.tmx",
+        "Tileset/Game maps/Bridge.tmx",
+        "Tileset/Game maps/Bridges no cobbles.tsx",
+        "Tileset/Game maps/Briges.tsx",
+        "Tileset/Game maps/Cliff to water transp.tsx",
+        "Tileset/Game maps/Cliff to water.tsx",
+        "Tileset/Game maps/Overworld.tmx",
+        "Tileset/Game maps/Sus_house.tmx",
+        "Tileset/Game maps/Top wall.tmx",
         "Tileset/Game maps/Water-fall bridge trees.tmx",
-        "Tileset/gentle trees 80x96 v02.tsx"
+        "Tileset/Game maps/Sus_house_roof.tmx"
     ],
     "project": "the-sevin-swords.tiled-project",
     "recentFiles": [
-        "Tileset/gentle trees 80x96 v02.tsx",
-        "Tileset/Game maps/Water-fall bridge trees.tmx",
         "Tileset/Game maps/Water-fall bridge.tmx",
-        "Tileset/gentle 32x32 v01.tsx",
-        "Tileset/gentle 32x32 v02.tsx",
-        "Tileset/gentle 32x32 v03.tsx",
-        "Tileset/gentle forest v01.tsx",
-        "Tileset/gentle forest v02.tsx",
-        "Tileset/gentle forest v03.tsx",
-        "Tileset/gentle trees 80x96 v01.tsx",
-        "Tileset/gentle trees 80x96 v03.tsx",
-        "Tileset/gentle water sparkles A v01.tsx"
+        "Tileset/Game maps/Botton wall.tmx",
+        "Tileset/Game maps/Bridge.tmx",
+        "Tileset/Game maps/Bridges no cobbles.tsx",
+        "Tileset/Game maps/Briges.tsx",
+        "Tileset/Game maps/Cliff to water transp.tsx",
+        "Tileset/Game maps/Cliff to water.tsx",
+        "Tileset/Game maps/Overworld.tmx",
+        "Tileset/Game maps/Sus_house.tmx",
+        "Tileset/Game maps/Top wall.tmx",
+        "Tileset/Game maps/Water-fall bridge trees.tmx",
+        "Tileset/Game maps/Sus_house_roof.tmx"
     ]
 }

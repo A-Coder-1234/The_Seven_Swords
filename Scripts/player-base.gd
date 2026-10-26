@@ -1,6 +1,9 @@
 extends CharacterBody2D
 
-const Is_entity = true
+# Declares this node is an entity
+const Is_entinity = true
+# Defines allegiance
+var Team = "Good"
 
 # Defines important variables
 var direction: int = 3
@@ -138,4 +141,3 @@ func _process(_delta: float) -> void:
 		$Body.frame = 0
 		$Clotheing.frame = 0
 		$Hair.frame = 0
-	print(z_index)

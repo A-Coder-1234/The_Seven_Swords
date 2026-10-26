@@ -15,4 +15,3 @@ func _on_body_entered(body: Node2D) -> void:
 	if "z_depth" in body:
 		if body.z_depth > -4 and body.z_depth < 1000:
 			body.fall_distance = body.z_depth - -4
-			print(body.fall_distance)

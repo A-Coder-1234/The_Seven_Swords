@@ -20,9 +20,12 @@ Dev log:
 	Finished right fort
 	Finished stone bridge
 	Finished sus house
-	Added collisions along the cliff top so players can't walk over the cliff anymore.
+	Added collisions along the cliff top so players can't walk over the cliff anymore
+	Debugged a missing dependency
 	
 Todo:
 	Sprint cooldown
 	Shooty guy
 	Entities interact with forts
+
+Progress on first alpha: 15%

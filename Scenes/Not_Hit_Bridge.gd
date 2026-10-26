@@ -14,7 +14,6 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if "z_depth" in body:
 		if body.z_depth < 0:
-			print("in")
 			body.set_collision_mask_value(1, false)
 			body.set_collision_mask_value(2, true)
 			body.set_collision_layer_value(1, false)
@@ -24,7 +23,6 @@ func _on_body_entered(body: Node2D) -> void:
 func _on_body_exited(body: Node2D) -> void:
 	if "z_depth" in body:
 		if body.z_depth < 0:
-			print("out")
 			body.set_collision_mask_value(1, true)
 			body.set_collision_mask_value(2, false)
 			body.set_collision_layer_value(1, true)
